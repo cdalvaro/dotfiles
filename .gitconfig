@@ -28,7 +28,9 @@
 [commit]
     gpgsign = true
 [gpg]
-    program = gpg-with-key
+    # Custom gpg command to sign commits from IDEs such as Xcode, Visual Studio Code ...
+    # https://gist.github.com/cdalvaro/f136792780e4306887daed3d9a64e972
+    program = /usr/local/sbin/gpg-with-key
 [protocol]
     version = 2
 [url "git@gitlab.cdalvaro.io:"]
@@ -39,4 +41,4 @@
     rebase = true
 [help]
     # Automatically correct and execute mistyped commands
-    autocorrect = true
+    autocorrect = 1
