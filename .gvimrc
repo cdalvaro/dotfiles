@@ -1,4 +1,4 @@
 " MacVim Settings
 
 set macligatures
-set guifont={{ pillar.nerd_font_postscript }}-{{ pillar.font_style }}:h{{ pillar.font_size }}
+set guifont={{ pillar.fonts.nerd.postscript }}-{{ pillar.fonts.style }}:h{{ pillar.fonts.size }}
