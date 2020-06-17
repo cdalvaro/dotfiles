@@ -13,7 +13,7 @@ dotfiles files present:
     - group: {{ grains.main_group }}
     - dir_mode: 755
     - template: jinja
-    - exclude_pat: README.md
+    - exclude_pat: E@(README.md|settings/)
 ```
 
 Also, other files may begins with `{% raw %}` and ends with `{% endraw %}`.

@@ -33,7 +33,7 @@
     program = /usr/local/sbin/gpg-with-key
 [protocol]
     version = 2
-[url "git@gitlab.cdalvaro.io:"]
+[url "git@{{ pillar.git.gitlab.url }}:"]
     insteadOf = gitlab:
 [url "git@github.com:"]
     insteadOf = github:
