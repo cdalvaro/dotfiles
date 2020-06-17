@@ -1,4 +1,4 @@
-# cdalvaro's dotfiles
+# 🗂 cdalvaro's dotfiles
 
 Deployment is made by SaltStack formulas.
 
@@ -17,4 +17,5 @@ dotfiles files present:
 ```
 
 Also, other files may begins with `{% raw %}` and ends with `{% endraw %}`.
+
 Thouse [escape sequences](https://jinja.palletsprojects.com/en/master/templates/#escaping) are interpreted by the Jinja engine in order to avoid replacing content between these two markers. (That is the case for `.p10k.zsh` file)
