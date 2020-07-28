@@ -10,7 +10,10 @@
     "editor.fontLigatures": true,
 
     // Controls whether the minimap is shown.
-    "editor.minimap.enabled": false,
+    "editor.minimap.enabled": true,
+
+    // Do not render the actual characters on a line, instead show color blocks.
+    "editor.minimap.renderCharacters": false,
 
     // Controls whether the editor should detect links and make them clickable.
     "editor.links": true,
