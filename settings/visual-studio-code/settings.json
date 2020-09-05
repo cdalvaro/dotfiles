@@ -117,5 +117,12 @@
     "autoDocstring.docstringFormat": "google",
 
     // Start documentation in a new line
-    "autoDocstring.startOnNewLine": true
+    "autoDocstring.startOnNewLine": true,
+
+    // List of remotes, by name, to fetch pull requests from
+    "githubPullRequests.remotes": [
+        "origin",
+        "upstream",
+        "github"
+    ]
 }
