@@ -1,5 +1,3 @@
-#!/usr/bin/env zsh
-
 # https://unix.stackexchange.com/a/71258/355495
 # Just for my own notes / confirmation and to help anybody else, the ultimate order is:
 # .zshenv → [.zprofile if login] → [.zshrc if interactive] → [.zlogin if login] → [.zlogout sometimes].
@@ -36,11 +34,9 @@ ZSH_DISABLE_COMPFIX=true
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(
-    brew colored-man-pages
-    docker docker-compose
-    fasd fd fzf git
-    forgit osx python ripgrep
-    salt sudo tmux xcode extract
+  brew colored-man-pages docker docker-compose
+  fasd fd fzf git forgit osx python ripgrep
+  salt sudo tmux xcode extract
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -49,7 +45,9 @@ source $ZSH/oh-my-zsh.sh
 export TERM="xterm-256color"
 
 # iTerm 2 integration
-test -f ~/.iterm2_shell_integration.zsh && source ~/.iterm2_shell_integration.zsh
+test "${TERM_PROGRAM}" = "iTerm.app" && \
+  test -f ~/.iterm2_shell_integration.zsh && \
+  source ~/.iterm2_shell_integration.zsh
 
 # ZSH syntax highlighting
 fpath=(/usr/local/share/zsh-completions $fpath)
