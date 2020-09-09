@@ -124,5 +124,14 @@
         "origin",
         "upstream",
         "github"
-    ]
+    ],
+
+    // Do not ignore extensions recomendations
+    "extensions.ignoreRecommendations": false,
+
+    // Format code on save
+    "editor.formatOnSave": true,
+
+    // Python formatting provider
+    "python.formatting.provider": "yapf"
 }
