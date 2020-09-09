@@ -1,32 +1,34 @@
 vscode:
   extensions:
     Docker:
-        id: ms-azuretools.vscode-docker
+      id: ms-azuretools.vscode-docker
     Gitconfig Syntax:
-        id: sidneys1.gitconfig
+      id: sidneys1.gitconfig
+    GitHub Actions:
+      id: cschleiden.vscode-github-actions
     GitHub Pull Requests and Issues:
-        id: github.vscode-pull-request-github
+      id: github.vscode-pull-request-github
     GitHub Theme:
-        id: github.github-vscode-theme
+      id: github.github-vscode-theme
     Gitlab Workflow:
-        id: fatihacet.gitlab-workflow
+      id: fatihacet.gitlab-workflow
     GitLens:
-        id: eamodio.gitlens
+      id: eamodio.gitlens
     Hadolint:
-        id: exiasr.hadolint
+      id: exiasr.hadolint
     Markdown All In One:
-        id: yzhang.markdown-all-in-one
+      id: yzhang.markdown-all-in-one
     Monokai Pro:
-        id: monokai.theme-monokai-pro-vscode
+      id: monokai.theme-monokai-pro-vscode
     Python:
-        id: ms-python.python
+      id: ms-python.python
     Python Docstring:
-        id: njpwerner.autodocstring
+      id: njpwerner.autodocstring
     SaltStack:
-        id: korekontrol.saltstack
+      id: korekontrol.saltstack
     Shellcheck:
-        id: timonwong.shellcheck
+      id: timonwong.shellcheck
     TODO Highlight:
-        id: wayou.vscode-todo-highlight
+      id: wayou.vscode-todo-highlight
     Vim Syntax:
-        id: dunstontc.viml
+      id: dunstontc.viml
