@@ -133,5 +133,8 @@
     "editor.formatOnSave": true,
 
     // Python formatting provider
-    "python.formatting.provider": "yapf"
+    "python.formatting.provider": "yapf",
+
+    // Do not focus window on break
+    "debug.focusWindowOnBreak": false
 }
