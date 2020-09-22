@@ -1,140 +1,164 @@
 // Place your settings in this file to overwrite the default settings
 {
-    // Controls the font family.
-    "editor.fontFamily": "{{ pillar.fonts.normal.family }}",
+  // Controls the font family.
+  "editor.fontFamily": "{{ pillar.fonts.normal.family }}",
 
-    // Controls the font size in pixels.
-    "editor.fontSize": {{ pillar.fonts.size }},
+  // Controls the font size in pixels.
+  "editor.fontSize": {{ pillar.fonts.size }},
 
-    // Enables/Disables font ligatures.
-    "editor.fontLigatures": true,
+  // Enables/Disables font ligatures.
+  "editor.fontLigatures": true,
 
-    // Controls whether the minimap is shown.
-    "editor.minimap.enabled": true,
+  // Controls whether the minimap is shown.
+  "editor.minimap.enabled": true,
 
-    // Do not render the actual characters on a line, instead show color blocks.
-    "editor.minimap.renderCharacters": false,
+  // Do not render the actual characters on a line, instead show color blocks.
+  "editor.minimap.renderCharacters": false,
 
-    // Controls whether the editor should detect links and make them clickable.
-    "editor.links": true,
+  // Controls whether the editor should detect links and make them clickable.
+  "editor.links": true,
 
-    // The modifier to be used to add multiple cursors with the mouse.
-    "editor.multiCursorModifier": "alt",
+  // The modifier to be used to add multiple cursors with the mouse.
+  "editor.multiCursorModifier": "alt",
 
-    // When enabled, automatically installs updates for extensions.
-    "extensions.autoUpdate": true,
+  // When enabled, automatically installs updates for extensions.
+  "extensions.autoUpdate": true,
 
-    // Disables update Toc on save.
-    "markdown.extension.toc.updateOnSave": false,
+  // Disables update Toc on save.
+  "markdown.extension.toc.updateOnSave": false,
 
-    // Customizes which terminal application to run on macOS.
-    "terminal.external.osxExec": "iTerm.app",
+  // Customizes which terminal application to run on macOS.
+  "terminal.external.osxExec": "iTerm.app",
 
-    // Specifies the color theme used in the workbench.
-    "workbench.colorTheme": "GitHub Dark",
+  // Specifies the color theme used in the workbench.
+  "workbench.colorTheme": "GitHub Dark",
 
-    // Specifies the icon theme used in the workbench or 'null' to not show any file icons.
-    "workbench.iconTheme": "Monokai Pro Icons",
+  // Specifies the icon theme used in the workbench or 'null' to not show any file icons.
+  "workbench.iconTheme": "Monokai Pro Icons",
 
-    //  Confirm before syncrhronizing git repositories.
-    "git.confirmSync": false,
+  //  Confirm before syncrhronizing git repositories.
+  "git.confirmSync": false,
 
-    // Whether auto fetching is enabled.
-    "git.autofetch": true,
+  // Whether auto fetching is enabled.
+  "git.autofetch": true,
 
-    // If set to true, the new version message won't be shown anymore for Vsicons
-    "vsicons.dontShowNewVersionMessage": true,
+  // If set to true, the new version message won't be shown anymore for Vsicons
+  "vsicons.dontShowNewVersionMessage": true,
 
-    // Controls whether the explorer should ask for confirmation to move files
-    // and folders via drag and drop.
-    "explorer.confirmDragAndDrop": false,
+  // Controls whether the explorer should ask for confirmation to move files
+  // and folders via drag and drop.
+  "explorer.confirmDragAndDrop": false,
 
-    // The number of spaces a tab is equal to. This setting is overriden
-    // based on the file contents when `editor.detectIndentation` is true.
-    "editor.tabSize": 4,
+  // The number of spaces a tab is equal to. This setting is overriden
+  // based on the file contents when `editor.detectIndentation` is true.
+  "editor.tabSize": 4,
 
-    // Insert spaces when pressing Tab. This setting is overriden
-    // based on the file contents when `editor.detectIndentation` is true.
-    "editor.insertSpaces": true,
+  // Insert spaces when pressing Tab. This setting is overriden
+  // based on the file contents when `editor.detectIndentation` is true.
+  "editor.insertSpaces": true,
 
-    // When opening a file, `editor.tabSize` and `editor.insertSpaces`
-    // will be detected based on the file contents. Set to false to keep
-    // the values you've explicitly set, above.
-    "editor.detectIndentation": true,
+  // When opening a file, `editor.tabSize` and `editor.insertSpaces`
+  // will be detected based on the file contents. Set to false to keep
+  // the values you've explicitly set, above.
+  "editor.detectIndentation": true,
 
-    // Controls whether the editor should render indent guides.
-    "editor.renderIndentGuides": false,
+  // Controls whether the editor should render indent guides.
+  "editor.renderIndentGuides": false,
 
-    // When enabled, will trim all new lines after the final new line at the end
-    // of the file when saving it.
-    "files.trimFinalNewlines": true,
+  // When enabled, will trim all new lines after the final new line at the end
+  // of the file when saving it.
+  "files.trimFinalNewlines": true,
 
-    // When enabled, will trim trailling whitespace when saving a file.
-    "files.trimTrailingWhitespace": true,
+  // When enabled, will trim trailling whitespace when saving a file.
+  "files.trimTrailingWhitespace": true,
 
-    // Controls the position of the editor's tabs close buttons, or disables them when set to 'off'.
-    "workbench.editor.tabCloseButton": "left",
+  // Controls the position of the editor's tabs close buttons, or disables them when set to 'off'.
+  "workbench.editor.tabCloseButton": "left",
 
-    // Your GitLab instance URL
-    "gitlab.instanceUrl": "https://{{ pillar.git.gitlab.url }}",
+  // Your GitLab instance URL
+  "gitlab.instanceUrl": "https://{{ pillar.git.gitlab.url }}",
 
-    // Show notification in VSCode when pipeline status change
-    "gitlab.showPipelineUpdateNotifications": true,
+  // Show notification in VSCode when pipeline status change
+  "gitlab.showPipelineUpdateNotifications": true,
 
-    // Enables commit signing with GPG
-    "git.enableCommitSigning": true,
+  // Enables commit signing with GPG
+  "git.enableCommitSigning": true,
 
-    // Lint Python code using pylint
-    "python.linting.enabled": true,
+  // Lint Python code using pylint
+  "python.linting.enabled": true,
 
-    // Python interpreter
-    "python.pythonPath": "/usr/local/bin/python3",
+  // Python interpreter
+  "python.pythonPath": "/usr/local/bin/python3",
 
-    // Controls the font family of the terminal
-    "terminal.integrated.fontFamily": "{{ pillar.fonts.nerd.family }}",
+  // Controls the font family of the terminal
+  "terminal.integrated.fontFamily": "{{ pillar.fonts.nerd.family }}",
 
-    // Controls the font size in pixels of the terminal
-    "terminal.integrated.fontSize": {{ pillar.fonts.size }},
+  // Controls the font size in pixels of the terminal
+  "terminal.integrated.fontSize": {{ pillar.fonts.size }},
 
-    // Don't ask for Jupyter Notebook restart
-    "python.dataScience.askForKernelRestart": false,
+  // Don't ask for Jupyter Notebook restart
+  "python.dataScience.askForKernelRestart": false,
 
-    // Change Terminal cursor style
-    "terminal.integrated.cursorStyle": "line",
+  // Change Terminal cursor style
+  "terminal.integrated.cursorStyle": "line",
 
-    // Enable terminal cursor blinking
-    "terminal.integrated.cursorBlinking": true,
+  // Enable terminal cursor blinking
+  "terminal.integrated.cursorBlinking": true,
 
-    // Increase terminal scrollback history
-    "terminal.integrated.scrollback": 50000,
+  // Increase terminal scrollback history
+  "terminal.integrated.scrollback": 50000,
 
-    // Semantic highlighting enriches syntax coloring based on symbol information from the language service.
-    "editor.semanticTokenColorCustomizations": {
-        "enabled": true
-    },
+  // Semantic highlighting enriches syntax coloring based on symbol information from the language service.
+  "editor.semanticTokenColorCustomizations": {
+    "enabled": true
+  },
 
-    // Template for Docstring Python documentation
-    "autoDocstring.docstringFormat": "google",
+  // Template for Docstring Python documentation
+  "autoDocstring.docstringFormat": "google",
 
-    // Start documentation in a new line
-    "autoDocstring.startOnNewLine": true,
+  // Start documentation in a new line
+  "autoDocstring.startOnNewLine": true,
 
-    // List of remotes, by name, to fetch pull requests from
-    "githubPullRequests.remotes": [
-        "origin",
-        "upstream",
-        "github"
-    ],
+  // List of remotes, by name, to fetch pull requests from
+  "githubPullRequests.remotes": [
+    "origin",
+    "upstream",
+    "github"
+  ],
 
-    // Do not ignore extensions recomendations
-    "extensions.ignoreRecommendations": false,
+  // Do not ignore extensions recomendations
+  "extensions.ignoreRecommendations": false,
 
-    // Format code on save
-    "editor.formatOnSave": true,
+  // Don't Format code on save
+  "editor.formatOnSave": false,
 
-    // Python formatting provider
-    "python.formatting.provider": "yapf",
+  // Python formatting provider
+  "python.formatting.provider": "yapf",
 
-    // Do not focus window on break
-    "debug.focusWindowOnBreak": false
+  // Do not focus window on break
+  "debug.focusWindowOnBreak": false,
+
+  // Dockerfile formatter
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+
+  // Ruby Code completion
+  "ruby.codeCompletion": "rcodetools",
+
+  // Ruby Format tool
+  "ruby.format": "rubocop",
+
+  // Ruby Intellisense
+  "ruby.intellisense": "rubyLocate",
+
+  // Where Ruby tools should be started using Bundler
+  "ruby.useBundler": true,
+
+  //Ruby Lint settings
+  "ruby.lint": {
+    "rubocop": {
+      "useBundler": true
+    }
+  }
 }
