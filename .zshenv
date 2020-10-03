@@ -14,3 +14,6 @@ export MANPATH="/usr/local/man:$MANPATH"
 
 # Python
 export PATH=/usr/local/opt/python/libexec/bin:$PATH
+
+# Avoid loading Oh-my-zsh magic functions, bracketed-paste-magic among other
+export DISABLE_MAGIC_FUNCTIONS=true
