@@ -33,7 +33,8 @@
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # os_icon               # os identifier
-    mac_model
+    # host                  # host name
+    mac_model               # Mac model
     dir                     # current directory
     vcs                     # git status
     # prompt_char           # prompt symbol
@@ -177,6 +178,10 @@
   # OS identifier color.
   typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=232
   typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=7
+
+  # Host color.
+  typeset -g POWERLEVEL9K_HOST_FOREGROUND=232
+  typeset -g POWERLEVEL9K_HOST_BACKGROUND=7
 
   typeset -g POWERLEVEL9K_MAC_MODEL_FOREGROUND=${POWERLEVEL9K_OS_ICON_FOREGROUND}
   typeset -g POWERLEVEL9K_MAC_MODEL_BACKGROUND=${POWERLEVEL9K_OS_ICON_BACKGROUND}
