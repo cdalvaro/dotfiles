@@ -4,6 +4,9 @@
 # Just for my own notes / confirmation and to help anybody else, the ultimate order is:
 # .zshenv → [.zprofile if login] → [.zshrc if interactive] → [.zlogin if login] → [.zlogout sometimes].
 
+# Avoid loading Oh-my-zsh magic functions, bracketed-paste-magic among other
+export DISABLE_MAGIC_FUNCTIONS=true
+
 # Fuzzy settings
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS=(
@@ -33,6 +36,10 @@ export DISABLE_FZF_KEY_BINDINGS=false
 # ripgrep settings
 # https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md#configuration-file
 export RIPGREP_CONFIG_PATH="${HOME}/.ripgreprc"
+
+# zsh-autosuggestions settings
+export ZSH_AUTOSUGGEST_USE_ASYNC=true
+export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=140
 
 # GPG key
 export GPG_TTY=$(tty)
