@@ -155,10 +155,104 @@
   // Where Ruby tools should be started using Bundler
   "ruby.useBundler": true,
 
-  //Ruby Lint settings
+  // Ruby Lint settings
   "ruby.lint": {
     "rubocop": {
       "useBundler": true
+    }
+  },
+
+  // Sort LaTeX references by author
+  "latex-workshop.bibtex-format.sort.enabled": true,
+  "latex-workshop.bibtex-format.sortby": [
+    "author"
+  ],
+
+  // LaTeX tools
+  "latex-workshop.latex.tools": [
+
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "--shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "lualatexmk",
+      "command": "latexmk",
+      "args": [
+        "--shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-lualatex",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "latexmk_rconly",
+      "command": "latexmk",
+      "args": [
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "--shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": [
+        "%DOCFILE%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "rnw2tex",
+      "command": "Rscript",
+      "args": [
+        "-e",
+        "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
+      ],
+      "env": {}
+    },
+    {
+      "name": "jnw2tex",
+      "command": "julia",
+      "args": [
+        "-e",
+        "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"
+      ],
+      "env": {}
+    },
+    {
+      "name": "jnw2texmintex",
+      "command": "julia",
+      "args": [
+        "-e",
+        "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
+      ],
+      "env": {}
     }
   }
 }
