@@ -143,6 +143,11 @@
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
 
+  // Markdown formatter
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
   // Ruby Code completion
   "ruby.codeCompletion": "rcodetools",
 
@@ -254,5 +259,5 @@
       ],
       "env": {}
     }
-  }
+  ]
 }
