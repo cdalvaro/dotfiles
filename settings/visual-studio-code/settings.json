@@ -30,6 +30,15 @@
   // Customizes which terminal application to run on macOS.
   "terminal.external.osxExec": "iTerm.app",
 
+  // Auto detect color scheme
+  "window.autoDetectColorScheme": false,
+
+  // Preferred Dark Color Theme
+  "workbench.preferredDarkColorTheme": "GitHub Dark",
+
+  // Preferred Light Color Theme
+  "workbench.preferredLightColorTheme": "GitHub Light"
+
   // Specifies the color theme used in the workbench.
   "workbench.colorTheme": "GitHub Dark",
 
