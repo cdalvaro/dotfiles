@@ -16,14 +16,22 @@ vscode:
       id: eamodio.gitlens
     Hadolint:
       id: exiasr.hadolint
+    LaTeX Workshop:
+      id: james-yu.latex-workshop
     Markdown All In One:
       id: yzhang.markdown-all-in-one
     Monokai Pro:
       id: monokai.theme-monokai-pro-vscode
+    Prettier - Code formatter:
+      id: esbenp.prettier-vscode
     Python:
       id: ms-python.python
     Python Docstring:
       id: njpwerner.autodocstring
+    Remote - Container:
+      id: ms-vscode-remote.remote-containers
+    Remote - SSH:
+      id: ms-vscode-remote.remote-ssh
     SaltStack:
       id: korekontrol.saltstack
     Shellcheck:
@@ -32,3 +40,5 @@ vscode:
       id: wayou.vscode-todo-highlight
     Vim Syntax:
       id: dunstontc.viml
+    YAML:
+      id: redhat.vscode-yaml
