@@ -3,7 +3,7 @@ name: Deploy dotfiles
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
