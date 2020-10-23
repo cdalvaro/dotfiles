@@ -40,5 +40,7 @@ vscode:
       id: wayou.vscode-todo-highlight
     Vim Syntax:
       id: dunstontc.viml
+    Visual Studio IntelliCode:
+      id: visualstudioexptteam.vscodeintellicode
     YAML:
       id: redhat.vscode-yaml
