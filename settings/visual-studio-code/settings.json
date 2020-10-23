@@ -37,7 +37,7 @@
   "workbench.preferredDarkColorTheme": "GitHub Dark",
 
   // Preferred Light Color Theme
-  "workbench.preferredLightColorTheme": "GitHub Light"
+  "workbench.preferredLightColorTheme": "GitHub Light",
 
   // Specifies the color theme used in the workbench.
   "workbench.colorTheme": "GitHub Dark",
