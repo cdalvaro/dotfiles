@@ -99,14 +99,28 @@
   // Python interpreter
   "python.pythonPath": "/usr/local/bin/python3",
 
+  // Visual Studio Code Python Server
+  "python.languageServer": "Pylance",
+
+  // Don't ask for Jupyter Notebook restart
+  "python.dataScience.askForKernelRestart": false,
+
+  // Python formatting provider
+  "python.formatting.provider": "yapf",
+
+  // Template for Docstring Python documentation
+  "autoDocstring.docstringFormat": "google",
+
+  // Visual Studio IntelliCode
+  "editor.suggestSelection": "first",
+
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+
   // Controls the font family of the terminal
   "terminal.integrated.fontFamily": "{{ pillar.fonts.nerd.family }}",
 
   // Controls the font size in pixels of the terminal
   "terminal.integrated.fontSize": {{ pillar.fonts.size }},
-
-  // Don't ask for Jupyter Notebook restart
-  "python.dataScience.askForKernelRestart": false,
 
   // Change Terminal cursor style
   "terminal.integrated.cursorStyle": "line",
@@ -121,9 +135,6 @@
   "editor.semanticTokenColorCustomizations": {
     "enabled": true
   },
-
-  // Template for Docstring Python documentation
-  "autoDocstring.docstringFormat": "google",
 
   // Start documentation in a new line
   "autoDocstring.startOnNewLine": true,
@@ -140,9 +151,6 @@
 
   // Don't Format code on save
   "editor.formatOnSave": false,
-
-  // Python formatting provider
-  "python.formatting.provider": "yapf",
 
   // Do not focus window on break
   "debug.focusWindowOnBreak": false,
@@ -268,5 +276,10 @@
       ],
       "env": {}
     }
-  ]
+  ],
+
+  // JSON formatter
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
