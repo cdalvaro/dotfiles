@@ -102,6 +102,9 @@
   // Visual Studio Code Python Server
   "python.languageServer": "Pylance",
 
+  // Pylance analysis type checking mode
+  "python.analysis.typeCheckingMode": "basic",
+
   // Don't ask for Jupyter Notebook restart
   "python.dataScience.askForKernelRestart": false,
 
