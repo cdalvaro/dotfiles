@@ -1,0 +1,17 @@
+[character]
+success_symbol = "[􀦱](bold gray)"
+error_symbol = "[􀦮](bold red)"
+
+[git_branch]
+symbol = ' '
+style = 'bold fg:#F05032'
+
+[git_commit]
+tag_disabled = false
+
+[git_status]
+style = 'bold fg:#F05032'
+
+[python]
+symbol = ' '
+style = 'bold green'
