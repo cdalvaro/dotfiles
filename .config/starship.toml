@@ -1,6 +1,26 @@
+format = """
+$username\
+$hostname\
+$shlvl\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$docker_context\
+$cmake\
+$python\
+$swift\
+$memory_usage\
+$custom\
+$line_break\
+$jobs\
+$status\
+$character"""
+
 [character]
-success_symbol = "[􀦱](bold gray)"
-error_symbol = "[􀦮](bold red)"
+success_symbol = "[􀦱 ](bold gray)"
+error_symbol = "[􀦮 ](bold red)"
 
 [git_branch]
 symbol = ' '
