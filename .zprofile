@@ -56,7 +56,3 @@ else
   export HOMEBREW_EDITOR='mvim --remote-silent'
 fi
 
-# Configuration based in terminal program
-if [[ $LC_TERMINAL == 'iTerm2' ]]; then
-  export ZSH_TMUX_ITERM2=true
-fi
