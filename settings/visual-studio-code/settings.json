@@ -120,10 +120,13 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 
   // Controls the font family of the terminal
-  "terminal.integrated.fontFamily": "{{ pillar.fonts.nerd.family }}",
+  "terminal.integrated.fontFamily": "{{ pillar.fonts.nerd.family }}, SF Pro Display",
 
   // Controls the font size in pixels of the terminal
   "terminal.integrated.fontSize": {{ pillar.fonts.size }},
+
+  // Controls the line height of the terminal
+  "terminal.integrated.lineHeight": 1.1,
 
   // Change Terminal cursor style
   "terminal.integrated.cursorStyle": "line",
