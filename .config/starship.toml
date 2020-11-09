@@ -32,16 +32,22 @@ read_only_style = "fg:#EE8738"
 truncation_symbol = "…/"
 
 [git_branch]
-symbol = " "
+symbol = "\uf418 "
 style = "bold fg:#F05032"
 
 [git_commit]
+symbol = "\uf02b "
 tag_disabled = false
 
 [git_status]
+stashed = "\uf487"
 style = "bold fg:#FCA121"
 
 [python]
-symbol = " "
+symbol = "\ue73c "
 style = "bold fg:#3776AB"
+
+[swift]
+symbol = "\ue755 "
+style = "bold fg:#FA7343"
 
