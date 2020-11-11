@@ -114,6 +114,9 @@
   // Template for Docstring Python documentation
   "autoDocstring.docstringFormat": "google",
 
+  // Large File Optimizations
+  "editor.largeFileOptimizations": false,
+
   // Visual Studio IntelliCode
   "editor.suggestSelection": "first",
 
