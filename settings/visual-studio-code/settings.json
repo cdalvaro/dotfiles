@@ -293,6 +293,9 @@
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+
+  // Spell checker languages
+  "cSpell.language": "en, es"
 
 }
