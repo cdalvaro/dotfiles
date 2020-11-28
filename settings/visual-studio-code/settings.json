@@ -31,7 +31,7 @@
   "terminal.external.osxExec": "iTerm.app",
 
   // Auto detect color scheme
-  "window.autoDetectColorScheme": false,
+  "window.autoDetectColorScheme": true,
 
   // Preferred Dark Color Theme
   "workbench.preferredDarkColorTheme": "GitHub Dark",
