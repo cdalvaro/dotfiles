@@ -16,14 +16,16 @@ vscode:
       id: eamodio.gitlens
     Hadolint:
       id: exiasr.hadolint
-    LaTeX Workshop:
-      id: james-yu.latex-workshop
+    Jupyter:
+      id: ms-toolsai.jupyter
     Markdown All In One:
       id: yzhang.markdown-all-in-one
     Monokai Pro:
       id: monokai.theme-monokai-pro-vscode
     Prettier - Code formatter:
       id: esbenp.prettier-vscode
+    Pylance:
+      id: ms-python.vscode-pylance
     Python:
       id: ms-python.python
     Python Docstring:
