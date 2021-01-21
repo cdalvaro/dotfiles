@@ -8,7 +8,7 @@
 # .zshenv → [.zprofile if login] → [.zshrc if interactive] → [.zlogin if login] → [.zlogout sometimes].
 
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+export ZSH=${HOME}/.oh-my-zsh
 
 ## Powerlevel 10k
 # # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -52,17 +52,25 @@ export TERM="xterm-256color"
 
 # iTerm 2 integration
 test "${TERM_PROGRAM}" = "iTerm.app" && \
-  test -f ~/.iterm2_shell_integration.zsh && \
-  source ~/.iterm2_shell_integration.zsh
+  test -f ${HOME}/.iterm2_shell_integration.zsh && \
+  source ${HOME}/.iterm2_shell_integration.zsh
 
-# ZSH syntax highlighting
-fpath=(/usr/local/share/zsh-completions $fpath)
+# Completions
+if [[ -v HOMEBREW_PREFIX ]]; then
+  # zsh completions
+  FPATH=${HOMEBREW_PREFIX}/share/zsh-completions:$FPATH
+  autoload -Uz compinit
+  compinit
 
-export ZSH_AUTOSUGGEST_USE_ASYNC=true
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  # zsh autosuggestions
+  export ZSH_AUTOSUGGEST_USE_ASYNC=true
+  test -f ${HOMEBREW_PREFIX}/share/zsh-autosuggestions/zsh-autosuggestions.zsh && \
+    source ${HOMEBREW_PREFIX}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-autoload -U +X compinit && compinit
+  # zsh syntax highlighting
+  test -f ${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh && \
+    source ${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
 # Show completion menu when number of options is at least 2
 zstyle ':completion:*' menu select=2

@@ -8,9 +8,11 @@
 export LANG=en_US.UTF-8
 export LC_ALL=$LANG
 
-# Path
-export PATH=$HOME/.local/sbin:/usr/local/bin:/usr/local/sbin:$PATH
-export MANPATH="/usr/local/man:$MANPATH"
+# Homebrew env
+if [[ "$(uname -m)" == 'arm64' ]]; then
+  HOMEBREW_PREFIX=/opt/homebrew
+else
+  HOMEBREW_PREFIX=/usr/local
+fi
 
-# Python
-export PATH=/usr/local/opt/python/libexec/bin:$PATH
+eval $(${HOMEBREW_PREFIX}/bin/brew shellenv)
