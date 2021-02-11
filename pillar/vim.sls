@@ -9,6 +9,9 @@ vim:
     brew:
       url: https://github.com/xu-cheng/brew.vim.git
       dir: start
+    colors-xcode:
+      url: https://github.com/arzg/vim-colors-xcode.git
+      dir: start
     commentary:
       url: https://github.com/tpope/vim-commentary.git
       dir: start

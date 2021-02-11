@@ -45,17 +45,40 @@ if (has("termguicolors"))
 endif
 
 " One theme
-packadd! one
-set background=dark
-" Fix: https://github.com/joshdick/onedark.vim/issues/97#issuecomment-299719352
-let g:one_allow_italics=1
-colorscheme one
+" packadd! one
+" set background=dark
+" " Fix: https://github.com/joshdick/onedark.vim/issues/97#issuecomment-299719352
+" let g:one_allow_italics=1
+" colorscheme one
+" let g:airline_theme='one'
+
+" Xcode theme
+colorscheme xcodedark
+let g:signify_sign_add    = '┃'
+let g:signify_sign_change = '┃'
+let g:signify_sign_delete = '•'
+let g:signify_sign_show_count = 0 " Don’t show the number of deleted lines.
+
+let g:xcodedark_emph_types = 1
+let g:xcodedark_emph_funcs = 1
+let g:xcodedark_match_paren_style = 1
+
+augroup vim-colors-xcode
+  autocmd!
+augroup END
+
+autocmd vim-colors-xcode ColorScheme * hi Comment        cterm=italic gui=italic
+autocmd vim-colors-xcode ColorScheme * hi SpecialComment cterm=italic gui=italic
 
 " Vim Airline
-let g:airline_theme='one'
 let g:airline_powerline_fonts=1
 set encoding=utf8
 set laststatus=2
+
+" Update Git signs every time the text is changed
+autocmd User SignifySetup
+  \ execute 'autocmd! signify' |
+  \ autocmd signify TextChanged,TextChangedI * call sy#start()
 
 " Clipboard settings
 if (has("mac"))
