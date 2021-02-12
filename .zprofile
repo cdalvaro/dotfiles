@@ -4,6 +4,15 @@
 # Just for my own notes / confirmation and to help anybody else, the ultimate order is:
 # .zshenv → [.zprofile if login] → [.zshrc if interactive] → [.zlogin if login] → [.zlogout sometimes].
 
+# Homebrew env
+if [[ "$(uname -m)" == 'arm64' ]]; then
+  HOMEBREW_PREFIX=/opt/homebrew
+else
+  HOMEBREW_PREFIX=/usr/local
+fi
+
+eval $(${HOMEBREW_PREFIX}/bin/brew shellenv)
+
 # Avoid loading Oh-my-zsh magic functions, bracketed-paste-magic among other
 export DISABLE_MAGIC_FUNCTIONS=true
 
@@ -55,4 +64,3 @@ else
   export EDITOR='mvim --remote-wait-silent'
   export HOMEBREW_EDITOR='mvim --remote-silent'
 fi
-

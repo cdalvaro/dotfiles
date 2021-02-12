@@ -47,9 +47,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# 256-terminal color
-export TERM="xterm-256color"
-
 # iTerm 2 integration
 test "${TERM_PROGRAM}" = "iTerm.app" && \
   test -f ${HOME}/.iterm2_shell_integration.zsh && \

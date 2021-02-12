@@ -7,12 +7,3 @@
 # Language settings
 export LANG=en_US.UTF-8
 export LC_ALL=$LANG
-
-# Homebrew env
-if [[ "$(uname -m)" == 'arm64' ]]; then
-  HOMEBREW_PREFIX=/opt/homebrew
-else
-  HOMEBREW_PREFIX=/usr/local
-fi
-
-eval $(${HOMEBREW_PREFIX}/bin/brew shellenv)
