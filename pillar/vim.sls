@@ -45,6 +45,9 @@ vim:
     polyglot:
       url: https://github.com/sheerun/vim-polyglot.git
       dir: start
+    ruby:
+      url: https://github.com/vim-ruby/vim-ruby.git
+      dir: start
     salt:
       url: https://github.com/saltstack/salt-vim.git
       dir: start
