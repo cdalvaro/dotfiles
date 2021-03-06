@@ -115,7 +115,7 @@ nnoremap <A-9> 9gt
 set guioptions-=r  "remove right-hand scroll bar
 
 " fzf integration
-set rtp+=/usr/local/opt/fzf
+set rtp+=$HOMEBREW_PREFIX/opt/fzf
 map ; :Files<CR>
 
 " Multiple Cursos
