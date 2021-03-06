@@ -5,5 +5,5 @@ fonts:
     family: SF Mono
     postscript: SFMono
   nerd:
-    family: Hack Nerd Font Mono
-    postscript: HackNerdFontCompleteM
+    family: SFMono Nerd Font Mono
+    postscript: SFMonoNerdFontCompleteM
