@@ -15,7 +15,7 @@ eval $(${HOMEBREW_PREFIX}/bin/brew shellenv)
 
 # Ruby settings
 export PATH="$(brew --prefix ruby)/bin:$PATH"
-export PATH="$(gem env gempath):$PATH"
+export PATH="$(gem env gemdir)/bin:$PATH"
 
 # Avoid loading Oh-my-zsh magic functions, bracketed-paste-magic among other
 export DISABLE_MAGIC_FUNCTIONS=true
