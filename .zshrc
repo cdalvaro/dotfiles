@@ -45,7 +45,7 @@ if [[ -v HOMEBREW_PREFIX ]]; then
   # zsh completions
   FPATH=${HOMEBREW_PREFIX}/share/zsh-completions:$FPATH
   autoload -Uz compinit
-  compinit
+  compinit -i
 
   # zsh autosuggestions
   export ZSH_AUTOSUGGEST_USE_ASYNC=true
