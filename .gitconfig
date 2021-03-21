@@ -5,6 +5,7 @@
 [core]
     editor = $EDITOR
     excludesfile = ~/.gitignore
+    pager = delta
 [merge]
     tool = Kaleidoscope
     # Include summaries of merged commits in newly created merge commit messages
@@ -16,6 +17,7 @@
     trustExitCode = true
 [diff]
     tool = Kaleidoscope
+    colorMoved = default
 [difftool]
     prompt = false
 [difftool "Kaleidoscope"]
@@ -25,6 +27,17 @@
     process = git-lfs filter-process
     required = true
     clean = git-lfs clean -- %f
+[delta]
+    plus-style = "syntax #012800"
+    minus-style = "syntax #340001"
+    syntax-theme = Monokai Extended
+    inspect-raw-lines = false
+    line-numbers = true
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul
+    file-decoration-style = none
+    hunk-header-decoration-style = yellow box
 [commit]
     gpgsign = true
 [gpg]
