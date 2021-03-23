@@ -53,22 +53,30 @@ endif
 " let g:airline_theme='one'
 
 " Xcode theme
-colorscheme xcodedark
-let g:signify_sign_add    = '┃'
-let g:signify_sign_change = '┃'
-let g:signify_sign_delete = '•'
-let g:signify_sign_show_count = 0 " Don’t show the number of deleted lines.
+" colorscheme xcodedark
+" let g:signify_sign_add    = '┃'
+" let g:signify_sign_change = '┃'
+" let g:signify_sign_delete = '•'
+" let g:signify_sign_show_count = 0 " Don’t show the number of deleted lines.
 
-let g:xcodedark_emph_types = 1
-let g:xcodedark_emph_funcs = 1
-let g:xcodedark_match_paren_style = 1
+" let g:xcodedark_emph_types = 1
+" let g:xcodedark_emph_funcs = 1
+" let g:xcodedark_match_paren_style = 1
 
-augroup vim-colors-xcode
-  autocmd!
-augroup END
+" augroup vim-colors-xcode
+"   autocmd!
+" augroup END
 
-autocmd vim-colors-xcode ColorScheme * hi Comment        cterm=italic gui=italic
-autocmd vim-colors-xcode ColorScheme * hi SpecialComment cterm=italic gui=italic
+" autocmd vim-colors-xcode ColorScheme * hi Comment        cterm=italic gui=italic
+" autocmd vim-colors-xcode ColorScheme * hi SpecialComment cterm=italic gui=italic
+
+" GitHub theme
+let g:github_colors_soft = 1            " use a slightly darker background, like GitHub inline code blocks
+let g:github_colors_block_diffmark = 0  " more blocky diff markers in signcolumn (e.g. GitGutter)
+set background=dark
+colorscheme github
+let g:airline_theme = "github"
+let g:lightline = { 'colorscheme': 'github' }
 
 " Vim Airline
 let g:airline_powerline_fonts=1
