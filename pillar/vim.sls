@@ -21,6 +21,9 @@ vim:
     devicons:
       url: https://github.com/ryanoasis/vim-devicons.git
       dir: start
+    fugitive:
+      url: https://github.com/tpope/vim-fugitive.git
+      dir: start
     fzf:
       url: https://github.com/junegunn/fzf.vim.git
       dir: start
