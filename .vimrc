@@ -41,42 +41,14 @@ endif
 "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
 " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
 if (has("termguicolors"))
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
 
-" One theme
-" packadd! one
-" set background=dark
-" " Fix: https://github.com/joshdick/onedark.vim/issues/97#issuecomment-299719352
-" let g:one_allow_italics=1
-" colorscheme one
-" let g:airline_theme='one'
-
-" Xcode theme
-" colorscheme xcodedark
-" let g:signify_sign_add    = '┃'
-" let g:signify_sign_change = '┃'
-" let g:signify_sign_delete = '•'
-" let g:signify_sign_show_count = 0 " Don’t show the number of deleted lines.
-
-" let g:xcodedark_emph_types = 1
-" let g:xcodedark_emph_funcs = 1
-" let g:xcodedark_match_paren_style = 1
-
-" augroup vim-colors-xcode
-"   autocmd!
-" augroup END
-
-" autocmd vim-colors-xcode ColorScheme * hi Comment        cterm=italic gui=italic
-" autocmd vim-colors-xcode ColorScheme * hi SpecialComment cterm=italic gui=italic
-
-" GitHub theme
-let g:github_colors_soft = 1            " use a slightly darker background, like GitHub inline code blocks
-let g:github_colors_block_diffmark = 0  " more blocky diff markers in signcolumn (e.g. GitGutter)
-set background=dark
-colorscheme github
-let g:airline_theme = "github"
-let g:lightline = { 'colorscheme': 'github' }
+" Spaceduck theme
+colorscheme spaceduck
+let g:airline_theme = 'spaceduck'
 
 " Vim Airline
 let g:airline_powerline_fonts=1
@@ -126,30 +98,13 @@ set guioptions-=r  "remove right-hand scroll bar
 set rtp+=$HOMEBREW_PREFIX/opt/fzf
 map ; :Files<CR>
 
-" Multiple Cursos
-" http://vimawesome.com/plugin/vim-multiple-cursors
-let g:multi_cursor_use_default_mapping=0
-
-" Default mapping
-let g:multi_cursor_next_key='<C-n>'
-let g:multi_cursor_prev_key='<C-p>'
-let g:multi_cursor_skip_key='<C-x>'
-let g:multi_cursor_quit_key='<Esc>'
-
-" C Language
-let g:C_UseTool_cmake='yes'
-let g:C_UseTool_doxygen='yes'
-
 if !has('nvim')
   set ttymouse=xterm2
 endif
 
 " Functions
-" JSON Formatter
-com! FormatJSON %!python -m json.tool
 
 " ALE Linter - https://github.com/w0rp/ale
-
 " Enable completion where available
 let g:ale_completion_enabled=1
 

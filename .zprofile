@@ -57,14 +57,14 @@ export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=140
 # GPG key
 export GPG_TTY=$(tty)
 
-if [[ -n $SSH_CONNECTION ]]; then
-  # Preferred editor for remote sessions
-  export EDITOR='vim'
+# Preferred editor
+export EDITOR='nvim'
 
+if [[ -n $SSH_CONNECTION ]]; then
   # Autostart tmux session in remote session
   export ZSH_TMUX_AUTOSTART=true
 else
   # Preferred editor for local sessions
-  export EDITOR='mvim --remote-wait-silent'
-  export HOMEBREW_EDITOR='mvim --remote-silent'
+  # export EDITOR='mvim --remote-wait-silent'
+  # export HOMEBREW_EDITOR='mvim --remote-silent'
 fi

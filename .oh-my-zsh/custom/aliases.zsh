@@ -15,5 +15,5 @@ fi
 # Trash
 type trash &>/dev/null && alias rm='trash'
 
-# VIM
-alias vi='vim'
+# NeoVim
+alias vi='nvim'
