@@ -17,3 +17,4 @@ type trash &>/dev/null && alias rm='trash'
 
 # NeoVim
 alias vi='nvim'
+alias gvi='vimr'
