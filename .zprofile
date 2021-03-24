@@ -65,6 +65,6 @@ if [[ -n $SSH_CONNECTION ]]; then
   export ZSH_TMUX_AUTOSTART=true
 else
   # Preferred editor for local sessions
-  # export EDITOR='mvim --remote-wait-silent'
-  # export HOMEBREW_EDITOR='mvim --remote-silent'
+  export EDITOR='vimr --wait'
+  export HOMEBREW_EDITOR='vimr'
 fi
