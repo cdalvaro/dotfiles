@@ -1,52 +1,62 @@
-" VIM Settings
+" NeoVim settings
 
-syntax on " Enable syntax highlight
+" NeoVim specific settings
+if (has('nvim'))
 
-"set mouse=a   " Enable mouse click
-nnoremap <silent> <2-LeftMouse> :let @/='\V\<'.escape(expand('<cword>'), '\').'\>'<cr>:set hls<cr>
-
-filetype plugin indent on " Enable file type specific indentation
-
-set expandtab     " Use spaces instead of tabs when indenting
-set number        " line number
-set shiftwidth=4  " Indent by 4 spaces
-set tabstop=4     " Hard tab stop
-set softtabstop=4 " Soft tab stop
-
-set magic          " Allow special characters in regex patterns
-set smarttab       " Use smart tabulation
-filetype indent on " Enable indentation based on filetype
-
-set incsearch  " Incrementally highlight search pattern as it is updated
-set hlsearch   " Highlight search matches after entering search pattern
-
-" Unhighlight selected word
-nnoremap <C-h> :nohlsearch<CR>
-
-set ignorecase " Use case insensitive search pattern matching by default
-set smartcase  " Override 'ignorecase' setting if search pattern contains uppercase characters
-set showcmd    " Show status line
-
-" Change swap and backup directories
-set backupdir=$HOME/.vim,/tmp,.
-set directory=$HOME/.vim,/tmp,.
-
-" TrueColors
-if (has("nvim"))
-  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 endif
 
-"For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
-"Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
-" < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+" Clipboard settings
+set clipboard=unnamedplus
+
+" TrueColors
 if (has("termguicolors"))
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
 
-" Spaceduck theme
+" Python provider
+if (has("nvim"))
+  let g:loaded_python_provider=0
+  let g:python3_host_prog="$HOMEBREW_PREFIX/bin/python3"
+endif
+
+" General settings
+syntax on           " Enable syntax highlight
+set expandtab       " Use spaces instead of tabs when indenting
+set number          " line number
+
+filetype indent on  " Enable file type specific indentation
+set shiftwidth=4    " Indent by 4 spaces
+set tabstop=4       " Hard tab stop
+set softtabstop=4   " Soft tab stop
+
+set magic           " Allow special characters in regex patterns
+set smarttab        " Use smart tabulation
+
+set incsearch       " Incrementally highlight search pattern as it is updated
+set hlsearch        " Highlight search matches after entering search pattern
+set ignorecase      " Use case insensitive search pattern matching by default
+set smartcase       " Override 'ignorecase' setting if search pattern contains uppercase characters
+set showcmd         " Show status line
+
+nnoremap <C-h> :nohlsearch<CR> " Unhighlight selected word
+
+" Change swap and backup directories
+set backupdir=$HOME/.vim,/tmp,.
+set directory=$HOME/.vim,/tmp,.
+
+" Solve problems related with backspace and delete keys
+" https://vim.fandom.com/wiki/Backspace_and_delete_problems
+set backspace=indent,eol,start
+
+"set mouse=a   " Enable mouse click
+nnoremap <silent> <2-LeftMouse> :let @/='\V\<'.escape(expand('<cword>'), '\').'\>'<cr>:set hls<cr>
+
+" Hide scroll bar
+set guioptions-=r  "remove right-hand scroll bar
+
+" Theme settings
 colorscheme spaceduck
 let g:airline_theme = 'spaceduck'
 
@@ -59,17 +69,6 @@ set laststatus=2
 autocmd User SignifySetup
   \ execute 'autocmd! signify' |
   \ autocmd signify TextChanged,TextChangedI * call sy#start()
-
-" Clipboard settings
-if (has("mac"))
-  set clipboard=unnamed "OSX
-else
-  set clipboard=unnamedplus "Linux
-endif
-
-" Solve problems related with backspace and delete keys
-" https://vim.fandom.com/wiki/Backspace_and_delete_problems
-set backspace=indent,eol,start
 
 " Navegacion de ventanas
 set swb=usetab
@@ -91,37 +90,43 @@ nnoremap <A-7> 7gt
 nnoremap <A-8> 8gt
 nnoremap <A-9> 9gt
 
-" Hide scroll bar
-set guioptions-=r  "remove right-hand scroll bar
-
 " fzf integration
 set rtp+=$HOMEBREW_PREFIX/opt/fzf
 map ; :Files<CR>
 
-if !has('nvim')
-  set ttymouse=xterm2
-endif
+" Clang-format
+map <silent> <C-S-f> :py3f $HOMEBREW_PREFIX/opt/clang-format/share/clang/clang-format.py<cr>
+imap <silent> <C-S-f> <c-o>:py3f $HOMEBREW_PREFIX/opt/clang-format/share/clang/clang-format.py<cr>
 
-" Functions
+function! ClangFormat()
+  let l:formatdiff=1
+  py3f $HOMEBREW_PREFIX/opt/clang-format/share/clang/clang-format.py
+endfunction
+autocmd BufWritePre *.h,*.hpp,*.c,*.cc,*.cpp call ClangFormat()
 
-" ALE Linter - https://github.com/w0rp/ale
+" ALE linter - https://github.com/w0rp/ale
 " Enable completion where available
 let g:ale_completion_enabled=1
+let g:ale_completion_autoimport=1
 
-" Set this. Airline will handle the rest
+let g:ale_sign_error = '🛑'
+let g:ale_sign_warning = '⚠️'
+
+" Show errors or warnings in my statusline
 let g:airline#extensions#ale#enabled=1
 
-" MuComplete
-let g:mucomplete#enable_auto_at_startup=1
+" Navigate between errors
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
-set completeopt+=menuone
-set completeopt+=noselect
-set completeopt+=noinsert
+" MuComplete
+" https://github.com/lifepillar/vim-mucomplete
+set completeopt+=menuone,noselect
 set shortmess+=c   " Shut off completion messages
 set belloff+=ctrlg " If Vim beeps during completion
 
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
+let g:mucomplete#enable_auto_at_startup=1
+let g:mucomplete#completion_delay = 1
 
 " Put these lines at the very end of your vimrc file
 
