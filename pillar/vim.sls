@@ -49,6 +49,9 @@ vim:
     salt:
       url: https://github.com/saltstack/salt-vim.git
       dir: start
+    spaceduck:
+      url: https://github.com/pineapplegiant/spaceduck.git
+      dir: start
     startify:
       url: https://github.com/mhinz/vim-startify.git
       dir: start
