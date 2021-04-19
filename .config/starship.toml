@@ -10,11 +10,9 @@ $git_status\
 $docker_context\
 $cmake\
 $python\
+$ruby\
 $swift\
-$memory_usage\
-$custom\
 $line_break\
-$jobs\
 $status\
 $character"""
 
@@ -26,10 +24,14 @@ error_symbol = "[􀦮](bold fg:#AC1B2E) "
 truncation_length = 3
 fish_style_pwd_dir_length = 1
 format = "[$read_only]($read_only_style)[$path]($style) "
-style = "bold fg:#00AAD1"
+style = "bold fg:blue"
 read_only = "􀎡 "
-read_only_style = "fg:#EE8738"
+read_only_style = "fg:magenta"
 truncation_symbol = "…/"
+
+[docker_context]
+symbol = "\ue7b0"
+style = "bold fg:#2496ED"
 
 [git_branch]
 symbol = "\uf418 "
@@ -41,11 +43,15 @@ tag_disabled = false
 
 [git_status]
 stashed = "\uf487"
-style = "bold fg:#FCA121"
+style = "bold fg:yellow"
 
 [python]
 symbol = "\ue73c "
 style = "bold fg:#3776AB"
+
+[ruby]
+symbol = "\ue739 "
+style = "bold fg:#CC342D"
 
 [swift]
 symbol = "\ue755 "
