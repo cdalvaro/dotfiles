@@ -57,7 +57,7 @@ nnoremap <silent> <2-LeftMouse> :let @/='\V\<'.escape(expand('<cword>'), '\').'\
 set guioptions-=r  "remove right-hand scroll bar
 
 " Theme settings
-colorscheme spaceduck
+colorscheme rose-pine-dark
 let g:airline_theme = 'spaceduck'
 
 " Vim Airline
@@ -109,8 +109,20 @@ autocmd BufWritePre *.h,*.hpp,*.c,*.cc,*.cpp call ClangFormat()
 let g:ale_completion_enabled=1
 let g:ale_completion_autoimport=1
 
-let g:ale_sign_error = '🛑'
+let g:ale_sign_error = '❌'
 let g:ale_sign_warning = '⚠️'
+
+let g:ale_fix_on_save = 1
+let g:ale_linters_explicit = 1
+
+let g:ale_linters = {
+\   'ruby': ['rubocop'],
+\}
+
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'ruby': ['rubocop']
+\}
 
 " Show errors or warnings in my statusline
 let g:airline#extensions#ale#enabled=1
