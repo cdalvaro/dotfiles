@@ -42,6 +42,9 @@ vim:
     polyglot:
       url: https://github.com/sheerun/vim-polyglot.git
       dir: start
+    rose-pine:
+      url: https://github.com/iandwelker/rose-pine-vim.git
+      dir: start
     # This plugin is loaded through vim-polyglot
     # ruby:
     #   url: https://github.com/vim-ruby/vim-ruby.git
