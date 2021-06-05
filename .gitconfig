@@ -3,7 +3,7 @@
     email = {{ pillar.git.user_email }}
     signingkey = {{ pillar.git.user_signingkey }}
 [core]
-    editor = $EDITOR
+    editor = $GIT_EDITOR
     excludesfile = ~/.gitignore
     pager = delta
 [merge]

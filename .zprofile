@@ -57,8 +57,9 @@ export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=140
 # GPG key
 export GPG_TTY=$(tty)
 
-# Preferred editor
+# Preferred editors
 export EDITOR='nvim'
+export GIT_EDITOR='nvim'
 
 if [[ -n $SSH_CONNECTION ]]; then
   # Autostart tmux session in remote session
