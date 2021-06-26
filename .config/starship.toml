@@ -29,10 +29,6 @@ read_only = "􀎡 "
 read_only_style = "fg:magenta"
 truncation_symbol = "…/"
 
-[docker_context]
-symbol = "\ue7b0"
-style = "bold fg:#2496ED"
-
 [git_branch]
 symbol = "\uf418 "
 style = "bold fg:#F05032"
