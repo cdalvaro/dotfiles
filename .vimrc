@@ -57,8 +57,14 @@ nnoremap <silent> <2-LeftMouse> :let @/='\V\<'.escape(expand('<cword>'), '\').'\
 set guioptions-=r  "remove right-hand scroll bar
 
 " Theme settings
-colorscheme spaceduck
-let g:airline_theme = 'spaceduck'
+colorscheme nord
+let g:airline_theme = 'nord'
+let g:nord_cursor_line_number_background = 1
+let g:nord_uniform_diff_background = 1
+let g:nord_bold = 1
+let g:nord_italic = 1
+let g:nord_italic_comments = 1
+let g:nord_underline = 1
 
 " Vim Airline
 let g:airline_powerline_fonts=1

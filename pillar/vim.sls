@@ -36,9 +36,9 @@ vim:
     mucomplete:
       url: https://github.com/lifepillar/vim-mucomplete.git
       dir: start
-    one:
-      url: https://github.com/rakr/vim-one.git
-      dir: opt
+    nord:
+      url: https://github.com/arcticicestudio/nord-vim.git
+      dir: start
     polyglot:
       url: https://github.com/sheerun/vim-polyglot.git
       dir: start
