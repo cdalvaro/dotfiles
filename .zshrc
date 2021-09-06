@@ -66,3 +66,7 @@ zstyle ':completion:*' menu select=2
 # Starship prompt
 # https://starship.rs/config/
 eval $(starship init zsh)
+
+# Load dir colors
+# https://www.nordtheme.com/docs/ports/dircolors
+test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
