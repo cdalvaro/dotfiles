@@ -69,6 +69,3 @@ else
   export EDITOR='vimr --wait'
   export HOMEBREW_EDITOR='vimr'
 fi
-
-# Bat settings
-export BAT_THEME='Nord'
