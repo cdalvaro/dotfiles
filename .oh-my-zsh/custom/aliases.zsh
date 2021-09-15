@@ -1,9 +1,6 @@
 #!/usr/bin/env zsh
 
 # List directories
-alias ls='ls -G'
-export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
-
 if type exa &>/dev/null; then
   # https://the.exa.website
   export EXA_STRICT=true
