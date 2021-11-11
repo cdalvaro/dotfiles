@@ -32,7 +32,7 @@ forgit_checkout_branch=fgcb
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(
   brew colored-man-pages docker docker-compose
-  fasd fd fzf git forgit osx ripgrep
+  fasd fd fzf git forgit macos ripgrep
   salt thefuck tmux xcode extract
 )
 
