@@ -52,6 +52,7 @@
     insteadOf = github:
 [pull]
     rebase = true
+    autoStash = true
 [help]
     # Automatically correct and execute mistyped commands
     autocorrect = 1
