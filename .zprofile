@@ -50,6 +50,9 @@ export DISABLE_FZF_KEY_BINDINGS=false
 # https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md#configuration-file
 export RIPGREP_CONFIG_PATH="${HOME}/.ripgreprc"
 
+# bat settings
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
 # zsh-autosuggestions settings
 export ZSH_AUTOSUGGEST_USE_ASYNC=true
 export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=140
