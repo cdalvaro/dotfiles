@@ -2,8 +2,8 @@ fonts:
   size: 12.0
   style: Regular
   normal:
-    family: PragmataPro Liga
-    postscript: PragmataProLiga
+    family: SF Mono
+    postscript: SFMono
   nerd:
-    family: PragmataPro Liga
-    postscript: PragmataProLiga
+    family: SFMono Nerd Font Mono
+    postscript: SFMonoNerdFontCompleteM
