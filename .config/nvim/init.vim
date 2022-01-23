@@ -61,6 +61,9 @@ nnoremap <silent> <2-LeftMouse> :let @/='\V\<'.escape(expand('<cword>'), '\').'\
 " Hide scroll bar
 set guioptions-=r  "remove right-hand scroll bar
 
+" Restore terminal cursor with vertical line
+autocmd VimLeave * set guicursor=a:ver25
+
 " Theme settings
 colorscheme nord
 let g:airline_theme = 'nord'
