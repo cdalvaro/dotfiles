@@ -49,7 +49,6 @@ vim:
     startify:
       url: https://github.com/mhinz/vim-startify.git
       dir: plugins/start
-    # Requires nvim nightly
-    # treesitter:
-    #   url: https://github.com/nvim-treesitter/nvim-treesitter.git
-    #   dir: plugins/start
+    treesitter:
+      url: https://github.com/nvim-treesitter/nvim-treesitter.git
+      dir: plugins/start
