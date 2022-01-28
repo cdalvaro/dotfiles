@@ -9,6 +9,9 @@ vim:
     brew:
       url: https://github.com/xu-cheng/brew.vim.git
       dir: syntax/start
+    copy-as-rtf:
+      url: https://github.com/zerowidth/vim-copy-as-rtf.git
+      dir: plugins/start
     github:
       url: https://github.com/cormacrelf/vim-colors-github.git
       dir: colors/start
