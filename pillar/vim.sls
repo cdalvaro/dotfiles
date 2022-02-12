@@ -1,8 +1,5 @@
 vim:
   packages:
-    airline:
-      url: https://github.com/vim-airline/vim-airline.git
-      dir: plugins/start
     ale:
       url: https://github.com/w0rp/ale.git
       dir: plugins/start
@@ -32,6 +29,9 @@ vim:
       dir: plugins/start
     gitgutter:
       url: https://github.com/airblade/vim-gitgutter.git
+      dir: plugins/start
+    lualine:
+      url: https://github.com/nvim-lualine/lualine.nvim.git
       dir: plugins/start
     nord:
       url: https://github.com/arcticicestudio/nord-vim.git
