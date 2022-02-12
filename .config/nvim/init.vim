@@ -65,17 +65,16 @@ set guioptions-=r  "remove right-hand scroll bar
 autocmd VimLeave * set guicursor=a:ver25
 
 " Theme settings
-colorscheme nord
-let g:airline_theme = 'nord'
-let g:nord_cursor_line_number_background = 1
-let g:nord_uniform_diff_background = 1
-let g:nord_bold = 1
-let g:nord_italic = 1
-let g:nord_italic_comments = 1
-let g:nord_underline = 1
+let g:github_theme_style = 'dimmed'
+colorscheme github_dimmed
+lua << EOF
+require('lualine').setup {
+  options = {
+    theme = 'github_dimmed'
+  }
+}
+EOF
 
-" Vim Airline
-let g:airline_powerline_fonts=1
 set encoding=utf8
 set laststatus=2
 
