@@ -67,10 +67,12 @@ autocmd VimLeave * set guicursor=a:ver25
 " Theme settings
 let g:github_theme_style = 'dimmed'
 colorscheme github_dimmed
+
+" Lualine settings
 lua << EOF
 require('lualine').setup {
   options = {
-    theme = 'github_dimmed'
+    theme = 'github'
   }
 }
 EOF
