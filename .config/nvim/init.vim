@@ -66,6 +66,7 @@ autocmd VimLeave * set guicursor=a:ver25
 
 " Theme settings
 let g:github_theme_style = 'dimmed'
+let g:github_transparent = 'true'
 colorscheme github_dimmed
 
 " Lualine settings
