@@ -12,8 +12,8 @@ vim:
     copy-as-rtf:
       url: https://github.com/zerowidth/vim-copy-as-rtf.git
       dir: plugins/start
-    github:
-      url: https://github.com/cormacrelf/vim-colors-github.git
+    github-theme:
+      url: https://github.com/projekt0n/github-nvim-theme.git
       dir: colors/start
     xcode:
       url: https://github.com/arzg/vim-colors-xcode.git
