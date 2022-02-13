@@ -9,6 +9,9 @@ vim:
     copy-as-rtf:
       url: https://github.com/zerowidth/vim-copy-as-rtf.git
       dir: plugins/start
+    github-copilot:
+      url: https://github.com/github/copilot.vim.git
+      dir: plugins/start
     github-theme:
       url: https://github.com/projekt0n/github-nvim-theme.git
       dir: colors/start
