@@ -15,7 +15,3 @@ dotfiles files present:
     - template: jinja
     - exclude_pat: E@(README.md|settings/|pillar/)
 ```
-
-Also, other files may begins with `{% raw %}` and ends with `{% endraw %}`.
-
-Thouse [escape sequences](https://jinja.palletsprojects.com/en/master/templates/#escaping) are interpreted by the Jinja engine in order to avoid replacing content between these two markers. (That is the case for `.p10k.zsh` file)
