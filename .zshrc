@@ -33,7 +33,7 @@ forgit_checkout_branch=fgcb
 plugins=(
   brew colored-man-pages docker docker-compose
   fasd fd fzf git forgit macos ripgrep
-  salt thefuck tmux xcode extract
+  salt thefuck tmux xcode extract you-should-use
 )
 
 source $ZSH/oh-my-zsh.sh
