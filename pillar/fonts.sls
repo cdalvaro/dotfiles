@@ -2,8 +2,8 @@ fonts:
   size: 12.0
   style: Regular
   normal:
-    family: SF Mono
-    postscript: SFMono
+    family: JetBrains Mono
+    postscript: JetBrainsMono
   nerd:
-    family: SFMono Nerd Font Mono
-    postscript: SFMonoNerdFontCompleteM
+    family: JetBrainsMono Nerd Font Mono
+    postscript: JetBrainsMonoNerdFontCompleteM
