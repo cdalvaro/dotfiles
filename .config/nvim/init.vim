@@ -72,7 +72,7 @@ colorscheme github_dimmed
 lua << EOF
 require('lualine').setup {
   options = {
-    theme = 'github'
+    theme = 'github_dimmed'
   }
 }
 EOF
