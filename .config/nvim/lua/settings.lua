@@ -3,10 +3,10 @@
 local cmd = vim.cmd
 local fn = vim.fn
 
-local u = require('utils')
+local utils = require('utils')
 
 -- filetype
-u.create_augroup({
+utils.create_augroup({
   { 'BufNewFile,BufRead', 'Rexfile', 'set', 'filetype=perl' },
   { 'BufNewFile,BufRead', '*sls', 'set', 'filetype=yaml' }
 }, 'filetype')

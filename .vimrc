@@ -1,9 +1,4 @@
-" NeoVim settings
-
-" NeoVim specific settings
-if (has('nvim'))
-
-endif
+" Vim settings
 
 " Clipboard settings
 if (has("mac"))
@@ -17,12 +12,6 @@ if (has("termguicolors"))
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
-endif
-
-" Python provider
-if (has("nvim"))
-  let g:loaded_python_provider=0
-  let g:python3_host_prog="$HOMEBREW_PREFIX/bin/python3"
 endif
 
 " General settings
