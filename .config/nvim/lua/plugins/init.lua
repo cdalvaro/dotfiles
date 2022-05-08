@@ -59,6 +59,10 @@ return packer.startup {
       'davidgranstrom/nvim-markdown-preview',
       config = 'require "plugins.config.markdown-preview"'
     }
+    use { -- Vim plugin for clang-format
+      'rhysd/vim-clang-format',
+      config = 'require "plugins.config.clang-format"'
+    }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

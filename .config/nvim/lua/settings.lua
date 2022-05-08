@@ -1,15 +1,6 @@
 -- Help: https://github.com/nanotee/nvim-lua-guide
 
-local cmd = vim.cmd
 local fn = vim.fn
-
-local utils = require('utils')
-
--- filetype
-utils.create_augroup({
-  { 'BufNewFile,BufRead', 'Rexfile', 'set', 'filetype=perl' },
-  { 'BufNewFile,BufRead', '*sls', 'set', 'filetype=sls' }
-}, 'filetype')
 
 -- Python provider
 vim.g.loaded_python_provider = 0
@@ -23,15 +14,16 @@ else
 end
 
 -- Global settings
+vim.o.backupdir = '/tmp'      -- Backup directory
+vim.o.hlsearch = true         -- Highlight search matches after entering search pattern
 vim.o.ignorecase = true       -- Use case insensitive search pattern matching by default
 vim.o.incsearch = true        -- Incrementally highlight search pattern as it is updated
 vim.o.laststatus = 2          -- Always show the status bar
-vim.o.smartcase = true        -- Override 'ignorecase' setting if search pattern contains uppercase characters
 vim.o.magic = true            -- Allow special characters in regex patterns
+vim.o.showcmd = true          -- Show status line
+vim.o.smartcase = true        -- Override 'ignorecase' setting if search pattern contains uppercase characters
 vim.o.termguicolors = true    -- Enable truecolors
-
-vim.o.hlsearch = true
-vim.o.scrolloff = 12
+vim.o.scrolloff = 12          -- Scrolling offset
 
 -- make backspace work like most other programs
 -- https://vim.fandom.com/wiki/Backspace_and_delete_problems
