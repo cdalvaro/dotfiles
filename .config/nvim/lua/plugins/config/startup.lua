@@ -3,4 +3,6 @@ if not ok then
   return
 end
 
-startup.setup()
+startup.setup {
+
+}

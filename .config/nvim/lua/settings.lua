@@ -8,7 +8,7 @@ local utils = require('utils')
 -- filetype
 utils.create_augroup({
   { 'BufNewFile,BufRead', 'Rexfile', 'set', 'filetype=perl' },
-  { 'BufNewFile,BufRead', '*sls', 'set', 'filetype=yaml' }
+  { 'BufNewFile,BufRead', '*sls', 'set', 'filetype=sls' }
 }, 'filetype')
 
 -- Python provider
