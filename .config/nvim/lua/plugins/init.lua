@@ -63,6 +63,10 @@ return packer.startup {
       'rhysd/vim-clang-format',
       config = 'require "plugins.config.clang-format"'
     }
+    use { -- Neovim plugin that displays decorated scrollbars
+      'lewis6991/satellite.nvim',
+      config = 'require "plugins.config.satellite"'
+    }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
