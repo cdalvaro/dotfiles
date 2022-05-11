@@ -1,4 +1,3 @@
 base:
   '*':
-    - fonts
-    - vim
+    - .fonts
