@@ -27,7 +27,7 @@ vim.o.scrolloff = 12          -- Scrolling offset
 
 -- make backspace work like most other programs
 -- https://vim.fandom.com/wiki/Backspace_and_delete_problems
-vim.o.backspace = 2
+vim.o.backspace = 'indent,eol,start'
 
 -- tabs
 vim.o.shiftwidth = 2          -- Indent by 2 spaces
