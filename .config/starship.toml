@@ -26,7 +26,7 @@ fish_style_pwd_dir_length = 1
 format = "[$read_only]($read_only_style)[$path]($style) "
 style = "bold fg:blue"
 read_only = "􀎡 "
-read_only_style = "fg:magenta"
+read_only_style = "fg:#F69F37"
 truncation_symbol = "…/"
 
 [git_branch]
