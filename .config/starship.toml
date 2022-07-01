@@ -1,6 +1,6 @@
 format = """
-$username\
-$hostname\
+${custom.mac_user}\
+${custom.mac_model}\
 $shlvl\
 $directory\
 $git_branch\
@@ -17,8 +17,8 @@ $status\
 $character"""
 
 [character]
-success_symbol = "[􀦱](bold fg:#999999) "
-error_symbol = "[􀦮](bold fg:#AC1B2E) "
+success_symbol = "[􀆔](bold fg:#CDCED0) "
+error_symbol = "[􀆔](bold fg:#EC3D50) "
 
 [directory]
 truncation_length = 3
@@ -52,3 +52,18 @@ style = "bold fg:#CC342D"
 [swift]
 symbol = "\ue755 "
 style = "bold fg:#FA7343"
+
+[custom.mac_user]
+description = "Show the shortname of the user"
+command = "id -F | awk '{print $1}'"
+style = "bold fg:#F6C05E"
+format = "[$output]($style) on "
+when = true
+
+[custom.mac_model]
+description = "Show the model of the Mac"
+command = "/usr/local/sbin/starship-mac-model"
+os = "macos"
+style = "bold fg:#CDCED0"
+format = "[$output]($style) in "
+when = true
