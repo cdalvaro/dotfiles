@@ -5,6 +5,17 @@ return packer.startup {
   function()
     use { 'wbthomason/packer.nvim' } -- Let packer manage itself
 
+    -- Theme
+    use { -- Catppuccin theme
+      'catppuccin/nvim',
+      as = 'catppuccin',
+      config = 'require "plugins.config.catppuccin"'
+    }
+    --use { -- Github theme for Neovim and Terminals written in Lua
+    --  'projekt0n/github-nvim-theme',
+    --  config = 'require "plugins.config.github-theme"'
+    --}
+
     use { 'nvim-lua/popup.nvim' } -- An implementation of the Popup API from vim in Neovim
     use { 'nvim-lua/plenary.nvim' } -- Useful lua functions used ny lots of plugins
     use { -- Fuzzy finder
@@ -31,10 +42,6 @@ return packer.startup {
     use { 'xu-cheng/brew.vim' } -- Vim Syntax for Homebrew formulae
     use { 'kyazdani42/nvim-web-devicons' } -- nvim Devicons
     use { 'github/copilot.vim' } -- GitHub Copilot
-    use { -- Github theme for Neovim and Terminals written in Lua
-      'projekt0n/github-nvim-theme',
-      config = 'require "plugins.config.github-theme"'
-    }
     use { -- A blazing fast and easy to configure neovim statusline plugin written in pure lua.
       'nvim-lualine/lualine.nvim',
       requires = { 'projekt0n/github-nvim-theme' },
@@ -63,10 +70,11 @@ return packer.startup {
       'rhysd/vim-clang-format',
       config = 'require "plugins.config.clang-format"'
     }
-    use { -- Neovim plugin that displays decorated scrollbars
-      'lewis6991/satellite.nvim',
-      config = 'require "plugins.config.satellite"'
-    }
+    -- FIXME: Currently broken
+    --use { -- Neovim plugin that displays decorated scrollbars
+    --  'lewis6991/satellite.nvim',
+    --  config = 'require "plugins.config.satellite"'
+    --}
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

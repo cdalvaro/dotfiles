@@ -7,7 +7,7 @@ end
 
 lualine.setup {
   options = {
-    theme = 'github_dimmed',
+    theme = 'catppuccin',
     globalstatus = true,
   }
 }
