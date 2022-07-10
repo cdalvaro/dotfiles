@@ -21,12 +21,16 @@ export PATH="$(gem env gemdir)/bin:$PATH"
 export DISABLE_MAGIC_FUNCTIONS=true
 
 # Fuzzy settings
+# Colors from: https://github.com/catppuccin/fzf/blob/main/mocha.md
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS=(
     --ansi --height 90% --layout=reverse --border --inline-info
     '--preview="_fzf_preview {} 2> /dev/null"'
     --bind ctrl-j:preview-page-down --bind ctrl-k:preview-page-up
     --bind ctrl-p:toggle-preview
+    --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8
+    --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc
+    --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8
 )
 
 # Use fd (https://github.com/sharkdp/fd) instead of the default find
