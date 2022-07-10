@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # Uncomment this line for profiling
 # After having load .zshrc execute: zprof
 # More info at: https://blog.mattclemente.com/2020/06/26/oh-my-zsh-slow-to-load.html
@@ -36,28 +38,28 @@ plugins=(
   salt thefuck tmux xcode extract you-should-use
 )
 
-source $ZSH/oh-my-zsh.sh
+source "${ZSH}"/oh-my-zsh.sh
 
 # iTerm 2 integration
 test "${TERM_PROGRAM}" = "iTerm.app" && \
-  test -f ${HOME}/.iterm2_shell_integration.zsh && \
-  source ${HOME}/.iterm2_shell_integration.zsh
+  check_and_source_file "${HOME}"/.iterm2_shell_integration.zsh
 
 # Completions
 if [[ -v HOMEBREW_PREFIX ]]; then
   # zsh completions
-  FPATH=${HOMEBREW_PREFIX}/share/zsh-completions:$FPATH
+  FPATH="${HOMEBREW_PREFIX}"/share/zsh-completions:$FPATH
   autoload -Uz compinit
   compinit -i
 
   # zsh autosuggestions
   export ZSH_AUTOSUGGEST_USE_ASYNC=true
-  test -f ${HOMEBREW_PREFIX}/share/zsh-autosuggestions/zsh-autosuggestions.zsh && \
-    source ${HOMEBREW_PREFIX}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  check_and_source_file "${HOMEBREW_PREFIX}"/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
   # zsh syntax highlighting
-  test -f ${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh && \
-    source ${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  if [ -f "${HOMEBREW_PREFIX}"/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+    check_and_source_file "${ZSH}"/custom/catppuccin-zsh-syntax-highlighting.zsh
+    source "${HOMEBREW_PREFIX}"/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  fi
 fi
 
 # Show completion menu when number of options is at least 2
