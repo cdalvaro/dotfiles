@@ -27,4 +27,4 @@ jobs:
           pepper --client runner --output-file /dev/null fileserver.update
       - name: Apply states
         run: |
-          pepper -C 'G@os:macOS and *.cdalvaro.io' state.apply formulas.cdalvaro.config.home,formulas.cdalvaro.applications.nvim
+          pepper -C 'G@os:macOS and *.cdalvaro.io' state.apply cdalvaro.macOS.config.home,cdalvaro.macOS.applications.nvim
