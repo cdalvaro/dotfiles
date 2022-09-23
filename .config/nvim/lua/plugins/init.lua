@@ -56,11 +56,12 @@ return packer.startup {
       requires = { 'nvim-lua/plenary.nvim' },
       config = 'require "plugins.config.gitsigns"',
     }
-    use { -- A highly configurable neovim startup screen
-      'startup-nvim/startup.nvim',
-      requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
-      config = 'require "plugins.config.startup"'
-    }
+    --use { -- A highly configurable neovim startup screen
+    --  'startup-nvim/startup.nvim',
+    --  requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+    --  config = 'require "plugins.config.startup"'
+    --}
+
     use { 'folke/which-key.nvim' } -- A plugin for Neovim that shows the available keybindings
     use { -- Markdown preview for neovim using pandoc and live-server
       'davidgranstrom/nvim-markdown-preview',
