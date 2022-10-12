@@ -1,61 +1,64 @@
 [user]
-    name = {{ pillar.git.user_name }}
-    email = {{ pillar.git.user_email }}
-    signingkey = {{ pillar.git.user_signingkey }}
+  name = {{ pillar.git.user_name }}
+  email = {{ pillar.git.user_email }}
+  signingkey = {{ pillar.git.user_signingkey }}
 [core]
-    editor = $GIT_EDITOR
-    excludesfile = ~/.gitignore
-    pager = delta
+  editor = $GIT_EDITOR
+  excludesfile = ~/.gitignore
+  pager = delta
 [merge]
-    tool = Kaleidoscope
-    # Include summaries of merged commits in newly created merge commit messages
-    log = true
+  tool = Kaleidoscope
+  # Include summaries of merged commits in newly created merge commit messages
+  log = true
 [mergetool]
-    prompt = false
+  prompt = false
 [mergetool "Kaleidoscope"]
-    cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-    trustExitCode = true
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
 [diff]
-    tool = Kaleidoscope
-    colorMoved = default
+  tool = Kaleidoscope
+  colorMoved = default
 [difftool]
-    prompt = false
+  prompt = false
 [difftool "Kaleidoscope"]
-    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [filter "lfs"]
-    smudge = git-lfs smudge -- %f
-    process = git-lfs filter-process
-    required = true
-    clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
 [delta]
-    plus-style = "syntax #012800"
-    minus-style = "syntax #340001"
-    syntax-theme = Nord
-    inspect-raw-lines = false
-    line-numbers = true
+  plus-style = "syntax #012800"
+  minus-style = "syntax #340001"
+  syntax-theme = Nord
+  inspect-raw-lines = false
+  line-numbers = true
 [delta "decorations"]
-    commit-decoration-style = bold yellow box ul
-    file-style = bold yellow ul
-    file-decoration-style = none
-    hunk-header-decoration-style = yellow box
+  commit-decoration-style = bold yellow box ul
+  file-style = bold yellow ul
+  file-decoration-style = none
+  hunk-header-decoration-style = yellow box
 [commit]
-    gpgsign = true
+  gpgsign = true
 [gpg]
-    # Custom gpg command to sign commits from IDEs such as Xcode, Visual Studio Code ...
-    # https://gist.github.com/cdalvaro/f136792780e4306887daed3d9a64e972
-    program = /usr/local/sbin/gpg-with-key
+  # Custom gpg command to sign commits from IDEs such as Xcode, Visual Studio Code ...
+  # https://gist.github.com/cdalvaro/f136792780e4306887daed3d9a64e972
+  program = /usr/local/sbin/gpg-with-key
 [protocol]
-    version = 2
+  version = 2
 [url "git@{{ pillar.git.gitlab.url }}:"]
-    insteadOf = gitlab:
+  insteadOf = gitlab:
 [url "git@github.com:"]
-    insteadOf = github:
+  insteadOf = github:
 [pull]
-    rebase = true
-    autoStash = true
+  rebase = true
+[rebase]
+  autoStash = true
+[fetch]
+  prune = true
 [help]
-    # Automatically correct and execute mistyped commands
-    autocorrect = 1
+  # Automatically correct and execute mistyped commands
+  autocorrect = 1
 [init]
 	defaultBranch = main
 [push]
