@@ -12,6 +12,10 @@ fi
 # Trash
 type trash &>/dev/null && alias rm='trash'
 
+# The fuck
+alias copon=fuck
+alias ea=fuck
+
 # NeoVim
 alias vi='nvim'
 alias gvi='vimr'
