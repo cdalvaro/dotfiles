@@ -41,7 +41,6 @@ return packer.startup {
     }
     use { 'xu-cheng/brew.vim' } -- Vim Syntax for Homebrew formulae
     use { 'kyazdani42/nvim-web-devicons' } -- nvim Devicons
-    use { 'github/copilot.vim' } -- GitHub Copilot
     use { -- A blazing fast and easy to configure neovim statusline plugin written in pure lua.
       'nvim-lualine/lualine.nvim',
       requires = { 'projekt0n/github-nvim-theme' },
