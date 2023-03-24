@@ -7,7 +7,7 @@ end
 
 local servers = {
     'bashls', 'clangd', 'cmake', 'dockerls',
-    'jsonls', 'sumneko_lua', 'perlnavigator',
+    'jsonls', 'lua_ls', 'perlnavigator',
     'sourcery', 'solargraph', 'salt_ls',
     'sourcekit', 'yamlls'
   }
