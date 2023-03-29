@@ -65,6 +65,9 @@ fi
 # Show completion menu when number of options is at least 2
 zstyle ':completion:*' menu select=2
 
+# Load rbenv
+eval "$(rbenv init - zsh)"
+
 # Starship prompt
 # https://starship.rs/config/
 eval $(starship init zsh)
