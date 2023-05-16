@@ -71,7 +71,3 @@ eval "$(rbenv init - zsh)"
 # Starship prompt
 # https://starship.rs/config/
 eval $(starship init zsh)
-
-# Load dir colors
-# https://www.nordtheme.com/docs/ports/dircolors
-test -r ~/.dir_colors && eval $(gdircolors ~/.dir_colors)
