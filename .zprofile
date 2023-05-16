@@ -74,6 +74,6 @@ if [[ -n $SSH_CONNECTION ]]; then
   export ZSH_TMUX_AUTOSTART=true
 else
   # Preferred editor for local sessions
-  export EDITOR='vimr --wait'
-  export HOMEBREW_EDITOR='vimr'
+  export EDITOR='bbedit --wait'
+  export HOMEBREW_EDITOR='bbedit'
 fi
