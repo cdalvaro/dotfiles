@@ -6,15 +6,19 @@ return packer.startup {
     use { 'wbthomason/packer.nvim' } -- Let packer manage itself
 
     -- Theme
-    use { -- Catppuccin theme
-      'catppuccin/nvim',
-      as = 'catppuccin',
-      config = 'require "plugins.config.catppuccin"'
-    }
+    -- use { -- Catppuccin theme
+    --   'catppuccin/nvim',
+    --   as = 'catppuccin',
+    --   config = 'require "plugins.config.catppuccin"'
+    -- }
     --use { -- Github theme for Neovim and Terminals written in Lua
     --  'projekt0n/github-nvim-theme',
     --  config = 'require "plugins.config.github-theme"'
     --}
+    use {
+      'Mofiqul/dracula.nvim',
+      config = 'require "plugins.config.dracula"'
+    }
 
     use { 'nvim-lua/popup.nvim' } -- An implementation of the Popup API from vim in Neovim
     use { 'nvim-lua/plenary.nvim' } -- Useful lua functions used ny lots of plugins
