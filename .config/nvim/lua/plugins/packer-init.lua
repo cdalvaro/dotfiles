@@ -29,6 +29,7 @@ packer.init {
     clone_timeout = 600,
   },
   auto_clean = true,
+  autoremove = true,
   compile_on_sync = true,
   auto_reload_compiled = true,
   luarocks = {
