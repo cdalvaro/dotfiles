@@ -57,7 +57,7 @@ if [[ -v HOMEBREW_PREFIX ]]; then
 
   # zsh syntax highlighting
   if [ -f "${HOMEBREW_PREFIX}"/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-    check_and_source_file "${ZSH}"/custom/catppuccin-zsh-syntax-highlighting.zsh
+    check_and_source_file "${ZSH}"/custom/dracula-zsh-syntax-highlighting.zsh
     source "${HOMEBREW_PREFIX}"/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   fi
 fi
