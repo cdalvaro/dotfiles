@@ -7,7 +7,7 @@ end
 
 lualine.setup {
   options = {
-    theme = 'catppuccin',
+    theme = 'dracula',
     globalstatus = true,
   }
 }
