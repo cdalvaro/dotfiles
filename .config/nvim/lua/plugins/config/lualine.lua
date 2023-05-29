@@ -7,7 +7,7 @@ end
 
 lualine.setup {
   options = {
-    theme = 'dracula',
+    theme = 'dracula-nvim',
     globalstatus = true,
   }
 }

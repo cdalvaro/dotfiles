@@ -11,3 +11,5 @@ dracula.setup({
   -- set italic comment
   italic_comment = true,
 })
+
+vim.cmd[[colorscheme dracula]]
