@@ -68,6 +68,9 @@ zstyle ':completion:*' menu select=2
 # Load rbenv
 eval "$(rbenv init - zsh)"
 
+# zsh-abbr import aliases
+type abbr > /dev/null && abbr import-aliases
+
 # Starship prompt
 # https://starship.rs/config/
 eval $(starship init zsh)
