@@ -33,9 +33,9 @@ forgit_checkout_branch=fgcb
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(
-  brew colored-man-pages docker docker-compose
-  fasd fd fzf git forgit ripgrep
-  salt thefuck tmux xcode extract you-should-use
+  bbedit colored-man-pages docker extract
+  fasd fd fzf gem gh git git-auto-fetch forgit
+  ripgrep rbenv salt thefuck tmux xcode you-should-use
 )
 
 source "${ZSH}"/oh-my-zsh.sh
