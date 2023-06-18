@@ -68,8 +68,11 @@ zstyle ':completion:*' menu select=2
 # Load rbenv
 eval "$(rbenv init - zsh)"
 
-# zsh-abbr import aliases
-type abbr > /dev/null && abbr import-aliases
+# Load zsh-abbr and import aliases
+if [ -f "${HOMEBREW_PREFIX}"/share/zsh-abbr/zsh-abbr.zsh ]; then
+  source "${HOMEBREW_PREFIX}"/share/zsh-abbr/zsh-abbr.zsh
+  abbr import-aliases
+fi
 
 # Starship prompt
 # https://starship.rs/config/
