@@ -11,7 +11,6 @@ else
   HOMEBREW_PREFIX=/usr/local
 fi
 
-export HOMEBREW_NO_GOOGLE_ANALYTICS=true
 eval $(${HOMEBREW_PREFIX}/bin/brew shellenv)
 
 # Ruby settings
