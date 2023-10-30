@@ -5,7 +5,7 @@ function _fzf_preview() {
   local file="$1"
   case "$(file --brief --mime $file)" in
     inode/directory*)
-      exa --long --header --group --modified --git \
+      eza --long --header --group --modified --git \
         --color=always --color-scale "$file"
       ;;
     *charset=binary)
