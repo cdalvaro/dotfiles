@@ -34,7 +34,7 @@ forgit_checkout_branch=fgcb
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(
   bbedit colored-man-pages docker extract
-  fasd fd fzf gem gh git git-auto-fetch forgit
+  zoxide fd fzf gem gh git git-auto-fetch forgit
   ripgrep rbenv salt thefuck tmux xcode you-should-use
 )
 
