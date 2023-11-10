@@ -6,7 +6,7 @@ function _fzf_preview() {
   case "$(file --brief --mime $file)" in
     inode/directory*)
       eza --long --header --group --modified --git \
-        --color=always --color-scale size --icons "$file"
+        --color=always --color-scale=size --icons=automatic "$file"
       ;;
     *charset=binary)
       bold_green='\033[1;32m'
