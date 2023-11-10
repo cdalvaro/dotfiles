@@ -4,7 +4,7 @@
 if type eza &>/dev/null; then
   # https://eza.rocks
   export EZA_STRICT=true
-  alias ll='eza --long --header --group --git --modified --color-scale --icons'
+  alias ll='eza --long --header --group --git --modified --color-scale size --icons'
 else
   alias ll='ls -lhG'
 fi
