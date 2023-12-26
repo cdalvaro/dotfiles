@@ -35,7 +35,7 @@ forgit_checkout_branch=fgcb
 plugins=(
   bbedit colored-man-pages docker extract
   zoxide fd fzf gem gh git git-auto-fetch forgit
-  ripgrep rbenv salt thefuck tmux xcode you-should-use
+  ripgrep salt thefuck tmux xcode you-should-use
 )
 
 source "${ZSH}"/oh-my-zsh.sh
@@ -64,9 +64,6 @@ fi
 
 # Show completion menu when number of options is at least 2
 zstyle ':completion:*' menu select=2
-
-# Load rbenv
-eval "$(rbenv init - zsh)"
 
 # Load zsh-abbr
 check_and_source_file "${HOMEBREW_PREFIX}"/share/zsh-abbr/zsh-abbr.zsh

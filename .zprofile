@@ -11,11 +11,13 @@ else
   HOMEBREW_PREFIX=/usr/local
 fi
 
-eval $(${HOMEBREW_PREFIX}/bin/brew shellenv)
+export HOMEBREW_INSTALL_FROM_API=true
+eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
 
-# Ruby settings
-export PATH="$(brew --prefix ruby)/bin:$PATH"
-export PATH="$(gem env gemdir)/bin:$PATH"
+# Load rbenv
+if command -v rbenv > /dev/null 2>&1; then
+  eval "$(rbenv init - zsh)"
+fi
 
 # Avoid loading Oh-my-zsh magic functions, bracketed-paste-magic among other
 export DISABLE_MAGIC_FUNCTIONS=true
