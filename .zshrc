@@ -70,4 +70,4 @@ check_and_source_file "${HOMEBREW_PREFIX}"/share/zsh-abbr/zsh-abbr.zsh
 
 # Starship prompt
 # https://starship.rs/config/
-eval $(starship init zsh)
+eval "$(starship init zsh)"
