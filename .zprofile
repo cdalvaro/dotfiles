@@ -19,6 +19,11 @@ if command -v rbenv > /dev/null 2>&1; then
   eval "$(rbenv init - zsh)"
 fi
 
+# Load pyenv
+export PYENV_ROOT="${HOME}/.pyenv"
+[[ -d "${PYENV_ROOT}/bin" ]] && export PATH="${PYENV_ROOT}/bin:$PATH"
+eval "$(pyenv init -)"
+
 # Avoid loading Oh-my-zsh magic functions, bracketed-paste-magic among other
 export DISABLE_MAGIC_FUNCTIONS=true
 
