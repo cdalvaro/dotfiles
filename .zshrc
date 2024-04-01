@@ -27,14 +27,11 @@ ZSH_DISABLE_COMPFIX=true
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# forgit aliases
-forgit_checkout_branch=fgcb
-
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(
   bbedit colored-man-pages docker extract
-  zoxide fd fzf gem gh git git-auto-fetch forgit
+  zoxide fd fzf gem gh git git-auto-fetch
   ripgrep salt thefuck tmux xcode you-should-use
 )
 
@@ -60,6 +57,10 @@ if [[ -v HOMEBREW_PREFIX ]]; then
     check_and_source_file "${ZSH}"/custom/dracula-zsh-syntax-highlighting.zsh
     source "${HOMEBREW_PREFIX}"/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   fi
+
+  # forgit aliases
+  forgit_checkout_branch=fgcb
+  check_and_source_file "${HOMEBREW_PREFIX}"/share/forgit/forgit.plugin.zsh
 fi
 
 # Show completion menu when number of options is at least 2
