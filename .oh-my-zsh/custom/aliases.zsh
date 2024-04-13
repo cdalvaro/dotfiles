@@ -18,7 +18,3 @@ alias ea=fuck
 
 # NeoVim
 alias vi='nvim'
-alias gvi='vimr'
-
-# Visual Studio Code
-alias vs='code'
