@@ -15,7 +15,7 @@ export HOMEBREW_INSTALL_FROM_API=true
 eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
 
 # Load rbenv
-if command -v rbenv > /dev/null 2>&1; then
+if command -v rbenv >/dev/null 2>&1; then
   eval "$(rbenv init - zsh)"
 fi
 
@@ -31,13 +31,13 @@ export DISABLE_MAGIC_FUNCTIONS=true
 # Colors from: https://github.com/catppuccin/fzf/blob/main/mocha.md
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS=(
-    --ansi --height 90% --layout=reverse --border --inline-info
-    '--preview="_fzf_preview {} 2> /dev/null"'
-    --bind ctrl-j:preview-page-down --bind ctrl-k:preview-page-up
-    --bind ctrl-p:toggle-preview
-    --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8
-    --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc
-    --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8
+  --ansi --height 90% --layout=reverse --border --inline-info
+  '--preview="_fzf_preview {} 2> /dev/null"'
+  --bind ctrl-j:preview-page-down --bind ctrl-k:preview-page-up
+  --bind ctrl-p:toggle-preview
+  --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8
+  --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc
+  --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8
 )
 
 # Use fd (https://github.com/sharkdp/fd) instead of the default find
@@ -62,7 +62,9 @@ export DISABLE_FZF_KEY_BINDINGS=false
 export RIPGREP_CONFIG_PATH="${HOME}/.ripgreprc"
 
 # bat settings
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+if type bat &>/dev/null; then
+  export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+fi
 
 # zsh-autosuggestions settings
 export ZSH_AUTOSUGGEST_USE_ASYNC=true
