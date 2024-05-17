@@ -30,15 +30,14 @@ ZSH_DISABLE_COMPFIX=true
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(
-  bbedit colored-man-pages docker extract
-  zoxide fd fzf gem gh git git-auto-fetch
-  ripgrep salt thefuck tmux xcode you-should-use
+  docker extract eza fd fzf git git-auto-fetch
+  ripgrep thefuck tmux you-should-use zoxide
 )
 
 source "${ZSH}"/oh-my-zsh.sh
 
 # iTerm 2 integration
-test "${TERM_PROGRAM}" = "iTerm.app" && \
+test "${TERM_PROGRAM}" = "iTerm.app" &&
   check_and_source_file "${HOME}"/.iterm2_shell_integration.zsh
 
 # Completions
