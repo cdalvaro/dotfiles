@@ -9,12 +9,9 @@
 # Just for my own notes / confirmation and to help anybody else, the ultimate order is:
 # .zshenv → [.zprofile if login] → [.zshrc if interactive] → [.zlogin if login] → [.zlogout sometimes].
 
-# Path to your oh-my-zsh installation.
-export ZSH=${HOME}/.oh-my-zsh
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-DISABLE_UPDATE_PROMPT=true
+# Oh my Zsh autoupdate settings
+zstyle ':omz:update' mode auto
+zstyle ':omz:update' frequency 7
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION=false
