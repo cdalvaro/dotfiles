@@ -9,6 +9,9 @@
 # Just for my own notes / confirmation and to help anybody else, the ultimate order is:
 # .zshenv → [.zprofile if login] → [.zshrc if interactive] → [.zlogin if login] → [.zlogout sometimes].
 
+# Path to your oh-my-zsh installation.
+export ZSH=${HOME}/.oh-my-zsh
+
 # Oh my Zsh autoupdate settings
 zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 7
