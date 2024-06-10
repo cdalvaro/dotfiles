@@ -37,7 +37,6 @@ symbol = "\uf418 "
 style = "bold fg:#F05032"
 
 [git_commit]
-style = "bold fg:#F05032"
 only_detached = false
 tag_disabled = false
 tag_symbol = "\uf02b "
