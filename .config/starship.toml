@@ -1,5 +1,8 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
 format = """
-${custom.mac_user}\
+$username\
 ${custom.mac_model}\
 $shlvl\
 $directory\
@@ -17,8 +20,8 @@ $status\
 $character"""
 
 [character]
-success_symbol = "[􀆔](bold fg:#CDCED0) "
-error_symbol = "[􀆔](bold fg:#EC3D50) "
+success_symbol = "[􀆔](fg:#58C09F) "
+error_symbol = "[􀆔](bold fg:#EC7432) "
 
 [directory]
 truncation_length = 3
@@ -34,8 +37,10 @@ symbol = "\uf418 "
 style = "bold fg:#F05032"
 
 [git_commit]
-tag_symbol = "\uf02b "
+style = "bold fg:#F05032"
+only_detached = false
 tag_disabled = false
+tag_symbol = "\uf02b "
 
 [git_status]
 stashed = "\uf487"
@@ -53,12 +58,10 @@ style = "bold fg:#CC342D"
 symbol = "\ue755 "
 style = "bold fg:#FA7343"
 
-[custom.mac_user]
-description = "Show the shortname of the user"
-command = "id -F | awk '{print $1}'"
-style = "bold fg:#F6C05E"
-format = "[$output]($style) on "
-when = true
+[username]
+style_user = "bold fg:#F5C643"
+show_always = true
+aliases = { "carlos.alvaro" = "Carlos", "cdalvaro" = "Carlos" }
 
 [custom.mac_model]
 description = "Show the model of the Mac"
