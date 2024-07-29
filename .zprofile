@@ -31,8 +31,7 @@ export DISABLE_MAGIC_FUNCTIONS=true
 # Colors from: https://github.com/catppuccin/fzf/blob/main/mocha.md
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS=(
-  --ansi --height 90% --layout=reverse --border --inline-info
-  '--preview="_fzf_preview {} 2> /dev/null"'
+  --height 90% --layout=reverse --border --info=inline
   --bind ctrl-j:preview-page-down --bind ctrl-k:preview-page-up
   --bind ctrl-p:toggle-preview
   --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8
@@ -45,12 +44,12 @@ export FZF_DEFAULT_OPTS=(
 # - The first argument to the function ($1) is the base path to start traversal
 # - See the source code (completion.{bash,zsh}) for the details.
 _fzf_compgen_path() {
-  fd --hidden --follow --color always --exclude ".git" . "$1"
+  fd --hidden --follow --exclude ".git" . "$1"
 }
 
 # Use fd to generate the list for directory completion
 _fzf_compgen_dir() {
-  fd --type d --hidden --follow --color always --exclude ".git" . "$1"
+  fd --type d --hidden --follow --exclude ".git" . "$1"
 }
 
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"

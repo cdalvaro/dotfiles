@@ -30,8 +30,8 @@ ZSH_DISABLE_COMPFIX=true
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(
-  docker extract eza fd fzf git git-auto-fetch
-  ripgrep thefuck tmux you-should-use zoxide
+  docker extract eza fasd fzf git git-auto-fetch
+  thefuck tmux you-should-use zoxide
 )
 
 source "${ZSH}"/oh-my-zsh.sh
