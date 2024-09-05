@@ -11,6 +11,10 @@ end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 
+# Cpp
+[*.{c,cpp,cxx,h,hh,hpp}]
+indent_size = 4
+
 # Python
 [*.py]
 indent_size = 4
