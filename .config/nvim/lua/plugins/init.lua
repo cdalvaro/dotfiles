@@ -33,8 +33,8 @@ return packer.startup {function()
     }
     use { -- Neovim plugin that allows you to seamlessly manage LSP servers with :LspInstall.
         'williamboman/mason.nvim',
-        requires = {'williamboman/mason-lspconfig.nvim', 'neovim/nvim-lspconfig'},
-        config = 'require "plugins.config.lsp-installer"'
+        requires = {'williamboman/mason-lspconfig.nvim'},
+        config = 'require "plugins.config.mason"'
     }
     use {
         'jose-elias-alvarez/null-ls.nvim',
