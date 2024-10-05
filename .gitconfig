@@ -47,7 +47,7 @@
 [gpg]
   # Custom gpg command to sign commits from IDEs such as Xcode, Visual Studio Code ...
   # https://gist.github.com/cdalvaro/f136792780e4306887daed3d9a64e972
-  program = /usr/local/sbin/gpg-with-key
+  program = ~/.local/sbin/gpg-with-key
 [protocol]
   version = 2
 [url "git@{{ pillar.git.gitlab.url }}:"]
