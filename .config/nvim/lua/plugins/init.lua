@@ -28,7 +28,14 @@ return packer.startup {function()
     }
     use { -- Syntax highlighting
         'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate',
+        -- To avoid :TSUpdate to fail upon first installation
+        -- https://github.com/nvim-treesitter/nvim-treesitter/wiki/Installation#packernvim
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({
+                with_sync = true
+            })
+            ts_update()
+        end,
         config = 'require "plugins.config.treesitter"'
     }
     use { -- Neovim plugin that allows you to seamlessly manage LSP servers with :LspInstall.
@@ -57,9 +64,13 @@ return packer.startup {function()
         config = 'require "plugins.config.gitsigns"'
     }
     -- use { -- A highly configurable neovim startup screen
-    --  'startup-nvim/startup.nvim',
-    --  requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
-    --  config = 'require "plugins.config.startup"'
+    --     "startup-nvim/startup.nvim",
+    --     requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim",
+    --                 "nvim-telescope/telescope-file-browser.nvim"},
+    --     config = function()
+    --         require"startup".setup()
+    --     end,
+    --     config = 'require "plugins.config.startup"'
     -- }
 
     use {'folke/which-key.nvim'} -- A plugin for Neovim that shows the available keybindings
