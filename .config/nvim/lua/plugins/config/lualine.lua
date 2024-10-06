@@ -8,14 +8,8 @@ lualine.setup {
     options = {
         theme = 'dracula-nvim',
         icons_enabled = true,
-        component_separators = {
-            left = '',
-            right = ''
-        },
-        section_separators = {
-            left = '',
-            right = ''
-        },
+        component_separators = '', -- diabled { left = '', right = '' },
+        section_separators = '', -- diabled { left = '', right = '' },
         disabled_filetypes = {
             statusline = {},
             winbar = {}
