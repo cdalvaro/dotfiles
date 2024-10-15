@@ -21,8 +21,10 @@ fi
 
 # Load pyenv
 export PYENV_ROOT="${HOME}/.pyenv"
-[[ -d "${PYENV_ROOT}/bin" ]] && export PATH="${PYENV_ROOT}/bin:$PATH"
-eval "$(pyenv init -)"
+if [[ -d "${PYENV_ROOT}/bin" ]]; then
+  export PATH="${PYENV_ROOT}/bin:$PATH"
+  eval "$(pyenv init -)"
+fi
 
 # Avoid loading Oh-my-zsh magic functions, bracketed-paste-magic among other
 export DISABLE_MAGIC_FUNCTIONS=true
