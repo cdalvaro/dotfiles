@@ -1,5 +1,6 @@
 #!/usr/bin/env zsh
 
+{% raw %}
 # https://monokai.pro/zsh
 
 # ls colors
@@ -151,3 +152,5 @@ function precmd() {
   lprompt
   print ""
 }
+
+{% endraw %}
