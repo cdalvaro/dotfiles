@@ -52,16 +52,7 @@ if [[ -v HOMEBREW_PREFIX ]]; then
   check_and_source_file "${HOMEBREW_PREFIX}"/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
   # zsh syntax highlighting
-  ZSH_SYNTAX_HIGHLIGHTING_PATH="${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-  if [ -f "${ZSH_SYNTAX_HIGHLIGHTING_PATH}" ]; then
-    [[ -f ~/.z-monokai ]] && source ~/.z-monokai
-    source "${ZSH_SYNTAX_HIGHLIGHTING_PATH}"
-
-    # override zsh-syntax-highlighting defaults
-    ZSH_HIGHLIGHT_STYLES[path]=
-    ZSH_HIGHLIGHT_STYLES[path_pathseparator]=fg=black,bold
-    ZSH_HIGHLIGHT_STYLES[path_prefix]=
-  fi
+  check_and_source_file "${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
   # forgit aliases
   forgit_checkout_branch=fgcb
