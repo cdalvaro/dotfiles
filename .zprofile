@@ -11,7 +11,6 @@ else
   HOMEBREW_PREFIX=/usr/local
 fi
 
-export HOMEBREW_INSTALL_FROM_API=true
 eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
 
 # Load rbenv

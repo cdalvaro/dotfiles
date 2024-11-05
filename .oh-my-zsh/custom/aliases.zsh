@@ -19,12 +19,5 @@ fi
 # Trash
 type trash &>/dev/null && alias rm='trash'
 
-# The fuck
-alias copon=fuck
-alias ea=fuck
-
 # NeoVim
 alias vi='nvim'
-
-# DNS
-alias flushdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'

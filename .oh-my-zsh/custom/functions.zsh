@@ -17,7 +17,7 @@ function check_and_source_file() {
 #----------------------------------------------------------------------------------------------------------------------
 function s() {
   local server
-  server=$(rg '^Host ' ~/.ssh/config | rg -v '\*' | sort | awk '{print $2}' | fzf)
+  server=$(rg --color=never '^Host ' ~/.ssh/config | rg --color=never -v '\*' | sort | awk '{print $2}' | fzf)
   if [[-n $server]]; then
     ssh $server
   fi
