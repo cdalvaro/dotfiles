@@ -4,6 +4,9 @@
 # Just for my own notes / confirmation and to help anybody else, the ultimate order is:
 # .zshenv → [.zprofile if login] → [.zshrc if interactive] → [.zlogin if login] → [.zlogout sometimes].
 
+# set initial shell level
+export INIT_SHELL_LEVEL=$SHLVL
+
 # Homebrew env
 if [[ "$(uname -m)" == 'arm64' ]]; then
   HOMEBREW_PREFIX=/opt/homebrew

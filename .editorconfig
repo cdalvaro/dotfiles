@@ -22,7 +22,7 @@ trim_trailing_whitespace = true
 insert_final_newline = false
 
 # Shell
-[*.{sh,bash,zsh}]
+[*.{sh,bash,zsh,zshenv,zprofile,zshrc}]
 indent_size = 2
 
 # Swift

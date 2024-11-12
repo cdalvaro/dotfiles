@@ -59,9 +59,6 @@ fi
 # Show completion menu when number of options is at least 2
 zstyle ':completion:*' menu select=2
 
-# Load zsh-abbr
-check_and_source_file "${HOMEBREW_PREFIX}"/share/zsh-abbr/zsh-abbr.zsh
-
 # Starship prompt
 # https://starship.rs/config/
 eval "$(starship init zsh)"
