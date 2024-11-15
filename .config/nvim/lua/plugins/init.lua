@@ -5,11 +5,6 @@ return packer.startup {function()
     use {'wbthomason/packer.nvim'} -- Let packer manage itself
 
     -- Theme
-    -- use { -- Catppuccin theme
-    --   'catppuccin/nvim',
-    --   as = 'catppuccin',
-    --   config = 'require "plugins.config.catppuccin"'
-    -- }
     -- use { -- Github theme for Neovim and Terminals written in Lua
     --  'projekt0n/github-nvim-theme',
     --  config = 'require "plugins.config.github-theme"'
@@ -40,7 +35,7 @@ return packer.startup {function()
     }
     use { -- Neovim plugin that allows you to seamlessly manage LSP servers with :LspInstall.
         'williamboman/mason.nvim',
-        requires = {'williamboman/mason-lspconfig.nvim', 'neovim/nvim-lspconfig'},
+        requires = {{'williamboman/mason-lspconfig.nvim'}, {'neovim/nvim-lspconfig'}},
         config = 'require "plugins.config.mason"'
     }
     use {
@@ -63,15 +58,6 @@ return packer.startup {function()
         requires = {'nvim-lua/plenary.nvim'},
         config = 'require "plugins.config.gitsigns"'
     }
-    -- use { -- A highly configurable neovim startup screen
-    --     "startup-nvim/startup.nvim",
-    --     requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim",
-    --                 "nvim-telescope/telescope-file-browser.nvim"},
-    --     config = function()
-    --         require"startup".setup()
-    --     end,
-    --     config = 'require "plugins.config.startup"'
-    -- }
 
     use {'folke/which-key.nvim'} -- A plugin for Neovim that shows the available keybindings
     use { -- Markdown preview for neovim using pandoc and live-server
