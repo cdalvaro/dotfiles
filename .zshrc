@@ -43,6 +43,7 @@ zinit light Aloxaf/fzf-tab
 zinit light zsh-users/zsh-autosuggestions # NOTE: After fzf-tab
 zinit light wfxr/forgit
 zinit light olets/zsh-abbr
+zinit light ohmyzsh/ohmyzsh
 
 # -- Snippets
 zinit snippet OMZP::command-not-found
