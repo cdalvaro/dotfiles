@@ -4,10 +4,10 @@
 # Just for my own notes / confirmation and to help anybody else, the ultimate order is:
 # .zshenv → [.zprofile if login] → [.zshrc if interactive] → [.zlogin if login] → [.zlogout sometimes].
 
-# set initial shell level
+# -- Initial shell level
 export INIT_SHELL_LEVEL=$SHLVL
 
-# Language settings
+# -- Language settings
 export LANG=en_US.UTF-8
 export LC_ALL=$LANG
 
@@ -18,4 +18,17 @@ if [[ $(uname) == 'Darwin' ]]; then
   else
     export HOMEBREW_PREFIX=/usr/local
   fi
+fi
+
+# -- Preferred editors
+export EDITOR='nvim'
+export GIT_EDITOR='nvim'
+
+if [[ -n $SSH_CONNECTION ]]; then
+  ## Remote sessions
+  export ZSH_TMUX_AUTOSTART=true
+else
+  ## Local sessions
+  export EDITOR='bbedit --wait'
+  export HOMEBREW_EDITOR='bbedit'
 fi

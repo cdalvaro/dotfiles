@@ -164,19 +164,6 @@ export RIPGREP_CONFIG_PATH="${HOME}/.ripgreprc"
 # -- trash
 type trash &>/dev/null && alias rm='trash'
 
-# -- Preferred editors
-export EDITOR='nvim'
-export GIT_EDITOR='nvim'
-
-if [[ -n $SSH_CONNECTION ]]; then
-  ## Remote sessions
-  export ZSH_TMUX_AUTOSTART=true
-else
-  ## Local sessions
-  export EDITOR='bbedit --wait'
-  export HOMEBREW_EDITOR='bbedit'
-fi
-
 # -- Aliases
 alias c='clear'
 alias ls='ls --color'
