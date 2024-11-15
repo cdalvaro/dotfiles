@@ -4,87 +4,20 @@
 # Just for my own notes / confirmation and to help anybody else, the ultimate order is:
 # .zshenv → [.zprofile if login] → [.zshrc if interactive] → [.zlogin if login] → [.zlogout sometimes].
 
-# set initial shell level
-export INIT_SHELL_LEVEL=$SHLVL
+[[ -n "${HOMEBREW_PREFIX}" ]] && eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
 
-# Homebrew env
-if [[ "$(uname -m)" == 'arm64' ]]; then
-  HOMEBREW_PREFIX=/opt/homebrew
-else
-  HOMEBREW_PREFIX=/usr/local
-fi
-
-eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
-
-# Load rbenv
+# rbenv
+# https://github.com/rbenv/rbenv
 if command -v rbenv >/dev/null 2>&1; then
   eval "$(rbenv init - zsh)"
+  FPATH="$(brew --prefix rbenv)/completions:$FPATH"
 fi
 
-# Load pyenv
-export PYENV_ROOT="${HOME}/.pyenv"
-if [[ -d "${PYENV_ROOT}/bin" ]]; then
-  export PATH="${PYENV_ROOT}/bin:$PATH"
+# pyenv
+# https://github.com/pyenv/pyenv
+if command -v pyenv >/dev/null 2>&1; then
+  export PYENV_ROOT="${HOME}/.pyenv"
+  [[ -d "${PYENV_ROOT}/bin" ]] && export PATH="${PYENV_ROOT}/bin:$PATH"
   eval "$(pyenv init -)"
-fi
-
-# Avoid loading Oh-my-zsh magic functions, bracketed-paste-magic among other
-export DISABLE_MAGIC_FUNCTIONS=true
-
-# Fuzzy settings
-# Colors from: https://github.com/catppuccin/fzf/blob/main/mocha.md
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
-export FZF_DEFAULT_OPTS=(
-  --height 90% --layout=reverse --border --info=inline
-  --bind ctrl-j:preview-page-down --bind ctrl-k:preview-page-up
-  --bind ctrl-p:toggle-preview
-  --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8
-  --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc
-  --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8
-)
-
-# Use fd (https://github.com/sharkdp/fd) instead of the default find
-# command for listing path candidates.
-# - The first argument to the function ($1) is the base path to start traversal
-# - See the source code (completion.{bash,zsh}) for the details.
-_fzf_compgen_path() {
-  fd --hidden --follow --exclude ".git" . "$1"
-}
-
-# Use fd to generate the list for directory completion
-_fzf_compgen_dir() {
-  fd --type d --hidden --follow --exclude ".git" . "$1"
-}
-
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export DISABLE_FZF_AUTO_COMPLETION=false
-export DISABLE_FZF_KEY_BINDINGS=false
-
-# ripgrep settings
-# https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md#configuration-file
-export RIPGREP_CONFIG_PATH="${HOME}/.ripgreprc"
-
-# bat settings
-if type bat &>/dev/null; then
-  export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-fi
-
-# zsh-autosuggestions settings
-export ZSH_AUTOSUGGEST_USE_ASYNC=true
-export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=140
-
-# GPG key
-export GPG_TTY=$(tty)
-
-# Preferred editors
-export EDITOR='nvim'
-export GIT_EDITOR='nvim'
-
-if [[ -n $SSH_CONNECTION ]]; then
-  # Autostart tmux session in remote session
-  export ZSH_TMUX_AUTOSTART=true
-else
-  # Preferred editor for local sessions
-  export EDITOR='bbedit --wait'
-  export HOMEBREW_EDITOR='bbedit'
+  FPATH="$(brew --prefix pyenv)/completions:$FPATH"
 fi
