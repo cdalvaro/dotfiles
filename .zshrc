@@ -187,7 +187,7 @@ eval "$(starship init zsh)"
 
 # -- Shell integrations
 eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init zsh)"
 
 # zsh-syntax-highlighting
 ## https://github.com/zsh-users/zsh-syntax-highlighting
