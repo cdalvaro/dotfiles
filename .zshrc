@@ -52,6 +52,8 @@ zinit snippet OMZP::docker
 zinit snippet OMZP::git
 zinit snippet OMZP::git-auto-fetch
 zinit snippet OMZP::sudo
+
+zi ice svn # Requires complete directory for tmux.extra.conf
 zinit snippet OMZP::tmux
 
 # -- History
