@@ -5,7 +5,8 @@
 
 format = """
 $username\
-${custom.mac_model}\
+${custom.macOS_hostname}\
+${custom.linux_hostname}\
 $shlvl\
 $directory\
 $git_branch\
@@ -13,10 +14,8 @@ $git_commit\
 $git_state\
 $git_status\
 $docker_context\
-$cmake\
 $python\
 $ruby\
-$swift\
 $line_break\
 $status\
 $character"""
@@ -55,19 +54,26 @@ style = "bold fg:#3776AB"
 symbol = "\ue739 "
 style = "bold fg:#CC342D"
 
-[swift]
-symbol = "\ue755 "
-style = "bold fg:#FA7343"
-
 [username]
 style_user = "bold fg:#F5C643"
 show_always = true
 aliases = { "carlos.alvaro" = "Carlos", "cdalvaro" = "Carlos" }
 
-[custom.mac_model]
-description = "Show the model of the Mac"
+[custom.macOS_hostname]
+description = "Show the model name of the Mac"
 command = "/usr/local/sbin/starship-mac-model"
+# Posible cmd: system_profiler -json SPHardwareDataType | jq '.SPHardwareDataType[0].machine_name'
 os = "macos"
-style = "bold fg:#CDCED0"
+symbol = "{{ pillar.config.starship.hostname_icon }}"
+style = "bold fg:{{ pillar.config.starship.hostname_color }}"
 format = "[$output]($style) in "
+when = true
+
+[custom.linux_hostname]
+description = "Show the hostname of the Linux machine"
+command = "hostnamectl --pretty"
+os = "linux"
+symbol = "{{ pillar.config.starship.hostname_icon }}"
+style = "bold fg:{{ pillar.config.starship.hostname_color }}"
+format = "[$symbol($output)]($style) in "
 when = true
