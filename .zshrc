@@ -167,6 +167,7 @@ type trash &>/dev/null && alias rm='trash'
 # -- Aliases
 alias c='clear'
 alias ls='ls --color'
+alias glow='glow --config ~/.config/glow/glow.yml'
 alias vi='nvim'
 
 # -- Starship prompt
