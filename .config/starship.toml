@@ -5,8 +5,7 @@
 
 format = """
 $username\
-${custom.macOS_hostname}\
-${custom.linux_hostname}\
+$hostname\
 $shlvl\
 $directory\
 $git_branch\
@@ -21,15 +20,15 @@ $status\
 $character"""
 
 [character]
-success_symbol = "[􀆔](fg:#58C09F) "
-error_symbol = "[􀆔](bold fg:#EC7432) "
+success_symbol = "[\uf4b5](fg:#58C09F) "
+error_symbol = "[\uf4b5](bold fg:#EC7432) "
 
 [directory]
 truncation_length = 3
 fish_style_pwd_dir_length = 1
 format = "[$read_only]($read_only_style)[$path]($style) "
 style = "bold fg:blue"
-read_only = "􀎡 "
+read_only = "\uea75 "
 read_only_style = "fg:#F69F37"
 truncation_symbol = "…/"
 
@@ -59,21 +58,8 @@ style_user = "bold fg:#F5C643"
 show_always = true
 aliases = { "carlos.alvaro" = "Carlos", "cdalvaro" = "Carlos" }
 
-[custom.macOS_hostname]
-description = "Show the model name of the Mac"
-command = "/usr/local/sbin/starship-mac-model"
-# Posible cmd: system_profiler -json SPHardwareDataType | jq '.SPHardwareDataType[0].machine_name'
-os = "macos"
-symbol = "{{ pillar.config.starship.hostname_icon }}"
+[hostname]
+ssh_symbol = "\ueb3a "
+ssh_only = false
 style = "bold fg:{{ pillar.config.starship.hostname_color }}"
-format = "[$output]($style) in "
-when = true
-
-[custom.linux_hostname]
-description = "Show the hostname of the Linux machine"
-command = "hostnamectl --pretty"
-os = "linux"
-symbol = "{{ pillar.config.starship.hostname_icon }}"
-style = "bold fg:{{ pillar.config.starship.hostname_color }}"
-format = "[$symbol($output)]($style) in "
-when = true
+aliases = { "MacPro" = "􀦱 Mac Pro", "MacStudio" = "􁏍  Mac Studio", "MacBook" = "􁟫  MacBook Pro", "bee-rikku" = "\uf31d Bee Rikku", "bee-yuna" = "\uf31d Bee Yuna", "ms-01-tidus" = "\uf31d MS-01 Tidus", "pi-apricot" = "\uf315 Pi Apricot", "pi-banana" = "\uf315 Pi Banana", "pi-cherry" = "\uf315 Pi Cherry" }
