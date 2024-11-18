@@ -2,10 +2,12 @@
 local cmd = vim.cmd
 local ok, packer = pcall(require, 'packer')
 
+local fn = vim.fn
+
 if not ok then
-    local install_path = vim.fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
-    vim.fn.delete(install_path, 'rf')
-    vim.fn.system {'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path}
+    local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+    fn.delete(install_path, 'rf')
+    fn.system {'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path}
 
     cmd 'packadd packer.nvim'
     packer_cloned, packer = pcall(require, 'packer')
@@ -17,7 +19,7 @@ if not ok then
 end
 
 packer.init {
-    compile_path = vim.fn.stdpath 'config' .. '/plugin/packer_compiled.lua',
+    compile_path = fn.stdpath 'config' .. '/plugin/packer_compiled.lua',
     display = {
         open_fn = function()
             return require('packer.util').float {
@@ -35,7 +37,7 @@ packer.init {
     compile_on_sync = true,
     auto_reload_compiled = true,
     luarocks = {
-        python_cmd = vim.env.HOMEBREW_PREFIX .. '/bin/python3' -- Set the python command to use for running hererocks
+        python_cmd = vim.g.python3_host_prog -- Set the python command to use for running hererocks
     }
 }
 

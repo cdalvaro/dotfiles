@@ -1,16 +1,13 @@
--- Help: https://github.com/nanotee/nvim-lua-guide
+-- Help: https://neovim.io/doc/user/lua-guide.html#lua-guide
 local fn = vim.fn
 
 -- Python provider
+-- https://neovim.io/doc/user/provider.html#_python-integration
 vim.g.loaded_python_provider = 0
-vim.g.python3_host_prog = vim.env.HOMEBREW_PREFIX .. '/bin/python3'
+vim.g.python3_host_prog = (os.getenv("PYENV_ROOT") and os.getenv("PYENV_ROOT") or '/usr') .. '/bin/python3'
 
 -- Clipboard
-if fn.has 'mac' then
-    vim.o.clipboard = 'unnamed'
-else
-    vim.o.clipboard = 'unnamedplus'
-end
+vim.o.clipboard = fh.has 'mac' and 'unnamed' or 'unnamedplus'
 
 -- Global settings
 vim.o.backupdir = '/tmp' -- Backup directory
