@@ -20,7 +20,7 @@ if not ok then
 end
 
 local lsps = {'bashls', 'dockerls', 'jsonls', 'lua_ls', 'salt_ls', 'yamlls'}
-if vim.fh.has 'mac' then
+if vim.fn.has 'mac' then
     local extra_lsps = {'clangd', 'cmake', 'perlnavigator', 'sourcery', 'ruby_lsp'}
     for _, v in ipairs(extra_lsps) do
         table.insert(lsps, v)
