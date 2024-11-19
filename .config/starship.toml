@@ -5,7 +5,7 @@
 
 format = """
 $username\
-$hostname\
+${custom.hostname}\
 $shlvl\
 $directory\
 $git_branch\
@@ -58,8 +58,9 @@ style_user = "bold fg:#F5C643"
 show_always = true
 aliases = { "carlos.alvaro" = "Carlos", "cdalvaro" = "Carlos" }
 
-[hostname]
-ssh_symbol = "\ueb3a "
-ssh_only = false
+[custom.hostname]
+description = 'Custom hostname delegated to salt deployment'
+when = true
+symbol = "{{ pillar.config.starship.hostname_symbol }}"
 style = "bold fg:{{ pillar.config.starship.hostname_color }}"
-aliases = { "MacPro" = "􀦱 Mac Pro", "MacStudio" = "􁏍  Mac Studio", "MacBook" = "􁟫  MacBook Pro", "bee-rikku" = "\uf31d Bee Rikku", "bee-yuna" = "\uf31d Bee Yuna", "ms-01-tidus" = "\uf31d MS-01 Tidus", "pi-apricot" = "\uf315 Pi Apricot", "pi-banana" = "\uf315 Pi Banana", "pi-cherry" = "\uf315 Pi Cherry" }
+format = "[$symbol {{ pretty_hostname }}]($style) in "
