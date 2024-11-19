@@ -37,6 +37,11 @@ return packer.startup {function()
             end,
             config = 'require "plugins.config.treesitter"'
         }
+        use { -- Git integration for buffers
+            'lewis6991/gitsigns.nvim',
+            requires = {'nvim-lua/plenary.nvim'},
+            config = 'require "plugins.config.gitsigns"'
+        }
     end
     use { -- Neovim plugin that allows you to seamlessly manage LSP servers with :LspInstall.
         'williamboman/mason.nvim',
@@ -59,11 +64,6 @@ return packer.startup {function()
     use { -- faster commenting
         'numToStr/Comment.nvim',
         config = 'require "plugins.config.comment"'
-    }
-    use { -- Git integration for buffers
-        'lewis6991/gitsigns.nvim',
-        requires = {'nvim-lua/plenary.nvim'},
-        config = 'require "plugins.config.gitsigns"'
     }
     use { -- Markdown preview for neovim using pandoc and live-server
         'davidgranstrom/nvim-markdown-preview',
