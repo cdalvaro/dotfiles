@@ -24,11 +24,12 @@ fi
 export EDITOR='nvim'
 export GIT_EDITOR='nvim'
 
+export ZSH_TMUX_FIXTERM=false
+
 ## -- Remote/local sessions
 if [[ -n $SSH_CONNECTION ]]; then
   ### tmux
   export ZSH_TMUX_AUTOSTART=true
-  export ZSH_TMUX_FIXTERM=false
 else
   ### Editos
   export EDITOR='bbedit --wait'
