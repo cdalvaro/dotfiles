@@ -48,7 +48,10 @@ zinit light ohmyzsh/ohmyzsh
 # -- Snippets
 zinit snippet OMZP::command-not-found
 zinit snippet OMZP::extract
-zinit snippet OMZP::docker
+
+zinit ice as"completion"
+zinit snippet OMZP::docker/_docker
+
 zinit snippet OMZP::git
 zinit snippet OMZP::git-auto-fetch
 zinit snippet OMZP::sudo
@@ -103,7 +106,6 @@ esac
 # -- bat settings
 ## https://github.com/sharkdp/bat
 if type bat &>/dev/null; then
-  alias cat='bat --paging=never'
   alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
   export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 fi
