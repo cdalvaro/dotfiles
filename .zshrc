@@ -32,30 +32,32 @@ source "${ZINIT_HOME}/zinit.zsh"
 ## NOTE: order matters
 
 ## Before compinit
-zinit light zsh-users/zsh-completions
+zi light zsh-users/zsh-completions
 
 ## compinit - Load completions
 autoload -U compinit && compinit
-zinit cdreplay -q
+zi cdreplay -q
 
 ## After compinit
-zinit light Aloxaf/fzf-tab
-zinit light zsh-users/zsh-autosuggestions # NOTE: After fzf-tab
-zinit light wfxr/forgit
-zinit light olets/zsh-abbr
-zinit light ohmyzsh/ohmyzsh
+zi light Aloxaf/fzf-tab
+zi light zsh-users/zsh-autosuggestions # NOTE: After fzf-tab
+zi light wfxr/forgit
+zi light olets/zsh-abbr
 
 # -- Snippets
-zinit snippet OMZP::command-not-found
-zinit snippet OMZP::extract
+zi snippet OMZL::clipboard.zsh
+zi snippet OMZL::termsupport.zsh
 
-zinit ice as"completion"
-zinit snippet OMZP::docker/_docker
+zi snippet OMZP::command-not-found
+zi snippet OMZP::extract
 
-zinit snippet OMZP::git
-zinit snippet OMZP::git-auto-fetch
-zinit snippet OMZP::sudo
-zinit snippet OMZP::tmux
+zi ice as"completion"
+zi snippet OMZP::docker/completions/_docker
+
+zi snippet OMZP::git
+zi snippet OMZP::git-auto-fetch
+zi snippet OMZP::sudo
+zi snippet OMZP::tmux
 
 # -- History
 HISTSIZE=5000
@@ -184,7 +186,7 @@ eval "$(zoxide init zsh)"
 # zsh-syntax-highlighting
 ## https://github.com/zsh-users/zsh-syntax-highlighting
 ## NOTE: Last plugin to be loaded
-zinit light zsh-users/zsh-syntax-highlighting
+zi light zsh-users/zsh-syntax-highlighting
 
 # zsh-syntax-highlighting styles from monokai.pro
 ZSH_HIGHLIGHT_STYLES[path]=

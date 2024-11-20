@@ -3,5 +3,5 @@
 # macOS specific settings
 
 # -- iTerm2
-zinit snippet OMZP::iterm2
+zi snippet OMZP::iterm2
 zstyle :omz:plugins:iterm2 shell-integration yes
