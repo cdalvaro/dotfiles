@@ -45,6 +45,7 @@ zi light wfxr/forgit
 zi light olets/zsh-abbr
 
 # -- Snippets
+zi snippet OMZL::functions.zsh
 zi snippet OMZL::clipboard.zsh
 zi snippet OMZL::termsupport.zsh
 
