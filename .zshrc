@@ -43,12 +43,9 @@ zi light Aloxaf/fzf-tab
 zi light zsh-users/zsh-autosuggestions # NOTE: After fzf-tab
 zi light wfxr/forgit
 zi light olets/zsh-abbr
+zi light ohmyzsh/ohmyzsh
 
 # -- Snippets
-zi snippet OMZL::functions.zsh
-zi snippet OMZL::clipboard.zsh
-zi snippet OMZL::termsupport.zsh
-
 zi snippet OMZP::command-not-found
 zi snippet OMZP::extract
 
