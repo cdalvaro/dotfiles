@@ -19,14 +19,9 @@ $line_break\
 $status\
 $character"""
 
-[character]
-success_symbol = "[\uf4b5](fg:#58C09F) "
-error_symbol = "[\uf4b5](bold fg:#EC7432) "
-
 [directory]
 truncation_length = 3
 fish_style_pwd_dir_length = 1
-format = "[$read_only]($read_only_style)[$path]($style) "
 style = "bold fg:blue"
 read_only = "\uea75 "
 read_only_style = "fg:#F69F37"
