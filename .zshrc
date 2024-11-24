@@ -41,7 +41,6 @@ zi cdreplay -q
 ## After compinit
 zi light Aloxaf/fzf-tab
 zi light zsh-users/zsh-autosuggestions # NOTE: After fzf-tab
-zi light wfxr/forgit
 zi light olets/zsh-abbr
 zi light ohmyzsh/ohmyzsh
 
@@ -54,6 +53,8 @@ zi snippet OMZP::docker/completions/_docker
 
 zi snippet OMZP::git
 zi snippet OMZP::git-auto-fetch
+zi light wfxr/forgit
+
 zi snippet OMZP::sudo
 zi snippet OMZP::tmux
 
