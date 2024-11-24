@@ -7,13 +7,10 @@ return packer.startup {function()
     use {'wbthomason/packer.nvim'} -- Let packer manage itself
 
     -- Theme
-    -- use { -- Github theme for Neovim and Terminals written in Lua
-    --  'projekt0n/github-nvim-theme',
-    --  config = 'require "plugins.config.github-theme"'
-    -- }
+    -- https://github.com/loctvl842/monokai-pro.nvim
     use {
-        'Mofiqul/dracula.nvim',
-        config = 'require "plugins.config.dracula"'
+        'loctvl842/monokai-pro.nvim',
+        config = 'require "plugins.config.monokai-pro"'
     }
 
     use {'nvim-lua/popup.nvim'} -- An implementation of the Popup API from vim in Neovim

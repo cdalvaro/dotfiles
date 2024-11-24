@@ -6,7 +6,7 @@ end
 
 lualine.setup {
     options = {
-        theme = 'dracula-nvim',
+        theme = 'monokai-pro',
         icons_enabled = true,
         component_separators = '', -- diabled { left = '', right = '' },
         section_separators = '', -- diabled { left = '', right = '' },
