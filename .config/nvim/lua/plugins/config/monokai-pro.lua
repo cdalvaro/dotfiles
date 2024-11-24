@@ -56,4 +56,5 @@ monokai.setup({
     }
 })
 
+-- lua theme
 vim.cmd [[colorscheme monokai-pro]]
