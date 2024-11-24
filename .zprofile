@@ -4,8 +4,15 @@
 # Just for my own notes / confirmation and to help anybody else, the ultimate order is:
 # .zshenv → [.zprofile if login] → [.zshrc if interactive] → [.zlogin if login] → [.zlogout sometimes].
 
+# Homebrew
 [[ -n "${HOMEBREW_PREFIX}" ]] && eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
-[[ -n "${NIX_PROFILE}" ]] && source "${NIX_PROFILE}/etc/profile.d/nix.sh"
+
+# Nix
+if [[ -n "${NIX_PROFILE}" ]]; then
+  source "${NIX_PROFILE}/etc/profile.d/nix.sh"
+  GLIBC_LOCALES_PATH=$(nix-env --installed --no-name --out-path --query glibc-locales 2>/dev/null)
+  [[ -n "${GLIBC_LOCALES_PATH}" ]] && export LOCALE_ARCHIVE="${GLIBC_LOCALES_PATH}/lib/locale/locale-archive"
+fi
 
 # rbenv
 # https://github.com/rbenv/rbenv
