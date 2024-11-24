@@ -11,14 +11,22 @@ export INIT_SHELL_LEVEL=$SHLVL
 export LANG=en_US.UTF-8
 export LC_ALL=$LANG
 
-# Homebrew env
+# Homebrew prefix
 if [[ $(uname) == 'Darwin' ]]; then
   if [[ $(uname -m) == 'arm64' ]]; then
-    export HOMEBREW_PREFIX=/opt/homebrew
+    HOMEBREW_PREFIX=/opt/homebrew
   else
-    export HOMEBREW_PREFIX=/usr/local
+    HOMEBREW_PREFIX=/usr/local
   fi
+else
+  HOMEBREW_PREFIX=/home/linuxbrew/.linuxbrew
 fi
+
+[[ -d $HOMEBREW_PREFIX ]] && export HOMEBREW_PREFIX || unset HOMEBREW_PREFIX
+
+# Nix profile
+NIX_PROFILE=$HOME/.nix-profile
+[[ -d $NIX_PROFILE ]] && export NIX_PROFILE || unset NIX_PROFILE
 
 # -- Preferred editors
 export EDITOR='nvim'

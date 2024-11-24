@@ -5,6 +5,7 @@
 # .zshenv → [.zprofile if login] → [.zshrc if interactive] → [.zlogin if login] → [.zlogout sometimes].
 
 [[ -n "${HOMEBREW_PREFIX}" ]] && eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
+[[ -n "${NIX_PROFILE}" ]] && source "${NIX_PROFILE}/etc/profile.d/nix.sh"
 
 # rbenv
 # https://github.com/rbenv/rbenv
