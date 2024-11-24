@@ -65,16 +65,16 @@ return packer.startup {function()
         'numToStr/Comment.nvim',
         config = 'require "plugins.config.comment"'
     }
-    use { -- Markdown preview for neovim using pandoc and live-server
-        'davidgranstrom/nvim-markdown-preview',
-        config = 'require "plugins.config.markdown-preview"'
-    }
 
     if fn.has 'mac' then
         use {'xu-cheng/brew.vim'} -- Vim Syntax for Homebrew formulae
         use { -- Vim plugin for clang-format
             'rhysd/vim-clang-format',
             config = 'require "plugins.config.clang-format"'
+        }
+        use { -- Markdown preview for neovim using pandoc and live-server
+            'davidgranstrom/nvim-markdown-preview',
+            config = 'require "plugins.config.markdown-preview"'
         }
     end
 
