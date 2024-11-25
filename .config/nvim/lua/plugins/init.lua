@@ -63,7 +63,7 @@ return packer.startup {function()
         config = 'require "plugins.config.comment"'
     }
 
-    if fn.has 'mac' then
+    if fn.has 'mac' == 1 then
         use {'xu-cheng/brew.vim'} -- Vim Syntax for Homebrew formulae
         use { -- Vim plugin for clang-format
             'rhysd/vim-clang-format',

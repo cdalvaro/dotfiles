@@ -7,7 +7,7 @@ vim.g.loaded_python_provider = 0
 vim.g.python3_host_prog = (os.getenv("PYENV_ROOT") and os.getenv("PYENV_ROOT") or '/usr') .. '/bin/python3'
 
 -- Clipboard
-vim.o.clipboard = fn.has 'mac' and 'unnamed' or 'unnamedplus'
+vim.o.clipboard = fn.has 'mac' == 1 and 'unnamed' or 'unnamedplus'
 
 -- Global settings
 vim.o.backupdir = '/tmp' -- Backup directory
