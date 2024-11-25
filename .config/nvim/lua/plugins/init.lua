@@ -6,15 +6,28 @@ local fn = vim.fn
 return packer.startup {function()
     use {'wbthomason/packer.nvim'} -- Let packer manage itself
 
-    -- Theme
-    -- https://github.com/loctvl842/monokai-pro.nvim
     use {
+        -- https://github.com/loctvl842/monokai-pro.nvim
         'loctvl842/monokai-pro.nvim',
         config = 'require "plugins.config.monokai-pro"'
     }
-
+    use { -- A blazing fast and easy to configure neovim statusline plugin written in pure lua.
+        'nvim-lualine/lualine.nvim',
+        requires = {'loctvl842/monokai-pro.nvim'},
+        config = 'require "plugins.config.lualine"'
+    }
     use {'nvim-lua/popup.nvim'} -- An implementation of the Popup API from vim in Neovim
     use {'nvim-lua/plenary.nvim'} -- Useful lua functions used ny lots of plugins
+    use {
+        'jose-elias-alvarez/null-ls.nvim',
+        requires = {'nvim-lua/plenary.nvim'}
+    }
+    use {'kyazdani42/nvim-web-devicons'} -- nvim Devicons
+    use { -- faster commenting
+        'numToStr/Comment.nvim',
+        config = 'require "plugins.config.comment"'
+    }
+
     -- NOTE: Telescope is only available for NeoVim 0.9 and above
     if fn.has("nvim-0.9") == 1 then
         use { -- Fuzzy finder
@@ -40,34 +53,19 @@ return packer.startup {function()
             config = 'require "plugins.config.gitsigns"'
         }
     end
-    use { -- Neovim plugin that allows you to seamlessly manage LSP servers with :LspInstall.
-        'williamboman/mason.nvim',
-        requires = {
-            {'williamboman/mason-lspconfig.nvim'},
-            {'neovim/nvim-lspconfig'},
-        },
-        config = 'require "plugins.config.mason"'
-    }
-    use {
-        'jose-elias-alvarez/null-ls.nvim',
-        requires = {'nvim-lua/plenary.nvim'}
-    }
-    use {'kyazdani42/nvim-web-devicons'} -- nvim Devicons
-    use { -- A blazing fast and easy to configure neovim statusline plugin written in pure lua.
-        'nvim-lualine/lualine.nvim',
-        requires = {'projekt0n/github-nvim-theme'},
-        config = 'require "plugins.config.lualine"'
-    }
-    use { -- faster commenting
-        'numToStr/Comment.nvim',
-        config = 'require "plugins.config.comment"'
-    }
 
+    -- macOS plugins
     if fn.has 'mac' == 1 then
         use {'xu-cheng/brew.vim'} -- Vim Syntax for Homebrew formulae
-        use { -- Vim plugin for clang-format
-            'rhysd/vim-clang-format',
-            config = 'require "plugins.config.clang-format"'
+        use {'williamboman/mason-lspconfig.nvim'}
+        use {'neovim/nvim-lspconfig'}
+        use { -- Neovim plugin that allows you to seamlessly manage LSP servers with :LspInstall.
+            'williamboman/mason.nvim',
+            requires = {
+                {'williamboman/mason-lspconfig.nvim'},
+                {'neovim/nvim-lspconfig'},
+            },
+            config = 'require "plugins.config.mason"'
         }
         use { -- Markdown preview for neovim using pandoc and live-server
             'davidgranstrom/nvim-markdown-preview',
