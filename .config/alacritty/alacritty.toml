@@ -3,6 +3,10 @@ live_config_reload = true
 
 [window]
 dimensions = { columns = 135, lines = 64 }
+decorations_theme_variant = "Dark"
+resize_increments = true
+dynamic_padding = true
+padding = { x = 5, y = 5 }
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
