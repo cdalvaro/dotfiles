@@ -1,0 +1,45 @@
+[general]
+live_config_reload = true
+
+[window]
+dimensions = { columns = 135, lines = 64 }
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
+size = 12.0
+
+[cursor]
+style = { shape = "Beam", blinking = "Always" }
+
+# Monokai Pro (Octagon)
+[colors]
+cursor = { text = "#b3b8bc", cursor = "#b3b8bc" }
+selection = { text = "#ebf1f0", background = "#535661" }
+
+[colors.primary]
+background = "#282938"
+foreground = "#ebf1f0"
+
+[colors.normal]
+black = "#282938"
+red = "#ec6f7c"
+green = "#bfd671"
+yellow = "#f8d87d"
+blue = "#f19f69"
+magenta = "#bc9bc5"
+cyan = "#a7cfbc"
+white = "#ebf1f0"
+
+[colors.bright]
+black = "#696c76"
+red = "#ec6f7c"
+green = "#bfd671"
+yellow = "#f8d87d"
+blue = "#f19f69"
+magenta = "#bc9bc5"
+cyan = "#a7cfbc"
+white = "#ebf1f0"
+
+[colors.search]
+matches = { foreground = "#282938", background = "#ffff00" }
+focused_match = { foreground = "#ebf1f0", background = "#535661" }
