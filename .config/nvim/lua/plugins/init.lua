@@ -71,6 +71,11 @@ return packer.startup {function()
             'davidgranstrom/nvim-markdown-preview',
             config = 'require "plugins.config.markdown-preview"'
         }
+        use {'folke/which-key.nvim'} -- A plugin for Neovim that shows the available keybindings
+        use { -- Vim plugin for clang-format
+            'rhysd/vim-clang-format',
+            config = 'require "plugins.config.clang-format"'
+        }
     end
 
     -- Automatically set up your configuration after cloning packer.nvim
