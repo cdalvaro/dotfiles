@@ -1,3 +1,3 @@
-require('settings')
-require('plugins')
-require('autocmds')
+require('config.settings')
+require('config.lazy')
+require('config.autocmds')
