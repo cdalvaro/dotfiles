@@ -189,7 +189,7 @@ zi light zsh-users/zsh-syntax-highlighting
 
 # zsh-syntax-highlighting styles from monokai.pro
 ZSH_HIGHLIGHT_STYLES[path]=
-ZSH_HIGHLIGHT_STYLES[path_pathseparator]=fg=black,bold
+ZSH_HIGHLIGHT_STYLES[path_pathseparator]=fg=cyan,bold
 ZSH_HIGHLIGHT_STYLES[path_prefix]=
 
 # Uncomment this line for showing the generated profiling
