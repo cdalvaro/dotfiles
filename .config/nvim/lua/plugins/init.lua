@@ -14,6 +14,11 @@ return {
     "kyazdani42/nvim-web-devicons"
   },
   {
+    -- A fancy, configurable, notification manager for NeoVim
+    ---@link https://github.com/rcarriga/nvim-notify
+    "rcarriga/nvim-notify"
+  },
+  {
     -- A plugin for Neovim that shows the available keybindings
     ---@link https://github.com/folke/which-key.nvim
     "folke/which-key.nvim",
