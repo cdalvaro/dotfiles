@@ -2,12 +2,6 @@
 local autocmd = vim.api.nvim_create_autocmd
 local utils = require('config.utils')
 
--- Filetype
-utils.create_augroup({
-  { 'BufNewFile,BufRead', 'Rexfile', 'set', 'filetype=perl' },
-  { 'BufNewFile,BufRead', '*sls',    'set', 'filetype=sls' }
-}, 'filetype')
-
 -- Lazy.nvim autoupdate
 -- https://github.com/folke/lazy.nvim/issues/702
 local function augroup(name)
