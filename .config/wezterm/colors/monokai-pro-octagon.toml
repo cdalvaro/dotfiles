@@ -1,0 +1,43 @@
+[colors]
+ansi = [
+  "#282938",
+  "#ec6f7c",
+  "#bfd671",
+  "#f8d87d",
+  "#f19f69",
+  "#bc9bc5",
+  "#a7cfbc",
+  "#ebf1f0",
+]
+background = "#282938"
+brights = [
+  "#696c76",
+  "#ec6f7c",
+  "#bfd671",
+  "#f8d87d",
+  "#f19f69",
+  "#bc9bc5",
+  "#a7cfbc",
+  "#ebf1f0",
+]
+cursor_bg = "#b3b8bc"
+cursor_border = "#b3b8bc"
+cursor_fg = "#b3b8bc"
+foreground = "#ebf1f0"
+selection_bg = "#535661"
+selection_fg = "#ebf1f0"
+
+# [colors.indexed]
+# 16 = "#e8bbd0"
+# 17 = "#cdab53"
+# 18 = "#3a3432"
+# 19 = "#4a4543"
+# 20 = "#807d7c"
+# 21 = "#d6d5d4"
+
+[metadata]
+aliases = ["Monokai Pro (Octagon)"]
+author = "Carlos Álvaro (http://github.com/cdalvaro)"
+name = "Monokai Pro (Octagon)"
+origin_url = "https://monokai.pro"
+wezterm_version = "20220807-113146-c2fee766"
