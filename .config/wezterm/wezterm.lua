@@ -29,11 +29,15 @@ config.color_scheme = scheme_for_appearance(get_appearance())
 config.default_cursor_style = 'BlinkingBar'
 
 -- Fonts
-config.font = wezterm.font {
-  family = 'MonoLisa Variable',
-  harfbuzz_features = {
-    'zero', 'ss01', 'ss02', 'ss06', 'ss07', 'ss08', 'ss11', 'ss12', 'ss13', 'ss14', 'ss15', 'ss16', 'ss17'
-  }
+config.font = wezterm.font_with_fallback {
+  {
+    family = 'MonoLisa Variable',
+    harfbuzz_features = {
+      'zero', 'ss01', 'ss02', 'ss06', 'ss07', 'ss08', 'ss11', 'ss12', 'ss13', 'ss14', 'ss15', 'ss16', 'ss17'
+    },
+  },
+  'Symbols Nerd Font Mono',
+  'SF Pro Display',
 }
 
 -- macOS specific configuration
@@ -46,7 +50,6 @@ config.hide_tab_bar_if_only_one_tab = false
 config.initial_cols = 126
 config.initial_rows = 67
 config.window_close_confirmation = 'NeverPrompt'
-config.window_decorations = 'MacOsNative'
 
 -- WezTerm settings
 config.automatically_reload_config = true
