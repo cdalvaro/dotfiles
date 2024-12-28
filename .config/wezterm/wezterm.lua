@@ -107,5 +107,6 @@ config.window_close_confirmation = 'NeverPrompt'
 config.automatically_reload_config = true
 config.check_for_updates = true
 config.show_update_window = false
+config.term = 'wezterm'
 
 return config
