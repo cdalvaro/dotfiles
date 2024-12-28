@@ -40,6 +40,58 @@ config.font = wezterm.font_with_fallback {
   'SF Pro Display',
 }
 
+-- Key bindings
+config.keys = {
+  {
+    -- Jump to the beginning of the line
+    key = 'LeftArrow',
+    mods = 'CMD',
+    action = wezterm.action.SendString '\x01',
+  },
+  {
+    -- Jump to the end of the line
+    key = 'RightArrow',
+    mods = 'CMD',
+    action = wezterm.action.SendString '\x05',
+  },
+  {
+    -- Jump to the beginning of the current word
+    key = 'LeftArrow',
+    mods = 'OPT',
+    action = wezterm.action.SendString '\x1b\x62',
+  },
+  {
+    -- Jump to the end of the current word
+    key = 'RightArrow',
+    mods = 'OPT',
+    action = wezterm.action.SendString '\x1b\x66',
+  },
+  {
+    -- Delete line from cursor position to start of line
+    key = 'Backspace',
+    mods = 'CMD',
+    action = wezterm.action.SendString '\x15',
+  },
+  {
+    -- Use cmd + . to cancel the current command
+    key = '.',
+    mods = 'CMD',
+    action = wezterm.action.SendString '\x03',
+  },
+  {
+    -- Split current pane vertically
+    key = 'D',
+    mods = 'CMD',
+    action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
+  },
+  {
+    -- Split current pane horizontally
+    key = 'D',
+    mods = 'SHIFT|CMD',
+    action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
+  }
+}
+
 -- macOS specific configuration
 config.native_macos_fullscreen_mode = true
 
