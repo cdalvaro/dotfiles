@@ -3,6 +3,7 @@
 
 -- Auxiliary functions
 local wezterm = require 'wezterm'
+local act = wezterm.action;
 
 function get_appearance()
   -- if wezterm.gui then
@@ -40,55 +41,78 @@ config.font = wezterm.font_with_fallback {
   'SF Pro Display',
 }
 
+-- Mouse bndings
+config.selection_word_boundary = ' \t\n{}[]()"\'`,;:'
+
+config.mouse_bindings = {
+  -- Change the default click behavior so that it only selects
+  -- text and doesn't open hyperlinks
+  {
+    event = { Up = { streak = 1, button = 'Left' } },
+    mods = 'NONE',
+    action = act.CompleteSelection 'ClipboardAndPrimarySelection',
+  },
+
+  -- and make CMD-Click open hyperlinks
+  {
+    event = { Up = { streak = 1, button = 'Left' } },
+    mods = 'CMD',
+    action = act.OpenLinkAtMouseCursor,
+  },
+
+  -- NOTE that binding only the 'Up' event can give unexpected behaviors.
+  -- Read more below on the gotcha of binding an 'Up' event only.
+}
+
 -- Key bindings
 config.keys = {
   {
     -- Jump to the beginning of the line
     key = 'LeftArrow',
     mods = 'CMD',
-    action = wezterm.action.SendString '\x01',
+    action = act.SendString '\x01',
   },
   {
     -- Jump to the end of the line
     key = 'RightArrow',
     mods = 'CMD',
-    action = wezterm.action.SendString '\x05',
+    action = act.SendString '\x05',
   },
   {
     -- Jump to the beginning of the current word
     key = 'LeftArrow',
     mods = 'OPT',
-    action = wezterm.action.SendString '\x1b\x62',
+    action = act.SendString '\x1b\x62',
   },
   {
     -- Jump to the end of the current word
     key = 'RightArrow',
     mods = 'OPT',
-    action = wezterm.action.SendString '\x1b\x66',
+    action = act.SendString '\x1b\x66',
   },
   {
     -- Delete line from cursor position to start of line
     key = 'Backspace',
     mods = 'CMD',
-    action = wezterm.action.SendString '\x15',
+    action = act.SendString '\x15',
   },
   {
     -- Use cmd + . to cancel the current command
     key = '.',
     mods = 'CMD',
-    action = wezterm.action.SendString '\x03',
+    action = act.SendString '\x03',
   },
   {
     -- Split current pane vertically
-    key = 'D',
-    mods = 'CMD',
-    action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
+    key = '-',
+    mods = 'CMD|SHIFT',
+    action = act.SplitVertical { domain = 'CurrentPaneDomain' },
   },
   {
     -- Split current pane horizontally
-    key = 'D',
+    key = '|',
     mods = 'SHIFT|CMD',
-    action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
+    action = act.SplitHorizontal { domain = 'CurrentPaneDomain' },
   }
 }
 
