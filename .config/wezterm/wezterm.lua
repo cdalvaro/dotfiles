@@ -127,6 +127,64 @@ config.initial_cols = 126
 config.initial_rows = 67
 config.window_close_confirmation = 'NeverPrompt'
 
+config.window_frame = {
+  font = wezterm.font { family = 'SF Pro Display', weight = 'Bold' },
+  font_size = 12.0,
+
+  -- The overall background color of the tab bar when
+  -- the window is focused
+  active_titlebar_bg = '#282938',
+
+  -- The overall background color of the tab bar when
+  -- the window is not focused
+  inactive_titlebar_bg = '#282938',
+}
+
+config.colors = {
+  tab_bar = {
+    -- The color of the strip that goes along the top of the window
+    background = '#282938',
+
+    -- The active tab is the one that has focus in the window
+    active_tab = {
+      bg_color = '#ebf1f0',
+      fg_color = '#696c76',
+      intensity = 'Normal',
+      underline = 'None',
+      italic = false,
+      strikethrough = false,
+    },
+
+    -- Inactive tabs are the tabs that do not have focus
+    inactive_tab = {
+      bg_color = '#a7cfbc',
+      fg_color = '#696c76',
+    },
+
+    -- You can configure some alternate styling when the mouse pointer
+    -- moves over inactive tabs
+    inactive_tab_hover = {
+      bg_color = '#f8d87d',
+      fg_color = '#696c76',
+      italic = true,
+    },
+
+    -- The new tab button that let you create new tabs
+    -- new_tab = {
+    --   bg_color = '#bfd671',
+    --   fg_color = '#696c76',
+    -- },
+
+    -- You can configure some alternate styling when the mouse pointer
+    -- moves over the new tab button
+    new_tab_hover = {
+      bg_color = '#f8d87d',
+      fg_color = '#696c76',
+      italic = true,
+    },
+  },
+}
+
 -- WezTerm settings
 config.automatically_reload_config = true
 config.check_for_updates = true
