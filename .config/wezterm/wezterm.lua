@@ -104,14 +104,14 @@ config.keys = {
   },
   {
     -- Split current pane vertically
-    key = '-',
+    key = 'd',
     mods = 'CMD|SHIFT',
     action = act.SplitVertical { domain = 'CurrentPaneDomain' },
   },
   {
     -- Split current pane horizontally
-    key = '|',
-    mods = 'SHIFT|CMD',
+    key = 'd',
+    mods = 'CMD',
     action = act.SplitHorizontal { domain = 'CurrentPaneDomain' },
   }
 }
