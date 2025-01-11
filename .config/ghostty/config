@@ -1,0 +1,56 @@
+# Ghostty Configuration
+# Reference: https://ghostty.org/docs/config/reference
+
+# App
+quit-after-last-window-closed = true
+scrollback-limit = 10000
+auto-update = download
+
+# macOS specific
+macos-non-native-fullscreen = false
+macos-icon = official
+# macos-icon-frame = aluminum
+# macos-icon-ghost-color = f19f69
+# macos-icon-screen-color = a7cfbc
+
+# Font
+font-family = MonoLisa Variable
+font-size = 12
+font-feature = zero
+font-feature = ss01
+font-feature = ss02
+font-feature = ss06
+font-feature = ss07
+font-feature = ss08
+font-feature = ss11
+font-feature = ss12
+font-feature = ss13
+font-feature = ss14
+font-feature = ss15
+font-feature = ss16
+font-feature = ss17
+
+# Keybindings
+## Jump to the beginning of the line
+keybind = cmd+left=text:\x01
+## Jump to the end of the line
+keybind = cmd+right=text:\x05
+## Jump to the beginning of the current word
+keybind = opt+left=text:\x1b\x62
+## Jump to the end of the current word
+keybind = opt+right=text:\x1b\x66
+## Delete line from cursor position to start of line
+keybind = cmd+backspace=text:\x15
+## Use cmd + . to cancel the current command
+keybind = cmd+.=text:\x03
+
+# Theme
+theme = monokai-pro-octagon
+
+# Window
+window-colorspace = display-p3
+window-padding-x = 5
+window-padding-y = 5
+window-height = 68
+window-width = 126
+window-save-state = always
