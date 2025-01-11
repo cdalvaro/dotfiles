@@ -6,6 +6,9 @@ quit-after-last-window-closed = true
 scrollback-limit = 10000
 auto-update = download
 
+# https://ghostty.org/docs/help/terminfo#sudo
+# shell-integration-features = sudo
+
 # macOS specific
 macos-non-native-fullscreen = false
 macos-icon = official
