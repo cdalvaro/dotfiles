@@ -48,6 +48,7 @@ keybind = cmd+backspace=text:\x15
 keybind = cmd+.=text:\x03
 
 # Theme
+cursor-style = bar
 theme = monokai-pro-octagon
 
 # Window
