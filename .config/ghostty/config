@@ -11,10 +11,10 @@ auto-update = download
 
 # macOS specific
 macos-non-native-fullscreen = false
-macos-icon = official
-# macos-icon-frame = aluminum
-# macos-icon-ghost-color = f19f69
-# macos-icon-screen-color = a7cfbc
+macos-icon = custom-style
+macos-icon-frame = aluminum
+macos-icon-ghost-color = #F4BA4D
+macos-icon-screen-color = #403f6f
 
 # Font
 font-family = MonoLisa Variable
