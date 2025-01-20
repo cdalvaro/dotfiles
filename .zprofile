@@ -16,7 +16,7 @@ fi
 
 # Cargo
 CARGO_DIR="${HOME}/.cargo"
-if [[ -d "${CARGO_DIR}" ]] && export PATH="${CARGO_DIR}/bin:$PATH"
+[[ -d "${CARGO_DIR}" ]] && export PATH="${CARGO_DIR}/bin:$PATH"
 
 # rbenv
 # https://github.com/rbenv/rbenv
