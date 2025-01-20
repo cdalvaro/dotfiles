@@ -101,6 +101,7 @@ zstyle ':fzf-tab:*' fzf-flags --color=fg:1,fg+:2
 # -- OS specific
 case "$(uname)" in
 Darwin) source ~/.macOS.zsh ;;
+Linux) source ~/.linux.zsh ;;
 *) ;;
 esac
 

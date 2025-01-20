@@ -3,8 +3,10 @@
 # macOS specific settings
 
 # -- iTerm2
-zi snippet OMZP::iterm2
-zstyle :omz:plugins:iterm2 shell-integration yes
+if [[ "${TERM_PROGRAM}" == "iTerm.app" ]]; then
+  zi snippet OMZP::iterm2
+  zstyle :omz:plugins:iterm2 shell-integration yes
+fi
 
 # -- kitty
 if command -v kitten &>/dev/null; then

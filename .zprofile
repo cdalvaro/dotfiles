@@ -14,6 +14,10 @@ if [[ -n "${NIX_PROFILE}" ]]; then
   [[ -n "${GLIBC_LOCALES_PATH}" ]] && export LOCALE_ARCHIVE="${GLIBC_LOCALES_PATH}/lib/locale/locale-archive"
 fi
 
+# Cargo
+CARGO_DIR="${HOME}/.cargo"
+if [[ -d "${CARGO_DIR}" ]] && export PATH="${CARGO_DIR}/bin:$PATH"
+
 # rbenv
 # https://github.com/rbenv/rbenv
 if command -v rbenv >/dev/null 2>&1; then
