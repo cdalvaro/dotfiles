@@ -11,6 +11,7 @@ auto-update = download
 
 # macOS specific
 macos-non-native-fullscreen = false
+macos-option-as-alt = false
 # macos-icon = custom-style
 # macos-icon-frame = aluminum
 # macos-icon-ghost-color = #F4BA4D
