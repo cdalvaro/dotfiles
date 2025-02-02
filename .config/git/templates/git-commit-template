@@ -44,7 +44,7 @@
 # There are three types of a footer:
 #   - Breaking change indicator     verbatim "BREAKING CHANGE:", followed by a <description>
 #   - Automatic issue management    such as "Close #123", "Reference #123", "See #123", etc.
-#   - Email-like metadata           such as "Signed-off-by:", "Co-authored-by", etc.
+#   - Email-like metadata           such as "Signed-off-by:", "Co-authored-by:", etc.
 #
 # There are three exceptions to the subject line rules:
 #   1. "Initial commit"     for the first commit in a git repository
