@@ -7,13 +7,6 @@
 # Homebrew
 [[ -n "${HOMEBREW_PREFIX}" ]] && eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
 
-# Nix
-if [[ -n "${NIX_PROFILE}" ]]; then
-  source "${NIX_PROFILE}/etc/profile.d/nix.sh"
-  GLIBC_LOCALES_PATH=$(nix-env --installed --no-name --out-path --query glibc-locales 2>/dev/null)
-  [[ -n "${GLIBC_LOCALES_PATH}" ]] && export LOCALE_ARCHIVE="${GLIBC_LOCALES_PATH}/lib/locale/locale-archive"
-fi
-
 # Cargo
 CARGO_DIR="${HOME}/.cargo"
 [[ -d "${CARGO_DIR}" ]] && export PATH="${CARGO_DIR}/bin:$PATH"

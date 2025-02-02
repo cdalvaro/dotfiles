@@ -24,10 +24,6 @@ fi
 
 [[ -d $HOMEBREW_PREFIX ]] && export HOMEBREW_PREFIX || unset HOMEBREW_PREFIX
 
-# Nix profile
-NIX_PROFILE=$HOME/.nix-profile
-[[ -d $NIX_PROFILE ]] && export NIX_PROFILE || unset NIX_PROFILE
-
 # -- Preferred editors
 export EDITOR='nvim'
 export GIT_EDITOR='nvim'
@@ -39,7 +35,7 @@ if [[ -n $SSH_CONNECTION ]]; then
   ### tmux
   export ZSH_TMUX_AUTOSTART=true
 else
-  ### Editos
+  ### Editors
   export EDITOR='bbedit --wait'
   export HOMEBREW_EDITOR='bbedit'
 fi
