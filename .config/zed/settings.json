@@ -1,0 +1,93 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-latest"
+    },
+    "version": "2"
+  },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
+  },
+  "ui_font_size": 13,
+  "buffer_font_family": "MonoLisa Variable",
+  "buffer_font_size": 12,
+  "buffer_font_weight": 400,
+  "buffer_font_fallbacks": ["Symbols Nerd Font Mono", "SF Pro Display"],
+  "buffer_font_features": {
+    "calt": true,
+    "zero": true,
+    "ss01": true,
+    "ss02": true,
+    "ss06": true,
+    "ss07": true,
+    "ss08": true,
+    "ss11": true,
+    "ss12": true,
+    "ss13": true,
+    "ss14": true,
+    "ss15": true,
+    "ss16": true,
+    "ss17": true
+  },
+  "theme": {
+    "mode": "system",
+    "light": "Ayu Light",
+    "dark": "One Dark"
+  },
+  "tabs": {
+    "close_position": "left",
+    "file_icons": true,
+    "git_status": true,
+    "activate_on_close": "history",
+    "always_show_close_button": false
+  },
+  "auto_install_extensions": {
+    "ruby": true,
+    "dockerfile": true,
+    "docker-compose": true,
+    "git-firefly": true
+  },
+  "autosave": "on_focus_change",
+  "restore_on_startup": "none",
+  "auto_update": true,
+  "preferred_line_length": 140,
+  "languages": {
+    "Ruby": {
+      "language_servers": ["ruby-lsp", "rubocop", "!solargraph", "..."]
+    }
+  },
+  "lsp": {
+    "rubocop": {
+      "initialization_options": {
+        "safeAutocorrect": true
+      }
+    },
+    "ruby-lsp": {
+      "initialization_options": {
+        "enabledFeatures": {
+          // This disables diagnostics
+          "diagnostics": false
+        },
+        "settings": {
+          "use_bundler": true
+        }
+      }
+    }
+  },
+  "file_types": {
+    "Jinja2": ["sls"]
+  }
+}
