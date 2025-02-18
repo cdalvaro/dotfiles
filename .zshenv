@@ -36,6 +36,7 @@ if [[ -n $SSH_CONNECTION ]]; then
   export ZSH_TMUX_AUTOSTART=true
 else
   ### Editors
-  export EDITOR='bbedit --wait'
-  export HOMEBREW_EDITOR='bbedit'
+  export EDITOR='zed --wait'
+  export GIT_EDITOR="${EDITOR}"
+  export HOMEBREW_EDITOR='zed'
 fi

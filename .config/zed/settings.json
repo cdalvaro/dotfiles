@@ -35,10 +35,7 @@
     "metrics": false
   },
   "terminal": {
-    "cursor_shape": "bar",
-    "env": {
-      "EDITOR": "zed --wait"
-    }
+    "cursor_shape": "bar"
   },
 
   // --- EXTENSIONS ---
