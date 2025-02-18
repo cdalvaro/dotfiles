@@ -35,6 +35,7 @@
     "metrics": false
   },
   "terminal": {
+    "cursor_shape": "bar",
     "env": {
       "EDITOR": "zed --wait"
     }
