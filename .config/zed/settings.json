@@ -38,6 +38,14 @@
     "cursor_shape": "bar"
   },
 
+  // --- APPEARANCE ---
+  "preferred_line_length": 140,
+  "theme": {
+    "mode": "system",
+    "light": "Monokai Pro Light",
+    "dark": "Monokai Pro (Filter Octagon)"
+  },
+
   // --- EXTENSIONS ---
   "auto_install_extensions": {
     "dockerfile": true,
@@ -69,12 +77,10 @@
     "ss16": true,
     "ss17": true
   },
-  "theme": {
-    "mode": "system",
-    "light": "Monokai Pro Light",
-    "dark": "Monokai Pro (Filter Octagon)"
-  },
-  "preferred_line_length": 140,
+
+  // --- FORMATTING ---
+  "ensure_final_newline_on_save": true,
+  "format_on_save": "on",
 
   // --- LANGUAGES ---
   "file_types": {
