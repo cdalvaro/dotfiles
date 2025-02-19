@@ -71,8 +71,8 @@
   },
   "theme": {
     "mode": "system",
-    "light": "Ayu Light",
-    "dark": "One Dark"
+    "light": "Monokai Pro Light",
+    "dark": "Monokai Pro (Filter Octagon)"
   },
   "preferred_line_length": 140,
 
@@ -86,6 +86,12 @@
     },
     "Ruby": {
       "language_servers": ["solargraph", "rubocop", "!ruby-lsp", "..."]
+    },
+    "TypeScript": {
+      "formatter": "prettier",
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
     }
   },
   "lsp": {
