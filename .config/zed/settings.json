@@ -87,9 +87,6 @@
     "Jinja2": ["sls"]
   },
   "languages": {
-    "Markdown": {
-      "format_on_save": "on"
-    },
     "Ruby": {
       "language_servers": ["solargraph", "rubocop", "!ruby-lsp", "..."]
     },
