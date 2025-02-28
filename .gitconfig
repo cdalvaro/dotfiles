@@ -6,6 +6,12 @@
   editor = $GIT_EDITOR
   excludesfile = ~/.gitignore
   pager = delta
+[column]
+  ui = auto
+[branch]
+  sort = -committerdate
+[tag]
+  sort = version:refname
 [merge]
   tool = Kaleidoscope
   # Include summaries of merged commits in newly created merge commit messages
@@ -20,6 +26,7 @@
   colorMoved = default
 [difftool]
   prompt = false
+  trustExitCode = true
 [difftool "Kaleidoscope"]
   cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [filter "lfs"]
@@ -45,6 +52,7 @@
 [commit]
   template = ~/.config/git/templates/git-commit-template
   gpgsign = true
+  verbose = true
 [gpg]
   # Custom gpg command to sign commits from IDEs such as Xcode, Visual Studio Code ...
   # https://gist.github.com/cdalvaro/f136792780e4306887daed3d9a64e972
@@ -58,16 +66,26 @@
 [pull]
   rebase = true
 [rebase]
+  autoSquash = true
   autoStash = true
+  updateRefs = true
 [fetch]
   prune = true
+  pruneTags = true
+  all = true
 [help]
   # Automatically correct and execute mistyped commands
-  autocorrect = 1
+  autocorrect = true
 [init]
+  algorithm = histogram
+  colorMoved = plain
+  mnemonicPrefix = true
+  renames = true
 	defaultBranch = main
 [push]
+  default = simple
   autoSetupRemote = true
+  followTags = true
 [blame]
 	ignoreRevsFile = .git-blame-ignore-revs
 
