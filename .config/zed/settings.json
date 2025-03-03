@@ -10,8 +10,8 @@
   // --- AI ASSISTANT ---
   "assistant": {
     "default_model": {
-      "model": "claude-3-5-sonnet-latest",
-      "provider": "zed.dev"
+      "model": "claude-3-7-sonnet-latest",
+      "provider": "anthropic"
     },
     "version": "2"
   },
