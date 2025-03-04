@@ -22,6 +22,7 @@
   // --- APP ---
   "auto_update": true,
   "autosave": "on_focus_change",
+  "on_last_window_closed": "quit_app",
   "restore_on_startup": "none",
   "tabs": {
     "activate_on_close": "history",
@@ -44,6 +45,14 @@
     "mode": "system",
     "light": "Monokai Pro Light",
     "dark": "Monokai Pro (Filter Octagon)"
+  },
+
+  // --- DIAGNOSTICS ---
+  "diagnostics": {
+    "include_warnings": true,
+    "inline": {
+      "enabled": true
+    }
   },
 
   // --- EXTENSIONS ---
@@ -79,6 +88,7 @@
   },
 
   // --- FORMATTING ---
+  "auto_indent_on_paste": true,
   "ensure_final_newline_on_save": true,
   "format_on_save": "on",
 
