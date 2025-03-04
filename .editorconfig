@@ -28,7 +28,7 @@ indent_size = 2
 insert_final_newline = false
 
 # Swift
-[*.swift]
+[*.{swift,playground}]
 indent_size = 4
 
 [Makefile]
