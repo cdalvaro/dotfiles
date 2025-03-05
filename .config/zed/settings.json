@@ -23,7 +23,7 @@
   "auto_update": true,
   "autosave": "on_focus_change",
   "on_last_window_closed": "quit_app",
-  "restore_on_startup": "none",
+  "restore_on_startup": "last_workspace",
   "tabs": {
     "activate_on_close": "history",
     "always_show_close_button": false,
