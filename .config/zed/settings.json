@@ -22,7 +22,6 @@
   // --- APP ---
   "auto_update": true,
   "autosave": "on_focus_change",
-  "on_last_window_closed": "quit_app",
   "restore_on_startup": "last_workspace",
   "tabs": {
     "activate_on_close": "history",
@@ -54,6 +53,9 @@
       "enabled": true
     }
   },
+
+  // --- EDITOR ---
+  "selection_highlight": true,
 
   // --- EXTENSIONS ---
   "auto_install_extensions": {
