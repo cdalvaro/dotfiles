@@ -42,8 +42,8 @@
   "preferred_line_length": 140,
   "theme": {
     "mode": "system",
-    "light": "Monokai Pro Light",
-    "dark": "Monokai Pro (Filter Octagon)"
+    "light": "One Light",
+    "dark": "One Dark"
   },
 
   // --- DIAGNOSTICS ---
