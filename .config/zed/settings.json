@@ -59,10 +59,13 @@
 
   // --- EXTENSIONS ---
   "auto_install_extensions": {
-    "dockerfile": true,
+    "basher": true,
     "docker-compose": true,
+    "dockerfile": true,
     "git-firefly": true,
-    "jinj2": true,
+    "html": true,
+    "jinja2": true,
+    "make": true,
     "ruby": true
   },
 
