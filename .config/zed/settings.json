@@ -23,7 +23,18 @@
   "auto_update": true,
   "autosave": "on_focus_change",
   // File scan exclusions, hide on the file explorer and search
-  "file_scan_exclusions": ["**/.git", "**/.svn", "**/.hg", "**/.idea", "**/.vscode", "**/node_modules"],
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/.jj",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.idea",
+    "**/.vscode",
+    "**/node_modules"
+  ],
   "restore_on_startup": "last_workspace",
   "tabs": {
     "activate_on_close": "history",
@@ -78,7 +89,7 @@
   },
 
   // --- FONTS ---
-  "ui_font_size": 13,
+  "ui_font_size": 14,
   "buffer_font_size": 12,
   "buffer_font_weight": 400,
   // "buffer_font_family": "MonoLisa Variable",
