@@ -22,6 +22,8 @@
   // --- APP ---
   "auto_update": true,
   "autosave": "on_focus_change",
+  // File scan exclusions, hide on the file explorer and search
+  "file_scan_exclusions": ["**/.git", "**/.svn", "**/.hg", "**/.idea", "**/.vscode", "**/node_modules"],
   "restore_on_startup": "last_workspace",
   "tabs": {
     "activate_on_close": "history",
@@ -55,6 +57,11 @@
   },
 
   // --- EDITOR ---
+  // Indentation, rainbow indentation
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware"
+  },
   "selection_highlight": true,
 
   // --- EXTENSIONS ---
@@ -65,32 +72,38 @@
     "git-firefly": true,
     "html": true,
     "jinja2": true,
+    "log": true,
     "make": true,
     "ruby": true
   },
 
   // --- FONTS ---
   "ui_font_size": 13,
-  "buffer_font_family": "MonoLisa Variable",
   "buffer_font_size": 12,
   "buffer_font_weight": 400,
-  "buffer_font_fallbacks": ["Symbols Nerd Font Mono", "SF Pro Display"],
+  // "buffer_font_family": "MonoLisa Variable",
+  // "buffer_font_features": {
+  //   "calt": true,
+  //   "zero": true,
+  //   "ss01": true,
+  //   "ss02": true,
+  //   "ss06": true,
+  //   "ss07": true,
+  //   "ss08": true,
+  //   "ss11": true,
+  //   "ss12": true,
+  //   "ss13": true,
+  //   "ss14": true,
+  //   "ss15": true,
+  //   "ss16": true,
+  //   "ss17": true
+  // },
+  "buffer_font_family": "Maple Mono",
   "buffer_font_features": {
     "calt": true,
-    "zero": true,
-    "ss01": true,
-    "ss02": true,
-    "ss06": true,
-    "ss07": true,
-    "ss08": true,
-    "ss11": true,
-    "ss12": true,
-    "ss13": true,
-    "ss14": true,
-    "ss15": true,
-    "ss16": true,
-    "ss17": true
+    "zero": true
   },
+  "buffer_font_fallbacks": ["Symbols Nerd Font Mono", "SF Pro Display"],
 
   // --- FORMATTING ---
   "auto_indent_on_paste": true,
@@ -102,6 +115,11 @@
     "Jinja2": ["sls"]
   },
   "languages": {
+    "Python": {
+      "format_on_save": { "language_server": { "name": "ruff" } },
+      "formatter": { "language_server": { "name": "ruff" } },
+      "language_servers": ["pyright", "ruff"]
+    },
     "Ruby": {
       "language_servers": ["ruby-lsp", "rubocop", "!solargraph", "..."]
     },
