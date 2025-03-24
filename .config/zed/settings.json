@@ -84,8 +84,10 @@
     "html": true,
     "jinja2": true,
     "log": true,
+    "lua": true,
     "make": true,
-    "ruby": true
+    "ruby": true,
+    "toml": true
   },
 
   // --- FONTS ---
