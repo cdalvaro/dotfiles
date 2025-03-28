@@ -91,8 +91,8 @@
   },
 
   // --- FONTS ---
-  "ui_font_size": 15,
-  "buffer_font_size": 13,
+  "ui_font_size": 14,
+  "buffer_font_size": 12,
   "buffer_font_weight": 400,
   // "buffer_font_family": "MonoLisa Variable",
   // "buffer_font_features": {
