@@ -10,8 +10,20 @@
   // --- AI ASSISTANT ---
   "assistant": {
     "default_model": {
-      "model": "claude-3-7-sonnet-latest",
-      "provider": "anthropic"
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet"
+    },
+    "editor_model": {
+      "provider": "openai",
+      "model": "gpt-4o"
+    },
+    "inline_assistant_model": {
+      "provider": "anthropic",
+      "model": "claude-3-7-sonnet"
+    },
+    "commit_message_model": {
+      "provider": "openai",
+      "model": "gpt-4o-mini"
     },
     "version": "2"
   },
@@ -87,6 +99,7 @@
     "lua": true,
     "make": true,
     "ruby": true,
+    "swift": true,
     "toml": true
   },
 
