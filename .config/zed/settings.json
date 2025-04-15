@@ -10,12 +10,8 @@
   // --- AI ASSISTANT ---
   "assistant": {
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-7-sonnet"
-    },
-    "editor_model": {
       "provider": "openai",
-      "model": "gpt-4o"
+      "model": "gpt-4.1"
     },
     "inline_assistant_model": {
       "provider": "anthropic",
@@ -23,7 +19,7 @@
     },
     "commit_message_model": {
       "provider": "openai",
-      "model": "gpt-4o-mini"
+      "model": "gpt-4.1-mini"
     },
     "version": "2"
   },
