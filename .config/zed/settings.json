@@ -94,6 +94,7 @@
     "log": true,
     "lua": true,
     "make": true,
+    "neocmake": true,
     "ruby": true,
     "swift": true,
     "toml": true
@@ -153,6 +154,9 @@
     }
   },
   "lsp": {
+    "clangd": {
+      "arguments": ["-background-index", "-compile-commands-dir=build"]
+    },
     "rubocop": {
       "initialization_options": {
         "safeAutocorrect": true
