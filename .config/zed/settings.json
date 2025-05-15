@@ -8,7 +8,7 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   // --- AI ASSISTANT ---
-  "assistant": {
+  "agent": {
     "default_model": {
       "provider": "openai",
       "model": "gpt-4.1"
@@ -80,6 +80,9 @@
   "indent_guides": {
     "enabled": true,
     "coloring": "indent_aware"
+  },
+  "minimap": {
+    "show": "always"
   },
   "selection_highlight": true,
 
