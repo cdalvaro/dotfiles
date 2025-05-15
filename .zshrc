@@ -76,15 +76,6 @@ setopt hist_find_no_dups
 export CLICOLOR=1
 export LSCOLORS=gxfxexdxcxegedabagacad
 
-## man colors from monokai.pro
-export LESS_TERMCAP_mb=$'e[1;35m'
-export LESS_TERMCAP_md=$'e[1;36m'
-export LESS_TERMCAP_me=$'e[0m'
-export LESS_TERMCAP_se=$'e[0m'
-export LESS_TERMCAP_so=$'e[1;44;33m'
-export LESS_TERMCAP_ue=$'e[0m'
-export LESS_TERMCAP_us=$'e[1;32m'
-
 autoload -U colors
 colors
 
@@ -109,7 +100,7 @@ esac
 ## https://github.com/sharkdp/bat
 if type bat &>/dev/null; then
   alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
-  export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+  export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
 fi
 
 # -- eza
