@@ -26,3 +26,6 @@ if command -v pyenv >/dev/null 2>&1; then
   eval "$(pyenv init -)"
   FPATH="$(brew --prefix pyenv)/completions:$FPATH"
 fi
+
+# User path
+export PATH="${HOME}/.local/bin:${PATH}"
