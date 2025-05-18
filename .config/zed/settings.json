@@ -99,6 +99,7 @@
     "make": true,
     "neocmake": true,
     "ruby": true,
+    "ruff": true,
     "swift": true,
     "toml": true
   },
@@ -159,6 +160,14 @@
   "lsp": {
     "clangd": {
       "arguments": ["-background-index", "-compile-commands-dir=build"]
+    },
+    "pyright": {
+      "settings": {
+        "python.analysis": {
+          "diagnosticMode": "workspace",
+          "typeCheckingMode": "strict"
+        }
+      }
     },
     "rubocop": {
       "initialization_options": {
