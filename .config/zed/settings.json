@@ -183,7 +183,8 @@
           // This disables diagnostics
           // Not supported yet: https://zed.dev/docs/languages/ruby#setting-up-ruby-lsp
           "diagnostics": false
-        }
+        },
+        "formatter": "rubocop"
       },
       "settings": {
         "use_bundler": false
