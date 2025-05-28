@@ -42,6 +42,11 @@ zi cdreplay -q
 zi light Aloxaf/fzf-tab
 zi light zsh-users/zsh-autosuggestions # NOTE: After fzf-tab
 zi light olets/zsh-abbr
+
+### ohmyzsh
+zstyle ':omz:update' mode auto
+zstyle ':omz:update' frequency 7
+zstyle ':omz:update' verbose silent
 zi light ohmyzsh/ohmyzsh
 
 # -- Snippets
