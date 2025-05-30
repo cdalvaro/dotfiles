@@ -139,6 +139,7 @@
 
   // --- LANGUAGES ---
   "file_types": {
+    "Dockerfile": ["Dockerfile*"],
     "Jinja2": ["sls"]
   },
   "languages": {
