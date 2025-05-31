@@ -10,8 +10,8 @@
   // --- AI ASSISTANT ---
   "agent": {
     "default_model": {
-      "provider": "openai",
-      "model": "gpt-4.1"
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-latest"
     },
     "inline_assistant_model": {
       "provider": "anthropic",
