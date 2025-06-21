@@ -3,7 +3,7 @@
 
 # App
 quit-after-last-window-closed = true
-scrollback-limit = 10000
+scrollback-limit = 1000000
 auto-update = download
 
 # https://ghostty.org/docs/help/terminfo#sudo
