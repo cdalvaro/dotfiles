@@ -20,8 +20,7 @@
     "commit_message_model": {
       "provider": "openai",
       "model": "gpt-4.1-mini"
-    },
-    "version": "2"
+    }
   },
   "features": {
     "edit_prediction_provider": "zed"
@@ -161,7 +160,9 @@
   },
   "lsp": {
     "clangd": {
-      "arguments": ["-background-index", "-compile-commands-dir=build"]
+      "binary": {
+        "arguments": ["-background-index", "-compile-commands-dir=build"]
+      }
     },
     "pyright": {
       "settings": {
