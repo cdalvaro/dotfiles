@@ -6,6 +6,14 @@
   editor = $GIT_EDITOR
   excludesfile = ~/.gitignore
   pager = delta
+[help]
+  # Automatically correct and execute mistyped commands
+  autocorrect = true
+[init]
+  templatedir = ~/.config/git/templates
+	defaultBranch = main
+[blame]
+	ignoreRevsFile = .git-blame-ignore-revs
 [column]
   ui = auto
 [branch]
@@ -13,7 +21,7 @@
 [tag]
   sort = version:refname
 [merge]
-  tool = Kaleidoscope
+  tool = vscode
   # Include summaries of merged commits in newly created merge commit messages
   log = true
 [mergetool]
@@ -21,34 +29,47 @@
 [mergetool "Kaleidoscope"]
   cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
   trustExitCode = true
+[mergetool "opendiff"]
+	cmd = opendiff \"$PWD/$LOCAL\" \"$PWD/$REMOTE\" -ancestor \"$PWD/$BASE\" -merge \"$PWD/$MERGED\"
+	trustExitCode = true
+[mergetool "vscode"]
+  cmd = code --new-window --wait --merge \"$REMOTE\" \"$LOCAL\" \"$BASE\" \"$MERGED\"
 [diff]
-  tool = Kaleidoscope
-  colorMoved = default
+	algorithm = histogram
+	colorMoved = default
+	mnemonicPrefix = true
+	renames = true
 [difftool]
   prompt = false
   trustExitCode = true
 [difftool "Kaleidoscope"]
   cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool "opendiff"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+[difftool "vscode"]
+  cmd = code --new-window --wait --diff \"$LOCAL\" \"$REMOTE\"
 [filter "lfs"]
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
   clean = git-lfs clean -- %f
 [delta]
-    features = line-numbers decorations
-    syntax-theme = Dracula
-    plus-style = syntax "#003800"
-    minus-style = syntax "#3f0001"
+  features = line-numbers decorations
+  syntax-theme = Dracula
+  plus-style = syntax "#003800"
+  minus-style = syntax "#3f0001"
 [delta "decorations"]
-    commit-decoration-style = bold yellow box ul
-    file-style = bold yellow ul
-    file-decoration-style = none
-    hunk-header-decoration-style = cyan box ul
+  commit-decoration-style = bold yellow box ul
+  file-style = bold yellow ul
+  file-decoration-style = none
+  hunk-header-decoration-style = cyan box ul
 [delta "line-numbers"]
-    line-numbers-left-style = cyan
-    line-numbers-right-style = cyan
-    line-numbers-minus-style = 124
-    line-numbers-plus-style = 28
+  line-numbers-left-style = cyan
+  line-numbers-right-style = cyan
+  line-numbers-minus-style = 124
+  line-numbers-plus-style = 28
+[interactive]
+  diffFilter = delta --color-only
 [commit]
   template = ~/.config/git/templates/git-commit-template
   gpgsign = true
@@ -56,13 +77,17 @@
 [gpg]
   # Custom gpg command to sign commits from IDEs such as Xcode, Visual Studio Code ...
   # https://gist.github.com/cdalvaro/f136792780e4306887daed3d9a64e972
-  program = {{ main_user_home }}/.local/sbin/gpg-with-key
+  program = ~/.local/sbin/gpg-with-key
 [protocol]
   version = 2
 [url "git@{{ pillar.git.gitlab.url }}:"]
   insteadOf = gitlab:
 [url "git@github.com:"]
   insteadOf = github:
+[push]
+  default = simple
+  autoSetupRemote = true
+  followTags = true
 [pull]
   rebase = true
 [rebase]
@@ -73,21 +98,9 @@
   prune = true
   pruneTags = true
   all = true
-[help]
-  # Automatically correct and execute mistyped commands
-  autocorrect = true
-[init]
-  algorithm = histogram
-  colorMoved = plain
-  mnemonicPrefix = true
-  renames = true
-	defaultBranch = main
-[push]
-  default = simple
-  autoSetupRemote = true
-  followTags = true
-[blame]
-	ignoreRevsFile = .git-blame-ignore-revs
+[rerere]
+  enabled = true
+  autoupdate = true
 
 # COLORS
 # ------
