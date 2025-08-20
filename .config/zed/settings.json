@@ -149,7 +149,14 @@
       "language_servers": ["pyright", "ruff"]
     },
     "Ruby": {
-      "language_servers": ["ruby-lsp", "sorbet", "rubocop"]
+      "language_servers": ["ruby-lsp", "sorbet", "rubocop", "!solargraph", "!steep"],
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "bundle",
+          "arguments": ["exec", "rubocop", "--stdin", "{buffer_path}", "--format", "quiet", "--stderr", "--autocorrect"]
+        }
+      }
     },
     "TypeScript": {
       "formatter": "prettier",
