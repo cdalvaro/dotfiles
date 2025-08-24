@@ -34,9 +34,4 @@ export ZSH_TMUX_FIXTERM=false
 if [[ -n $SSH_CONNECTION ]]; then
   ### tmux
   export ZSH_TMUX_AUTOSTART=true
-else
-  ### Editors
-  export EDITOR='zed --wait'
-  export GIT_EDITOR="${EDITOR}"
-  export HOMEBREW_EDITOR='zed'
 fi
