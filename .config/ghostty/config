@@ -57,6 +57,8 @@ keybind = cmd+.=text:\x03
 cursor-style = bar
 #theme = light:monokai-pro-light,dark:monokai-pro-octagon
 theme = monokai-pro-octagon
+background-opacity = 0.9
+background-blur = true
 
 # Window
 window-colorspace = display-p3
