@@ -8,6 +8,7 @@ return {
     build = ":TSUpdate",
     lazy = vim.fn.argc(-1) == 0, -- load treesitter early when opening a file from the cmdline
     enabled = function() return vim.fn.has("nvim-0.10.0") == 1 end,
+    dependencies = { "OXY2DEV/markview.nvim" },
     init = function(plugin)
       -- PERF: add nvim-treesitter queries to the rtp and it's custom query predicates early
       -- This is needed because a bunch of plugins no longer `require("nvim-treesitter")`, which
