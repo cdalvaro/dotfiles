@@ -4,13 +4,13 @@
   signingkey = {{ pillar.git.user_signingkey }}
 [core]
   editor = $GIT_EDITOR
-  excludesfile = ~/.gitignore
+  excludesfile = {{ main_user_home }}/.gitignore
   pager = delta
 [help]
   # Automatically correct and execute mistyped commands
   autocorrect = true
 [init]
-  templatedir = ~/.config/git/templates
+  templatedir = {{ main_user_home }}/.config/git/templates
 	defaultBranch = main
 [blame]
 	ignoreRevsFile = .git-blame-ignore-revs
@@ -71,13 +71,13 @@
 [interactive]
   diffFilter = delta --color-only
 [commit]
-  template = ~/.config/git/templates/git-commit-template
+  template = {{ main_user_home }}/.config/git/templates/git-commit-template
   gpgsign = true
   verbose = true
 [gpg]
   # Custom gpg command to sign commits from IDEs such as Xcode, Visual Studio Code ...
   # https://gist.github.com/cdalvaro/f136792780e4306887daed3d9a64e972
-  program = ~/.local/sbin/gpg-with-key
+  program = {{ main_user_home }}/.local/sbin/gpg-with-key
 [protocol]
   version = 2
 [url "git@{{ pillar.git.gitlab.url }}:"]
