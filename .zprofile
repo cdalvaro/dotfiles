@@ -7,10 +7,6 @@
 # Homebrew
 [[ -n "${HOMEBREW_PREFIX}" ]] && eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
 
-# Cargo
-CARGO_DIR="${HOME}/.cargo"
-[[ -d "${CARGO_DIR}" ]] && export PATH="${CARGO_DIR}/bin:$PATH"
-
 # rbenv
 # https://github.com/rbenv/rbenv
 if command -v rbenv >/dev/null 2>&1; then
