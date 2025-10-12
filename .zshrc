@@ -120,7 +120,7 @@ fi
 ## https://github.com/junegunn/fzf
 
 ## Options to fzf command
-export FZF_COMPLETION_OPTS='--border --info=inline --style full --preview 'fzf-preview.sh {}' --bind 'focus:transform-header:file --brief {}''
+export FZF_COMPLETION_OPTS="--border --info=inline --style full --preview 'fzf-preview.sh {}' --bind 'focus:transform-header:file --brief {}'"
 
 ## Use fd (https://github.com/sharkdp/fd) for listing path candidates.
 ## - The first argument to the function ($1) is the base path to start traversal
