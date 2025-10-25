@@ -10,6 +10,7 @@ auto-update = download
 # shell-integration-features = sudo
 
 # macOS specific
+macos-titlebar-style = native
 macos-non-native-fullscreen = false
 macos-option-as-alt = false
 # macos-icon = custom-style
