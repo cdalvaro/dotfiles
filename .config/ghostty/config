@@ -51,6 +51,8 @@ font-feature = ss18
 # font-feature = ss15
 # font-feature = ss16
 # font-feature = ss17
+
+# Fallback fonts
 font-family = "Symbols Nerd Font Mono"
 font-family = "SF Pro Display"
 
