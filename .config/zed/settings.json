@@ -106,9 +106,21 @@
 
   // --- FONTS ---
   "ui_font_size": 14,
-  "buffer_font_size": 12,
   "buffer_font_weight": 400,
+  /// --- PragmataPro
+  // https://fsd.it/pragmatapro/Handbook.png
+  "buffer_font_size": 13,
+  "buffer_font_family": "PragmataPro Mono Liga",
+  "buffer_font_features": {
+    "calt": true,
+    "ss13": true,
+    "ss15": true,
+    "ss18": true
+  },
+  "buffer_font_fallbacks": ["SF Pro Display"],
+  /// --- MonoLisa
   // "buffer_font_family": "MonoLisa Variable",
+  // "buffer_font_size": 12,
   // "buffer_font_features": {
   //   "calt": true,
   //   "zero": true,
@@ -125,12 +137,15 @@
   //   "ss16": true,
   //   "ss17": true
   // },
-  "buffer_font_family": "Maple Mono",
-  "buffer_font_features": {
-    "calt": true,
-    "zero": true
-  },
-  "buffer_font_fallbacks": ["Symbols Nerd Font Mono", "SF Pro Display"],
+  // "buffer_font_fallbacks": ["Symbols Nerd Font Mono", "SF Pro Display"],
+  /// --- Maple Mono
+  // "buffer_font_family": "Maple Mono",
+  // "buffer_font_size": 12,
+  // "buffer_font_features": {
+  //   "calt": true,
+  //   "zero": true
+  // },
+  // "buffer_font_fallbacks": ["Symbols Nerd Font Mono", "SF Pro Display"],
 
   // --- FORMATTING ---
   "auto_indent_on_paste": true,
@@ -144,11 +159,15 @@
   },
   "languages": {
     "Python": {
-      "format_on_save": { "language_server": { "name": "ruff" } },
+      "format_on_save": "on",
       "formatter": { "language_server": { "name": "ruff" } },
       "language_servers": ["pyright", "ruff"]
     },
     "Ruby": {
+      "inlay_hints": {
+        "enabled": true
+      },
+      "tab_size": 2,
       "language_servers": ["ruby-lsp", "sorbet", "rubocop", "!solargraph", "!steep"],
       "format_on_save": "on",
       "formatter": {

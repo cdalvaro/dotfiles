@@ -19,6 +19,7 @@ macos-option-as-alt = false
 # macos-icon-screen-color = #403f6f
 
 # Font
+### PragmataPro
 font-family = "PragmataPro Mono Liga"
 font-size = 13
 font-feature = calt
@@ -26,6 +27,7 @@ font-feature = ss13
 font-feature = ss15
 font-feature = ss18
 
+### Maple Mono
 # font-family = "Maple Mono NF"
 # font-size = 12
 # font-feature = calt
@@ -36,6 +38,7 @@ font-feature = ss18
 # font-feature = ss10
 # font-feature = ss11
 
+### MonoLisa
 # font-family = "MonoLisa Variable"
 # font-size = 12
 # font-feature = zero
@@ -53,7 +56,7 @@ font-feature = ss18
 # font-feature = ss17
 
 # Fallback fonts
-font-family = "Symbols Nerd Font Mono"
+# font-family = "Symbols Nerd Font Mono"
 font-family = "SF Pro Display"
 
 # Keybindings
