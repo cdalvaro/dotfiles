@@ -62,8 +62,8 @@
   "preferred_line_length": 140,
   "theme": {
     "mode": "system",
-    "light": "One Light",
-    "dark": "One Dark"
+    "light": "Ayu Light",
+    "dark": "Ayu Mirage"
   },
 
   // --- DIAGNOSTICS ---
@@ -87,6 +87,7 @@
   "selection_highlight": true,
 
   // --- EXTENSIONS ---
+  // Check extensions inside: ~/Library/Application\ Support/Zed/extensions/installed
   "auto_install_extensions": {
     "basher": true,
     "docker-compose": true,
@@ -168,12 +169,27 @@
         "enabled": true
       },
       "tab_size": 2,
-      "language_servers": ["ruby-lsp", "sorbet", "rubocop", "!solargraph", "!steep"],
+      "language_servers": [
+        "ruby-lsp",
+        "sorbet",
+        "rubocop",
+        "!solargraph",
+        "!steep"
+      ],
       "format_on_save": "on",
       "formatter": {
         "external": {
           "command": "bundle",
-          "arguments": ["exec", "rubocop", "--stdin", "{buffer_path}", "--format", "quiet", "--stderr", "--autocorrect"]
+          "arguments": [
+            "exec",
+            "rubocop",
+            "--stdin",
+            "{buffer_path}",
+            "--format",
+            "quiet",
+            "--stderr",
+            "--autocorrect"
+          ]
         }
       }
     },

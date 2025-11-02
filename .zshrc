@@ -77,10 +77,6 @@ setopt hist_save_no_dups
 setopt hist_find_no_dups
 
 # -- Colors
-## ls colors from monokai.pro
-export CLICOLOR=1
-export LSCOLORS=gxfxexdxcxegedabagacad
-
 autoload -U colors
 colors
 

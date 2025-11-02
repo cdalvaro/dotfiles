@@ -1,5 +1,5 @@
 fonts:
-  size: 12.0
+  size: 13.0
   style: Regular
   normal:
-    family: MonoLisa Variable
+    family: PragmataPro Mono Liga
