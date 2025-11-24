@@ -109,10 +109,10 @@
   // --- FONTS ---
   "ui_font_size": 14,
   "buffer_font_weight": 400,
-  /// --- PragmataPro
+  /// --- PragmataPro Variable
   // https://fsd.it/pragmatapro/Handbook.png
   "buffer_font_size": 13,
-  "buffer_font_family": "PragmataPro Mono Liga",
+  "buffer_font_family": "PragmataPro VF Mono Liga",
   "buffer_font_features": {
     "calt": true,
     "ss13": true,

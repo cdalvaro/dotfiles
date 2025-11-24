@@ -19,8 +19,8 @@ macos-option-as-alt = false
 # macos-icon-screen-color = #403f6f
 
 # Font
-### PragmataPro
-font-family = "PragmataPro Mono Liga"
+### PragmataPro Variable
+font-family = "PragmataPro VF Mono Liga"
 font-size = 13
 font-feature = calt
 font-feature = ss13
