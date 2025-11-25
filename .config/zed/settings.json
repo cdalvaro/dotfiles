@@ -115,6 +115,7 @@
   "buffer_font_family": "PragmataPro VF Mono Liga",
   "buffer_font_features": {
     "calt": true,
+    "cv04": true,
     "ss13": true,
     "ss15": true,
     "ss18": true

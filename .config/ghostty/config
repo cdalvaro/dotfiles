@@ -23,6 +23,7 @@ macos-option-as-alt = false
 font-family = "PragmataPro VF Mono Liga"
 font-size = 13
 font-feature = calt
+font-feature = cv04
 font-feature = ss13
 font-feature = ss15
 font-feature = ss18
