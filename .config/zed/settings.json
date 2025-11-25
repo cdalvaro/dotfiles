@@ -90,6 +90,7 @@
   // Check extensions inside: ~/Library/Application\ Support/Zed/extensions/installed
   "auto_install_extensions": {
     "basher": true,
+    "catppuccin-icons": true,
     "comment": true,
     "docker-compose": true,
     "dockerfile": true,
@@ -104,6 +105,11 @@
     "ruff": true,
     "swift": true,
     "toml": true
+  },
+  "icon_theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Mocha"
   },
 
   // --- FONTS ---
