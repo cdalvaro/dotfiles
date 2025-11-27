@@ -20,6 +20,10 @@ vim.o.smartcase = true     -- Override 'ignorecase' setting if search pattern co
 vim.o.termguicolors = true -- Enable truecolors
 vim.o.scrolloff = 12       -- Scrolling offset
 
+-- Spell Check
+vim.opt.spell = true
+vim.opt.spelllang = { "en_us", "es_es" }
+
 -- make backspace work like most other programs
 -- https://vim.fandom.com/wiki/Backspace_and_delete_problems
 vim.o.backspace = 'indent,eol,start'
