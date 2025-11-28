@@ -5,7 +5,7 @@
 [core]
   editor = $GIT_EDITOR
   excludesfile = {{ main_user_home }}/.gitignore
-  pager = delta
+  pager = bat --style=plain
 [help]
   # Automatically correct and execute mistyped commands
   autocorrect = true
