@@ -5,7 +5,7 @@
 [core]
   editor = $GIT_EDITOR
   excludesfile = {{ main_user_home }}/.gitignore
-  pager = bat --style=plain
+  pager = delta
 [help]
   # Automatically correct and execute mistyped commands
   autocorrect = true
@@ -24,6 +24,7 @@
   tool = vscode
   # Include summaries of merged commits in newly created merge commit messages
   log = true
+  conflictStyle = zdiff3
 [mergetool]
   prompt = false
 [mergetool "Kaleidoscope"]
@@ -54,10 +55,11 @@
   required = true
   clean = git-lfs clean -- %f
 [delta]
-  features = line-numbers decorations
-  syntax-theme = Dracula
-  plus-style = syntax "#003800"
-  minus-style = syntax "#3f0001"
+  navigate = true
+	features = decorations
+  line-numbers = true
+  hyperlinks = true
+  true-color = always
 [delta "decorations"]
   commit-decoration-style = bold yellow box ul
   file-style = bold yellow ul
@@ -144,6 +146,3 @@
   unmerged = magenta bold reverse
   untracked = red
   updated = green bold
-[pager]
-	diff = bat --style=changes
-	show = bat --style=changes
