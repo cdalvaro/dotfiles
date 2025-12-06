@@ -144,3 +144,6 @@
   unmerged = magenta bold reverse
   untracked = red
   updated = green bold
+[pager]
+	diff = bat --style=changes
+	show = bat --style=changes
