@@ -4,10 +4,12 @@
 return {
   {
     "nvim-lualine/lualine.nvim",
-    dependencies = { "Shatur/neovim-ayu" },
+    -- dependencies = { "Shatur/neovim-ayu" },
+    dependencies = { "loctvl842/monokai-pro.nvim" },
     opts = {
       options = {
-        theme = "ayu",
+        -- theme = "ayu",
+        theme = "monokai-pro",
         icons_enabled = true,
         component_separators = "", -- diabled { left = "", right = "" },
         section_separators = "",   -- diabled { left = "", right = "" },
