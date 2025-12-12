@@ -30,32 +30,32 @@ return {
         },
         keyword = {
           italic = true
-        },   -- any other keyword
+        }, -- any other keyword
         type = {
           italic = true
-        },   -- (preferred) int, long, char, etc
+        }, -- (preferred) int, long, char, etc
         storageclass = {
           italic = true
-        },   -- static, register, volatile, etc
+        }, -- static, register, volatile, etc
         structure = {
           italic = true
-        },   -- struct, union, enum, etc
+        }, -- struct, union, enum, etc
         parameter = {
           italic = true
-        },   -- parameter pass in function
+        }, -- parameter pass in function
         annotation = {
           italic = true
         },
         tag_attribute = {
           italic = true
-        }                 -- attribute of tag in reactjs
+        }             -- attribute of tag in reactjs
       },
-      filter = "octagon", -- classic | octagon | pro | machine | ristretto | spectrum
+      filter = "pro", -- classic | octagon | pro | machine | ristretto | spectrum
       -- Enable this will disable filter option
       day_night = {
-        enable = false,            -- turn off by default
-        day_filter = "pro",        -- classic | octagon | pro | machine | ristretto | spectrum
-        night_filter = "octagon"   -- classic | octagon | pro | machine | ristretto | spectrum
+        enable = true,             -- turn off by default
+        day_filter = "light",      -- classic | octagon | pro | machine | ristretto | spectrum
+        night_filter = "pro"       -- classic | octagon | pro | machine | ristretto | spectrum
       },
       inc_search = "background",   -- underline | background
       background_clear = {         -- "float_win",
@@ -70,7 +70,7 @@ return {
           underline_visible = false
         },
         indent_blankline = {
-          context_highlight = "default",     -- default | pro
+          context_highlight = "pro", -- default | pro
           context_start_underline = false
         },
       },
