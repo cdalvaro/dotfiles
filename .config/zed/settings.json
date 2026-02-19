@@ -8,22 +8,22 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   // --- AI ASSISTANT ---
+  "edit_predictions": {
+    "provider": "zed",
+  },
   "agent": {
     "default_model": {
       "provider": "anthropic",
-      "model": "claude-sonnet-4-latest"
+      "model": "claude-sonnet-4-latest",
     },
     "inline_assistant_model": {
       "provider": "anthropic",
-      "model": "claude-sonnet-4-latest"
+      "model": "claude-sonnet-4-latest",
     },
     "commit_message_model": {
-      "provider": "openai",
-      "model": "gpt-5-mini"
-    }
-  },
-  "features": {
-    "edit_prediction_provider": "zed"
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-latest",
+    },
   },
 
   // --- APP ---
@@ -40,22 +40,22 @@
     "**/Thumbs.db",
     "**/.idea",
     "**/.vscode",
-    "**/node_modules"
+    "**/node_modules",
   ],
-  "restore_on_startup": "last_workspace",
+  "restore_on_startup": "launchpad",
   "tabs": {
     "activate_on_close": "history",
     "show_close_button": "hover",
     "close_position": "left",
     "file_icons": true,
-    "git_status": true
+    "git_status": true,
   },
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
   "terminal": {
-    "cursor_shape": "bar"
+    "cursor_shape": "bar",
   },
 
   // --- APPEARANCE ---
@@ -63,26 +63,26 @@
   "theme": {
     "mode": "system",
     "light": "Ayu Light",
-    "dark": "Ayu Mirage"
+    "dark": "Ayu Mirage",
   },
 
   // --- DIAGNOSTICS ---
   "diagnostics": {
     "include_warnings": true,
     "inline": {
-      "enabled": true
-    }
+      "enabled": true,
+    },
   },
 
   // --- EDITOR ---
   // Indentation, rainbow indentation
   "indent_guides": {
     "enabled": true,
-    "coloring": "indent_aware"
+    "coloring": "indent_aware",
   },
   "minimap": {
     "display_in": "active_editor",
-    "show": "always"
+    "show": "always",
   },
   "selection_highlight": true,
 
@@ -104,12 +104,12 @@
     "ruby": true,
     "ruff": true,
     "swift": true,
-    "toml": true
+    "toml": true,
   },
   "icon_theme": {
     "mode": "system",
     "light": "Catppuccin Latte",
-    "dark": "Catppuccin Mocha"
+    "dark": "Catppuccin Mocha",
   },
 
   // --- FONTS ---
@@ -124,7 +124,7 @@
     "cv04": true,
     "ss13": true,
     "ss15": true,
-    "ss18": true
+    "ss18": true,
   },
   "buffer_font_fallbacks": ["SF Pro Display"],
   /// --- MonoLisa
@@ -164,17 +164,17 @@
   // --- LANGUAGES ---
   "file_types": {
     "Dockerfile": ["Dockerfile*"],
-    "Jinja2": ["sls"]
+    "Jinja2": ["sls"],
   },
   "languages": {
     "Python": {
       "format_on_save": "on",
       "formatter": { "language_server": { "name": "ruff" } },
-      "language_servers": ["pyright", "ruff"]
+      "language_servers": ["pyright", "ruff"],
     },
     "Ruby": {
       "inlay_hints": {
-        "enabled": true
+        "enabled": true,
       },
       "tab_size": 2,
       "language_servers": ["ruby-lsp", "sorbet", "rubocop", "!solargraph", "!steep"],
@@ -182,43 +182,44 @@
       "formatter": {
         "external": {
           "command": "bundle",
-          "arguments": ["exec", "rubocop", "--stdin", "{buffer_path}", "--format", "quiet", "--stderr", "--autocorrect"]
-        }
-      }
+          "arguments": ["exec", "rubocop", "--stdin", "{buffer_path}", "--format", "quiet", "--stderr", "--autocorrect"],
+        },
+      },
     },
     "TypeScript": {
       "formatter": "prettier",
       "code_actions_on_format": {
-        "source.fixAll.eslint": true
-      }
-    }
+        "source.fixAll.eslint": true,
+      },
+    },
   },
   "lsp": {
     "clangd": {
       "binary": {
-        "arguments": ["-background-index", "-compile-commands-dir=build"]
-      }
+        "arguments": ["-background-index", "-compile-commands-dir=build"],
+      },
     },
-    "pyright": {
+    "basedpyright": {
       "settings": {
         "python.analysis": {
           "diagnosticMode": "workspace",
-          "typeCheckingMode": "strict"
-        }
-      }
+          "typeCheckingMode": "strict",
+          "ignore": ["**/__pycache__"],
+        },
+      },
     },
     "rubocop": {
       "initialization_options": {
-        "safeAutocorrect": true
-      }
+        "safeAutocorrect": true,
+      },
     },
     "ruby-lsp": {
       "initialization_options": {
         "enabledFeatures": {
-          "diagnostics": false
+          "diagnostics": false,
         },
-        "formatter": "rubocop"
-      }
-    }
-  }
+        "formatter": "rubocop",
+      },
+    },
+  },
 }
