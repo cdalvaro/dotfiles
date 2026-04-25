@@ -25,3 +25,8 @@ fi
 
 # User path
 export PATH="${HOME}/.local/bin:${PATH}"
+
+# Added by Obsidian
+if -d /Applications/Obsidian.app; then
+  export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"
+fi
