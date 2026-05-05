@@ -13,16 +13,18 @@
   },
   "agent": {
     "default_model": {
+      "effort": "high",
+      "enable_thinking": true,
       "provider": "anthropic",
-      "model": "claude-sonnet-4-latest",
+      "model": "claude-opus-4-7-latest",
     },
     "inline_assistant_model": {
       "provider": "anthropic",
-      "model": "claude-sonnet-4-latest",
+      "model": "claude-opus-4-7-latest",
     },
     "commit_message_model": {
       "provider": "anthropic",
-      "model": "claude-sonnet-4-latest",
+      "model": "claude-opus-4-7-latest",
     },
   },
 
