@@ -10,6 +10,9 @@
       "Bash(git diff:*)",
       "Bash(git log:*)",
       "Bash(git branch:*)",
+      "Bash(pre-commit --version)",
+      "Bash(pre-commit install:*)",
+      "Bash(pre-commit run:*)",
       "Read(**)",
       "Glob",
       "Grep"
@@ -23,5 +26,9 @@
     ]
   },
   "effortLevel": "xhigh",
-  "theme": "auto"
+  "theme": "auto",
+  "enabledPlugins": {
+    "swift-lsp@claude-plugins-official": true,
+    "github@claude-plugins-official": true
+  }
 }
