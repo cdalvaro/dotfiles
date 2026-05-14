@@ -1,7 +1,10 @@
 {
   "permissions": {
+    "defaultMode": "acceptEdits",
     "allow": [
       "Bash(ls:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
       "Bash(pwd)",
       "Bash(cat:*)",
       "Bash(rg:*)",
@@ -28,7 +31,8 @@
   "effortLevel": "xhigh",
   "theme": "auto",
   "enabledPlugins": {
-    "swift-lsp@claude-plugins-official": true,
-    "github@claude-plugins-official": true
+    "github@claude-plugins-official": true,
+    "pyright-lsp@claude-plugins-official": true,
+    "swift-lsp@claude-plugins-official": true
   }
 }
