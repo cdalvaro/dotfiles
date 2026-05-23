@@ -64,8 +64,8 @@
   "preferred_line_length": 140,
   "theme": {
     "mode": "system",
-    "light": "Ayu Light",
-    "dark": "Ayu Mirage",
+    "light": "Monokai Pro Light",
+    "dark": "Monokai Pro (CE)",
   },
 
   // --- DIAGNOSTICS ---
