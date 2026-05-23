@@ -78,6 +78,7 @@
 
   // --- EDITOR ---
   // Indentation, rainbow indentation
+  "completion_menu_item_kind": "symbol",
   "indent_guides": {
     "enabled": true,
     "coloring": "indent_aware",
