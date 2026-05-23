@@ -2,6 +2,7 @@
   "permissions": {
     "defaultMode": "acceptEdits",
     "allow": [
+      "Bash(awk:*)",
       "Bash(cat:*)",
       "Bash(find:*)",
       "Bash(gh auth status:*)",
