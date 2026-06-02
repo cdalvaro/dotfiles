@@ -8,6 +8,14 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   // --- AI ASSISTANT ---
+  "agent_servers": {
+    "codex-acp": {
+      "type": "registry",
+    },
+    "claude-acp": {
+      "type": "registry",
+    },
+  },
   "edit_predictions": {
     "provider": "zed",
   },
@@ -16,15 +24,17 @@
       "effort": "high",
       "enable_thinking": true,
       "provider": "anthropic",
-      "model": "claude-opus-4-7-latest",
+      "model": "claude-opus-4-7",
     },
-    "inline_assistant_model": {
-      "provider": "anthropic",
-      "model": "claude-opus-4-7-latest",
-    },
+    "inline_alternatives": [
+      {
+        "provider": "openai",
+        "model": "gpt-5.5",
+      },
+    ],
     "commit_message_model": {
-      "provider": "anthropic",
-      "model": "claude-opus-4-7-latest",
+      "provider": "openai",
+      "model": "gpt-5.5",
     },
   },
 
@@ -64,8 +74,8 @@
   "preferred_line_length": 140,
   "theme": {
     "mode": "system",
-    "light": "Monokai Pro Light",
-    "dark": "Monokai Pro (CE)",
+    "light": "Ayu Light",
+    "dark": "Ayu Mirage",
   },
 
   // --- DIAGNOSTICS ---
