@@ -54,6 +54,7 @@
     "**/.vscode",
     "**/node_modules",
   ],
+  "cli_default_open_behavior": "new_window",
   "restore_on_startup": "launchpad",
   "tabs": {
     "activate_on_close": "history",
