@@ -181,6 +181,9 @@
     "Jinja2": ["sls"],
   },
   "languages": {
+    "JSON": {
+      "tab_size": 2,
+    },
     "Python": {
       "format_on_save": "on",
       "formatter": { "language_server": { "name": "ruff" } },
@@ -205,6 +208,9 @@
       "code_actions_on_format": {
         "source.fixAll.eslint": true,
       },
+    },
+    "YAML": {
+      "tab_size": 2,
     },
   },
   "lsp": {
