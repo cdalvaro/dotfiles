@@ -3,8 +3,11 @@
 
 # App
 quit-after-last-window-closed = true
-scrollback-limit = 1000000
 auto-update = download
+
+# Scrollback limit is set in bytes, not lines
+# 10MB of scrollback seems OK
+scrollback-limit = 10737418240
 
 # https://ghostty.org/docs/help/terminfo#sudo
 # shell-integration-features = sudo
