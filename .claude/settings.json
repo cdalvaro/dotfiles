@@ -1,6 +1,5 @@
 {
   "permissions": {
-    "defaultMode": "acceptEdits",
     "allow": [
       "Bash(awk:*)",
       "Bash(cat:*)",
@@ -44,13 +43,15 @@
       "Read(**/*secret*)",
       "Read(**/*.key)",
       "Read(**/id_rsa*)"
-    ]
+    ],
+    "defaultMode": "acceptEdits"
   },
-  "effortLevel": "xhigh",
-  "theme": "auto",
   "enabledPlugins": {
     "github@claude-plugins-official": true,
     "pyright-lsp@claude-plugins-official": true,
     "swift-lsp@claude-plugins-official": true
-  }
+  },
+  "effortLevel": "xhigh",
+  "theme": "auto",
+  "tui": "fullscreen"
 }
