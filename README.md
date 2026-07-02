@@ -15,3 +15,7 @@ dotfiles files present:
     - template: jinja
     - exclude_pat: E@(README.md|settings/|pillar/)
 ```
+
+## Claude
+
+Currently, my CLAUDE.md is just a copy of [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills).
