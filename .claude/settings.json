@@ -46,12 +46,25 @@
     ],
     "defaultMode": "acceptEdits"
   },
+  "extraKnownMarketplaces": {
+    "karpathy-skills": {
+      "source": {
+        "source": "github",
+        "repo": "forrestchang/andrej-karpathy-skills"
+      }
+    }
+  },
   "enabledPlugins": {
+    "andrej-karpathy-skills@karpathy-skills": true,
+    "clangd-lsp@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true,
     "github@claude-plugins-official": true,
+    "gitlab@claude-plugins-official": true,
     "pyright-lsp@claude-plugins-official": true,
+    "ruby-lsp@claude-plugins-official": true,
     "swift-lsp@claude-plugins-official": true
   },
-  "effortLevel": "xhigh",
+  "effortLevel": "high",
   "theme": "auto",
   "tui": "fullscreen"
 }
