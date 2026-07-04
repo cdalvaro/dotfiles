@@ -44,7 +44,7 @@
       "Read(**/*.key)",
       "Read(**/id_rsa*)"
     ],
-    "defaultMode": "acceptEdits"
+    "defaultMode": "auto"
   },
   "extraKnownMarketplaces": {
     "karpathy-skills": {
