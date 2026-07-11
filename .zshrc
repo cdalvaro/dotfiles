@@ -108,7 +108,7 @@ fi
 ## https://github.com/eza-community/eza
 if type eza &>/dev/null; then
   export EZA_STRICT=true
-  alias ll='eza --long --header --group --git --modified --color-scale=size --icons=automatic'
+  alias ll='eza --long --header --group --git --modified --color-scale=size --icons=auto'
 else
   alias ll='ls -lh --color'
 fi
