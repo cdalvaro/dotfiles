@@ -8,11 +8,6 @@ if [[ "${TERM_PROGRAM}" == "iTerm.app" ]]; then
   zstyle :omz:plugins:iterm2 shell-integration yes
 fi
 
-# -- kitty
-if command -v kitten &>/dev/null; then
-  alias s="kitten ssh"
-fi
-
 # Claude Code
 function cc-swiftui() {
   local agent_file="${HOME}/Developer/github/twostraws/SwiftAgents/AGENTS.md"
@@ -25,3 +20,14 @@ function cc-swiftui() {
     && echo "✓ CLAUDE.md for SwiftUI is ready. Good coding!" \
     || echo "✗ Failed to copy ${agent_file}" >&2
 }
+
+# OpenCore Legacy Patcher
+if nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:opencore-version >/dev/null 2>&1; then
+
+  ## Open Electron app using OpenGL
+  function oclp-open-elapp() {
+    local app_name="$*"
+    open "/Applications/${app_name}.app" --args --use-angle=gl
+  }
+
+fi
