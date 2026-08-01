@@ -25,6 +25,7 @@ function cc-swiftui() {
 if nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:opencore-version >/dev/null 2>&1; then
 
   ## Open Electron app using OpenGL
+  # https://github.com/dortania/OpenCore-Legacy-Patcher/issues/1145
   function oclp-open-elapp() {
     local app_name="$*"
     open "/Applications/${app_name}.app" --args --use-angle=gl
