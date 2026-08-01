@@ -22,9 +22,14 @@ function cc-swiftui() {
 }
 
 # OpenCore Legacy Patcher
-if nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:opencore-version >/dev/null 2>&1; then
+# https://dortania.github.io/OpenCore-Legacy-Patcher/UPDATE.html#updating-the-application-opencore-and-patches
+function oclp_version() {
+  nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:opencore-version 2>/dev/null
+}
 
-  ## Open Electron app using OpenGL
+if [[ -n "$(oclp_version)" ]]; then
+
+  # Open Electron app using OpenGL
   # https://github.com/dortania/OpenCore-Legacy-Patcher/issues/1145
   function oclp-open-elapp() {
     local app_name="$*"
