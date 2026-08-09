@@ -74,7 +74,7 @@ return {
       },
     })
 
-    require('catppuccin-nvim').colorscheme()
+    require('catppuccin').load()
   end,
 }
 

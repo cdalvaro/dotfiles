@@ -1,84 +1,78 @@
 -- Nvim Treesitter configurations and abstraction layer
 ---@link https://github.com/nvim-treesitter/nvim-treesitter
 
+-- Neovim already ships its own precompiled parsers, paired with its bundled
+-- queries, for: c, lua, markdown, markdown_inline, query, vim, vimdoc.
+-- Installing a different (newer) copy of those via nvim-treesitter shadows
+-- Neovim's version in the runtimepath and can break highlighting when the
+-- grammars drift apart (e.g. renamed fields), so they're excluded here.
+local ensure_installed = {
+  "bash",
+  "cpp",
+  "cmake",
+  "diff",
+  "dockerfile",
+  "html",
+  "javascript",
+  "jsdoc",
+  "json",
+  "jsonc",
+  "luadoc",
+  "luap",
+  "perl",
+  "printf",
+  "python",
+  "regex",
+  "ruby",
+  "swift",
+  "toml",
+  "tsx",
+  "typescript",
+  "xml",
+  "yaml",
+}
+
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    version = false,             -- last release is way too old and doesn't work on Windows
+    branch = "main",
+    lazy = false, -- this plugin does not support lazy-loading, see the plugin's README
     build = ":TSUpdate",
-    lazy = vim.fn.argc(-1) == 0, -- load treesitter early when opening a file from the cmdline
-    enabled = function() return vim.fn.has("nvim-0.10.0") == 1 end,
-    dependencies = { "OXY2DEV/markview.nvim" },
-    init = function(plugin)
-      -- PERF: add nvim-treesitter queries to the rtp and it's custom query predicates early
-      -- This is needed because a bunch of plugins no longer `require("nvim-treesitter")`, which
-      -- no longer trigger the **nvim-treesitter** module to be loaded in time.
-      -- Luckily, the only things that those plugins need are the custom queries, which we make available
-      -- during startup.
-      require("lazy.core.loader").add_to_rtp(plugin)
-      require("nvim-treesitter.query_predicates")
+    enabled = function() return vim.fn.has("nvim-0.12") == 1 end,
+    dependencies = {
+      "OXY2DEV/markview.nvim",
+      { "nvim-treesitter/nvim-treesitter-textobjects", branch = "main" },
+    },
+    config = function()
+      require("nvim-treesitter").install(ensure_installed)
+
+      -- Highlighting and indentation are provided by Neovim/this plugin but
+      -- are no longer enabled through a declarative `opts` table on `main`.
+      vim.api.nvim_create_autocmd("FileType", {
+        callback = function()
+          pcall(vim.treesitter.start)
+          vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+        end,
+      })
+
+      require("nvim-treesitter-textobjects").setup({
+        move = { set_jumps = true },
+      })
+
+      local move = require("nvim-treesitter-textobjects.move")
+      local map = vim.keymap.set
+      map({ "n", "x", "o" }, "]f", function() move.goto_next_start("@function.outer", "textobjects") end)
+      map({ "n", "x", "o" }, "]c", function() move.goto_next_start("@class.outer", "textobjects") end)
+      map({ "n", "x", "o" }, "]a", function() move.goto_next_start("@parameter.inner", "textobjects") end)
+      map({ "n", "x", "o" }, "]F", function() move.goto_next_end("@function.outer", "textobjects") end)
+      map({ "n", "x", "o" }, "]C", function() move.goto_next_end("@class.outer", "textobjects") end)
+      map({ "n", "x", "o" }, "]A", function() move.goto_next_end("@parameter.inner", "textobjects") end)
+      map({ "n", "x", "o" }, "[f", function() move.goto_previous_start("@function.outer", "textobjects") end)
+      map({ "n", "x", "o" }, "[c", function() move.goto_previous_start("@class.outer", "textobjects") end)
+      map({ "n", "x", "o" }, "[a", function() move.goto_previous_start("@parameter.inner", "textobjects") end)
+      map({ "n", "x", "o" }, "[F", function() move.goto_previous_end("@function.outer", "textobjects") end)
+      map({ "n", "x", "o" }, "[C", function() move.goto_previous_end("@class.outer", "textobjects") end)
+      map({ "n", "x", "o" }, "[A", function() move.goto_previous_end("@parameter.inner", "textobjects") end)
     end,
-    cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
-    keys = {
-      { "<c-space>", desc = "Increment Selection" },
-      { "<bs>",      desc = "Decrement Selection", mode = "x" },
-    },
-    opts_extend = { "ensure_installed" },
-    ---@type TSConfig
-    ---@diagnostic disable-next-line: missing-fields
-    opts = {
-      highlight = { enable = true },
-      indent = { enable = true },
-      ensure_installed = {
-        "bash",
-        "c",
-        "cpp",
-        "cmake",
-        "diff",
-        "dockerfile",
-        "html",
-        "javascript",
-        "jsdoc",
-        "json",
-        "jsonc",
-        "lua",
-        "luadoc",
-        "luap",
-        "markdown",
-        "markdown_inline",
-        "perl",
-        "printf",
-        "python",
-        "query",
-        "regex",
-        "ruby",
-        "swift",
-        "toml",
-        "tsx",
-        "typescript",
-        "vim",
-        "vimdoc",
-        "xml",
-        "yaml",
-      },
-      incremental_selection = {
-        enable = true,
-        keymaps = {
-          init_selection = "<C-space>",
-          node_incremental = "<C-space>",
-          scope_incremental = false,
-          node_decremental = "<bs>",
-        },
-      },
-      textobjects = {
-        move = {
-          enable = true,
-          goto_next_start = { ["]f"] = "@function.outer", ["]c"] = "@class.outer", ["]a"] = "@parameter.inner" },
-          goto_next_end = { ["]F"] = "@function.outer", ["]C"] = "@class.outer", ["]A"] = "@parameter.inner" },
-          goto_previous_start = { ["[f"] = "@function.outer", ["[c"] = "@class.outer", ["[a"] = "@parameter.inner" },
-          goto_previous_end = { ["[F"] = "@function.outer", ["[C"] = "@class.outer", ["[A"] = "@parameter.inner" },
-        },
-      },
-    },
   }
 }
