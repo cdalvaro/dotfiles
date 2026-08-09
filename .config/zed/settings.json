@@ -17,16 +17,16 @@
     },
   },
   "project_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "outline_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "collaboration_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "git_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "disable_ai": true,
   "edit_predictions": {
@@ -89,8 +89,13 @@
   "preferred_line_length": 140,
   "theme": {
     "mode": "system",
-    "light": "Ayu Light",
-    "dark": "Ayu Mirage",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Frappé",
+  },
+  "icon_theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Frappé",
   },
 
   // --- DIAGNOSTICS ---
@@ -133,11 +138,6 @@
     "ruff": true,
     "swift": true,
     "toml": true,
-  },
-  "icon_theme": {
-    "mode": "system",
-    "light": "Catppuccin Latte",
-    "dark": "Catppuccin Mocha",
   },
 
   // --- FONTS ---
