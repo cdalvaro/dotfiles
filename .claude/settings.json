@@ -64,6 +64,9 @@
     "ruby-lsp@claude-plugins-official": true,
     "swift-lsp@claude-plugins-official": true
   },
+  "env": {
+    "GITHUB_PERSONAL_ACCESS_TOKEN": "{{ claude_github_pat }}"
+  },
   "effortLevel": "high",
   "theme": "auto",
   "tui": "fullscreen"
