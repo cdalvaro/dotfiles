@@ -70,5 +70,7 @@
   },
   "effortLevel": "high",
   "theme": "auto",
-  "tui": "fullscreen"
+  "tui": "fullscreen",
+  "agentPushNotifEnabled": true,
+  "inputNeededNotifEnabled": true
 }
