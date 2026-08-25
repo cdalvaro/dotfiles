@@ -59,11 +59,10 @@
     "clangd-lsp@claude-plugins-official": true,
     "claude-md-management@claude-plugins-official": true,
     "github@claude-plugins-official": true,
-    "gitlab@claude-plugins-official": true,
+    "lua-lsp@claude-plugins-official": true,
     "pyright-lsp@claude-plugins-official": true,
     "ruby-lsp@claude-plugins-official": true,
-    "swift-lsp@claude-plugins-official": true,
-    "lua-lsp@claude-plugins-official": true
+    "swift-lsp@claude-plugins-official": true
   },
   "env": {
     "GITHUB_PERSONAL_ACCESS_TOKEN": "{{ claude_github_pat }}"
