@@ -1,4 +1,23 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "sandbox": {
+    "enabled": true,
+    "failIfUnavailable": true,
+    "filesystem": {
+      "denyRead": [
+        "~/.ssh",
+        "~/.gnupg",
+        "~/.kube",
+        "~/.config/gh",
+        "~/.docker/config.json",
+        "~/**/.env",
+        "~/**/.env.*",
+        "~/**/.pem",
+        "~/**/.key"
+      ],
+      "denyWrite": ["~/.ssh", "~/.gnupg", "~/.kube", "~/.config/gh", "~/.docker"]
+    }
+  },
   "permissions": {
     "allow": [
       "Bash(awk:*)",
@@ -31,8 +50,7 @@
       "Bash(shellcheck:*)",
       "Bash(tail:*)",
       "Glob",
-      "Grep",
-      "Read(**)"
+      "Grep"
     ],
     "deny": [
       "Bash(gh repo delete:*)",
@@ -42,7 +60,17 @@
       "Read(.env.*)",
       "Read(**/*secret*)",
       "Read(**/*.key)",
-      "Read(**/id_rsa*)"
+      "Read(**/id_rsa*)",
+      "Read(~/.ssh/**)",
+      "Read(~/.gnupg/**)",
+      "Read(~/.aws/**)",
+      "Read(~/.kube/**)",
+      "Read(~/.config/gh/**)",
+      "Read(~/.docker/config.json)",
+      "Edit(~/.ssh/**)",
+      "Edit(~/.gnupg/**)",
+      "Edit(~/.kube/**)",
+      "Edit(~/.config/gh/**)"
     ],
     "defaultMode": "auto"
   },
