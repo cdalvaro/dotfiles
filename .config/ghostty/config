@@ -3,6 +3,8 @@
 
 # App
 quit-after-last-window-closed = true
+window-inherit-working-directory = false
+tab-inherit-working-directory = false
 auto-update = download
 
 # Scrollback limit is set in bytes, not lines
