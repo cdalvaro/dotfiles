@@ -171,6 +171,12 @@ alias vi='nvim'
 # https://starship.rs/config/
 eval "$(starship init zsh)"
 
+# -- Ruby rv
+if command -v rv &>/dev/null && rv --version &>/dev/null; then
+  eval "$(rv shell init zsh)"
+  eval "$(rv shell completions zsh)"
+fi
+
 # -- Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
