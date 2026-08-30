@@ -47,6 +47,7 @@ style = "bold fg:#3776AB"
 [ruby]
 symbol = "\ue739 "
 style = "bold fg:#CC342D"
+detect_variables = []
 
 [username]
 style_user = "bold fg:#F5C643"
