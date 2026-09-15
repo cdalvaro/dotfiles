@@ -26,6 +26,7 @@
     "dock": "left",
   },
   "git_panel": {
+    "group_by": "staging",
     "dock": "left",
   },
   "disable_ai": false,
