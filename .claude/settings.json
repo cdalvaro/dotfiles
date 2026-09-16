@@ -88,6 +88,7 @@
     "claude-md-management@claude-plugins-official": true,
     "github@claude-plugins-official": true,
     "lua-lsp@claude-plugins-official": true,
+    "mattpocock-skills@claude-plugins-official": true,
     "pyright-lsp@claude-plugins-official": true,
     "ruby-lsp@claude-plugins-official": true,
     "swift-lsp@claude-plugins-official": true
