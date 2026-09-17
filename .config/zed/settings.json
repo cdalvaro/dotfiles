@@ -139,6 +139,7 @@
     "neocmake": true,
     "ruby": true,
     "ruff": true,
+    "salt": true,
     "swift": true,
     "toml": true
   },
@@ -194,8 +195,7 @@
 
   // --- LANGUAGES ---
   "file_types": {
-    "Dockerfile": ["Dockerfile*"],
-    "Jinja2": ["sls"]
+    "Dockerfile": ["Dockerfile*"]
   },
   "languages": {
     "JSON": {
