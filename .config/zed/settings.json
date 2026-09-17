@@ -10,47 +10,48 @@
   // --- AI ASSISTANT ---
   "agent_servers": {
     "codex-acp": {
-      "type": "registry",
+      "type": "registry"
     },
     "claude-acp": {
-      "type": "registry",
-    },
+      "type": "registry"
+    }
   },
   "project_panel": {
-    "dock": "left",
+    "dock": "left"
   },
   "outline_panel": {
-    "dock": "left",
+    "dock": "left"
   },
   "collaboration_panel": {
-    "dock": "left",
+    "dock": "left"
   },
   "git_panel": {
     "group_by": "staging",
-    "dock": "left",
+    "dock": "left"
   },
   "disable_ai": false,
   "edit_predictions": {
-    "provider": "zed",
+    "provider": "zed"
   },
   "agent": {
+    "sidebar_side": "right",
     "dock": "right",
     "default_model": {
       "effort": "high",
       "enable_thinking": true,
       "provider": "anthropic",
-      "model": "claude-opus-5",
+      "model": "claude-opus-5"
     },
     "inline_alternatives": [
       {
         "provider": "openai",
-        "model": "gpt-5.6-terra",
-      },
+        "model": "gpt-5.6-terra"
+      }
     ],
     "commit_message_model": {
       "provider": "openai",
-      "model": "gpt-5.6-terra",
-    },
+      "model": "gpt-5.6-terra"
+    }
   },
 
   // --- APP ---
@@ -67,7 +68,7 @@
     "**/Thumbs.db",
     "**/.idea",
     "**/.vscode",
-    "**/node_modules",
+    "**/node_modules"
   ],
   "cli_default_open_behavior": "new_window",
   "restore_on_startup": "launchpad",
@@ -76,14 +77,14 @@
     "show_close_button": "hover",
     "close_position": "left",
     "file_icons": true,
-    "git_status": true,
+    "git_status": true
   },
   "telemetry": {
     "diagnostics": false,
-    "metrics": false,
+    "metrics": false
   },
   "terminal": {
-    "cursor_shape": "bar",
+    "cursor_shape": "bar"
   },
 
   // --- APPEARANCE ---
@@ -91,20 +92,20 @@
   "theme": {
     "mode": "system",
     "light": "Catppuccin Latte",
-    "dark": "Catppuccin Frappé",
+    "dark": "Catppuccin Frappé"
   },
   "icon_theme": {
     "mode": "system",
     "light": "Catppuccin Latte",
-    "dark": "Catppuccin Frappé",
+    "dark": "Catppuccin Frappé"
   },
 
   // --- DIAGNOSTICS ---
   "diagnostics": {
     "include_warnings": true,
     "inline": {
-      "enabled": true,
-    },
+      "enabled": true
+    }
   },
 
   // --- EDITOR ---
@@ -112,11 +113,11 @@
   "completion_menu_item_kind": "symbol",
   "indent_guides": {
     "enabled": true,
-    "coloring": "indent_aware",
+    "coloring": "indent_aware"
   },
   "minimap": {
     "display_in": "active_editor",
-    "show": "always",
+    "show": "always"
   },
   "selection_highlight": true,
 
@@ -124,6 +125,7 @@
   // Check extensions inside: ~/Library/Application\ Support/Zed/extensions/installed
   "auto_install_extensions": {
     "basher": true,
+    "catppuccin": true,
     "catppuccin-icons": true,
     "comment": true,
     "docker-compose": true,
@@ -138,7 +140,7 @@
     "ruby": true,
     "ruff": true,
     "swift": true,
-    "toml": true,
+    "toml": true
   },
 
   // --- FONTS ---
@@ -153,7 +155,7 @@
     "cv04": true,
     "ss13": true,
     "ss15": true,
-    "ss18": true,
+    "ss18": true
   },
   "buffer_font_fallbacks": ["SF Pro Display"],
   /// --- MonoLisa
@@ -193,20 +195,20 @@
   // --- LANGUAGES ---
   "file_types": {
     "Dockerfile": ["Dockerfile*"],
-    "Jinja2": ["sls"],
+    "Jinja2": ["sls"]
   },
   "languages": {
     "JSON": {
-      "tab_size": 2,
+      "tab_size": 2
     },
     "Python": {
       "format_on_save": "on",
       "formatter": { "language_server": { "name": "ruff" } },
-      "language_servers": ["pyright", "ruff"],
+      "language_servers": ["pyright", "ruff"]
     },
     "Ruby": {
       "inlay_hints": {
-        "enabled": true,
+        "enabled": true
       },
       "tab_size": 2,
       "language_servers": ["ruby-lsp", "sorbet", "rubocop", "!solargraph", "!steep"],
@@ -214,47 +216,47 @@
       "formatter": {
         "external": {
           "command": "bundle",
-          "arguments": ["exec", "rubocop", "--stdin", "{buffer_path}", "--format", "quiet", "--stderr", "--autocorrect"],
-        },
-      },
+          "arguments": ["exec", "rubocop", "--stdin", "{buffer_path}", "--format", "quiet", "--stderr", "--autocorrect"]
+        }
+      }
     },
     "TypeScript": {
       "formatter": "prettier",
       "code_actions_on_format": {
-        "source.fixAll.eslint": true,
-      },
+        "source.fixAll.eslint": true
+      }
     },
     "YAML": {
-      "tab_size": 2,
-    },
+      "tab_size": 2
+    }
   },
   "lsp": {
     "clangd": {
       "binary": {
-        "arguments": ["-background-index", "-compile-commands-dir=build"],
-      },
+        "arguments": ["-background-index", "-compile-commands-dir=build"]
+      }
     },
     "basedpyright": {
       "settings": {
         "python.analysis": {
           "diagnosticMode": "workspace",
           "typeCheckingMode": "strict",
-          "ignore": ["**/__pycache__"],
-        },
-      },
+          "ignore": ["**/__pycache__"]
+        }
+      }
     },
     "rubocop": {
       "initialization_options": {
-        "safeAutocorrect": true,
-      },
+        "safeAutocorrect": true
+      }
     },
     "ruby-lsp": {
       "initialization_options": {
         "enabledFeatures": {
-          "diagnostics": false,
+          "diagnostics": false
         },
-        "formatter": "rubocop",
-      },
-    },
-  },
+        "formatter": "rubocop"
+      }
+    }
+  }
 }
