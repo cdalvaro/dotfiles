@@ -1,7 +1,7 @@
 [user]
   name = {{ pillar.git.user_name }}
   email = {{ pillar.git.user_email }}
-  signingkey = {{ pillar.git.user_signingkey }}
+  signingkey = {{ git_user_signingkey }}
 [core]
   editor = $GIT_EDITOR
   excludesfile = {{ main_user_home }}/.gitignore
@@ -76,8 +76,6 @@
   template = {{ main_user_home }}/.config/git/templates/git-commit-template
   gpgsign = true
   verbose = true
-[url "git@{{ pillar.git.gitlab.url }}:"]
-  insteadOf = gitlab:
 [url "git@github.com:"]
   insteadOf = github:
 [push]
