@@ -81,7 +81,9 @@ keybind = cmd+.=text:\x03
 
 # Theme
 cursor-style = bar
-theme = light:Catppuccin Latte, dark:Catppuccin Frappe
+theme = Ayu Mirage
+#theme = light:Ayu, dark:Ayu Mirage
+#theme = light:Catppuccin Latte, dark:Catppuccin Frappe
 #theme = light:monokai-pro-light, dark:monokai-pro
 #background-opacity = 0.9
 #background-blur = true
