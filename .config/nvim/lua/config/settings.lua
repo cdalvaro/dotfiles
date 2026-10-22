@@ -3,7 +3,7 @@
 -- Python provider
 -- https://neovim.io/doc/user/provider.html#_python-integration
 vim.g.loaded_python_provider = 0
-vim.g.python3_host_prog = (os.getenv("PYENV_ROOT") and os.getenv("PYENV_ROOT") or '/usr') .. '/bin/python3'
+vim.g.python3_host_prog = vim.fn.expand('~/.local/bin/python3')
 
 -- Clipboard
 vim.o.clipboard = vim.fn.has 'mac' == 1 and 'unnamed' or 'unnamedplus'
