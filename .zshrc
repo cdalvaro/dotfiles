@@ -171,6 +171,11 @@ alias vi='nvim'
 # https://starship.rs/config/
 eval "$(starship init zsh)"
 
+# -- Python uv
+if command -v uv &>/dev/null && uv --version &>/dev/null; then
+  eval "$(uv generate-shell-completion zsh)"
+fi
+
 # -- Ruby rv
 if command -v rv &>/dev/null && rv --version &>/dev/null; then
   eval "$(rv shell init zsh)"
