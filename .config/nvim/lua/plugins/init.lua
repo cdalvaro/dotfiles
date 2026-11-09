@@ -1,9 +1,5 @@
 return {
   {
-    -- An implementation of the Popup API from vim in Neovim
-    "nvim-lua/popup.nvim",
-  },
-  {
     -- Useful lua functions used by lots of plugins
     ---@link https://github.com/nvim-lua/plenary.nvim
     "nvim-lua/plenary.nvim",
@@ -11,12 +7,7 @@ return {
   {
     -- Provides Nerd Font icons (glyphs) for use by neovim plugins
     ---@link https://github.com/nvim-tree/nvim-web-devicons
-    "kyazdani42/nvim-web-devicons"
-  },
-  {
-    -- A fancy, configurable, notification manager for NeoVim
-    ---@link https://github.com/rcarriga/nvim-notify
-    "rcarriga/nvim-notify"
+    "nvim-tree/nvim-web-devicons"
   },
   {
     -- A plugin for Neovim that shows the available keybindings
