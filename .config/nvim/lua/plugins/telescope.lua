@@ -3,16 +3,15 @@
 
 return {
   {
-    "nvim-telescope/telescope-fzf-native.nvim",
-    enabled = function() return vim.fn.has("nvim-0.9.0") == 1 end,
-    build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
-  },
-  {
     "nvim-telescope/telescope.nvim",
     dependencies = {
-      "nvim-lua/plenary.nvim"
+      "nvim-lua/plenary.nvim",
+      {
+        "nvim-telescope/telescope-fzf-native.nvim",
+        build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
+      },
     },
-    enabled = function() return vim.fn.has("nvim-0.9.0") == 1 end,
+    enabled = function() return vim.fn.has("nvim-0.11") == 1 end,
     opts = {
       defaults = {
         vimgrep_arguments = { 'rg', '--color=never', '--no-heading', '--with-filename', '--line-number', '--column',
@@ -27,8 +26,7 @@ return {
         layout_config = {
           horizontal = {
             prompt_position = 'top',
-            preview_width = 0.55,
-            results_width = 0.8
+            preview_width = 0.55
           },
           vertical = {
             mirror = false
@@ -56,7 +54,7 @@ return {
     },
     config = function(_, opts)
       require('telescope').setup(opts)
-      require('telescope').load_extension('fzf')
+      pcall(require('telescope').load_extension, 'fzf')
 
       local builtin = require('telescope.builtin')
       vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
