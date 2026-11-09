@@ -1,6 +1,5 @@
 -- Help: https://neovim.io/doc/user/lua-guide.html
 local autocmd = vim.api.nvim_create_autocmd
-local utils = require('config.utils')
 
 -- Lazy.nvim autoupdate
 -- https://github.com/folke/lazy.nvim/issues/702
