@@ -1,9 +1,8 @@
 -- Help: https://neovim.io/doc/user/lua-guide.html#lua-guide
 
--- Python provider
+-- Python provider (no plugin needs it)
 -- https://neovim.io/doc/user/provider.html#_python-integration
-vim.g.loaded_python_provider = 0
-vim.g.python3_host_prog = vim.fn.expand('~/.local/bin/python3')
+vim.g.loaded_python3_provider = 0
 
 -- Clipboard
 vim.o.clipboard = vim.fn.has 'mac' == 1 and 'unnamed' or 'unnamedplus'
