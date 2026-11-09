@@ -8,13 +8,9 @@ vim.g.loaded_python3_provider = 0
 vim.o.clipboard = vim.fn.has 'mac' == 1 and 'unnamed' or 'unnamedplus'
 
 -- Global settings
-vim.o.backupdir = '/tmp'   -- Backup directory
-vim.o.hlsearch = true      -- Highlight search matches after entering search pattern
 vim.o.ignorecase = true    -- Use case insensitive search pattern matching by default
-vim.o.incsearch = true     -- Incrementally highlight search pattern as it is updated
 vim.o.laststatus = 2       -- Always show the status bar
-vim.o.magic = true         -- Allow special characters in regex patterns
-vim.o.showcmd = true       -- Show status line
+vim.o.showcmd = true       -- Show partial commands in the last line
 vim.o.smartcase = true     -- Override 'ignorecase' setting if search pattern contains uppercase characters
 vim.o.termguicolors = true -- Enable truecolors
 vim.o.scrolloff = 12       -- Scrolling offset
@@ -34,9 +30,9 @@ vim.o.softtabstop = 2  -- Soft tab stop
 vim.o.smarttab = true  -- Use smart tabulation
 vim.o.expandtab = true -- Use spaces instead of tabs when indenting
 
--- Window-local settings
-vim.wo.number = true
-vim.wo.wrap = true
+-- Window settings
+vim.o.number = true
+vim.o.wrap = true
 
 -- Diagnostic
 -- https://neovim.io/doc/user/diagnostic.html
