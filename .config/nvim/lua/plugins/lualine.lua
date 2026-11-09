@@ -10,11 +10,11 @@ return {
     opts = {
       options = {
         -- theme = "catppuccin-nvim",
-        theme = "ayu",
+        theme = "ayu_mirage",
         -- theme = "monokai-pro",
         icons_enabled = true,
-        component_separators = "", -- diabled { left = "", right = "" },
-        section_separators = "",   -- diabled { left = "", right = "" },
+        component_separators = "", -- disabled { left = "", right = "" },
+        section_separators = "",   -- disabled { left = "", right = "" },
         disabled_filetypes = {
           statusline = {},
           winbar = {}
