@@ -1,8 +1,8 @@
 -- https://github.com/mason-org/mason-lspconfig.nvim
 
-local lsps = { 'bashls', 'dockerls', 'jsonls', 'salt_ls', 'yamlls' }
+local lsps = { 'bashls', 'dockerls', 'jsonls', 'yamlls' }
 if vim.fn.has('mac') == 1 then
-  local extra_lsps = { 'clangd', 'cmake', 'perlnavigator', 'sourcery', 'ruby_lsp', 'lua_ls' }
+  local extra_lsps = { 'clangd', 'perlnavigator', 'sourcery', 'ruby_lsp', 'lua_ls' }
   for _, v in ipairs(extra_lsps) do
     table.insert(lsps, v)
   end
