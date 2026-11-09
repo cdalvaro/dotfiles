@@ -1,4 +1,4 @@
--- https://github.com/williamboman/nvim-lsp-installer
+-- https://github.com/mason-org/mason-lspconfig.nvim
 
 local lsps = { 'bashls', 'dockerls', 'jsonls', 'salt_ls', 'yamlls' }
 if vim.fn.has('mac') == 1 then
@@ -10,7 +10,7 @@ end
 
 return {
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     enabled = function() return vim.fn.has("nvim-0.9.0") == 1 end,
     opts = {
       ui = {
@@ -24,15 +24,14 @@ return {
   },
   {
     ---@link https://github.com/williamboman/mason-lspconfig.nvim
-    "williamboman/mason-lspconfig.nvim",
-    enabled = function() return vim.fn.has("nvim-0.9.0") == 1 end,
+    "mason-org/mason-lspconfig.nvim",
+    enabled = function() return vim.fn.has("nvim-0.11.0") == 1 end,
     opts = {
-      ensure_installed = lsps,      -- Ensure these servers are always installed
-      automatic_installation = true -- Automatically detect which servers to install (based on which servers are set up via lspconfig)
+      ensure_installed = lsps -- Ensure these servers are always installed
     }
   },
   {
     "neovim/nvim-lspconfig",
-    enabled = function() return vim.fn.has("nvim-0.9.0") == 1 end,
+    enabled = function() return vim.fn.has("nvim-0.11.3") == 1 end,
   },
 }
