@@ -93,13 +93,13 @@
   "preferred_line_length": 140,
   "theme": {
     "mode": "system",
-    "light": "Ayu Light",
-    "dark": "Ayu Mirage",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Macchiato",
   },
   "icon_theme": {
     "mode": "system",
-    "light": "Zed (Default)",
-    "dark": "Zed (Default)",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Macchiato",
   },
 
   // --- DIAGNOSTICS ---
